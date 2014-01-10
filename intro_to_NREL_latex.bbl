@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem[{Lamport(1986)}]{Lamport_1986_a}
+Lamport, L. (1986).
+\newblock \emph{{\LaTeX \rm:} {A} Document Preparation System}.
+\newblock Addison-Wesley.
+
+\end{thebibliography}

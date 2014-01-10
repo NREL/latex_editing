@@ -1,0 +1,41 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Requirements for NREL documents}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Use of english and other conventions}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Formatting}{1}{section.1.2}
+\contentsline {chapter}{\numberline {2}How to Make \textlatin {\LaTeX }\ documents that meet NREL's requirements}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}What is \textlatin {\LaTeX }?}{2}{section.2.1}
+\contentsline {section}{\numberline {2.2}General Process}{2}{section.2.2}
+\contentsline {section}{\numberline {2.3}The NREL \textlatin {\LaTeX }\ style file}{2}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Getting \emph {nrel.cls}}{2}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Installing \emph {nrel.cls}}{3}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Using \emph {nrel.cls}}{3}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Options in \emph {nrel.cls}}{3}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Classes and packages in \emph {nrel.cls}}{4}{subsection.2.3.5}
+\contentsline {chapter}{\numberline {3}Some LaTeX examples}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Page numbering}{5}{section.3.1}
+\contentsline {section}{\numberline {3.2}Headings}{5}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Chapter}{5}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Sections}{5}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Body text}{6}{section.3.3}
+\contentsline {section}{\numberline {3.4}Mathematics}{6}{section.3.4}
+\contentsline {section}{\numberline {3.5}Cross references}{6}{section.3.5}
+\contentsline {section}{\numberline {3.6}Floats}{6}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Tables}{7}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Figures}{7}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Subfigures}{7}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Lists}{8}{section.3.7}
+\contentsline {section}{\numberline {3.8}Computer code}{8}{section.3.8}
+\contentsline {section}{\numberline {3.9}Creating a file structure}{8}{section.3.9}
+\contentsline {section}{\numberline {3.10}Bibliographies and citations}{9}{section.3.10}
+\contentsline {section}{\numberline {3.11}Best practice in writing a document in \textlatin {\LaTeX }}{9}{section.3.11}
+\contentsline {chapter}{\numberline {4}Preparing a .DOC or .DOCX file from \textlatin {\LaTeX }}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}How does \texttt {latex2rtf} work?}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}Using \texttt {latex2rtf}}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}Using \texttt {latex2rtf} and \textlatin {\LaTeX }\ together}{10}{section.4.3}
+\contentsline {section}{\numberline {4.4}Indexes}{12}{section.4.4}
+\contentsline {section}{\numberline {4.5}What to do when the conversion to RTF fails}{12}{section.4.5}
+\contentsline {chapter}{\numberline {5}Preparing a high-quality PDF from LaTeX}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}PDF tagging}{13}{section.5.1}
+\contentsline {section}{\numberline {5.2}Alt-text on images and equations}{13}{section.5.2}
+\contentsline {section}{\numberline {5.3}Embedded fonts}{15}{section.5.3}
+\contentsline {chapter}{Bibliography}{16}{chapter*.7}
