@@ -1,16 +1,13 @@
-latex_editing
-=============
-
 #Introduction
 This is the repository for a LaTeX class file and example template document that can be used to produce LaTeX documents that conform to NREL's style guide. The file also includes instructions for converting the document into rich text format (.rtf), which can be read by WYSIWYG editors.
 
 NREL staff should check on the source for current guidance on using LaTeX for NREL documents (URL required), and are strongly encouraged to check in with their communications rep before starting to use LaTeX for documents.
 
 #Download
-LaTeX class file: https://github.com/NREL/latex_editing/blob/master/nrel.cls
-Bibliography style file: https://github.com/NREL/latex_editing/blob/master/nrel.bst
-Template .tex file: https://github.com/NREL/latex_editing/blob/master/intro_to_NREL_latex.tex
-Example .pdf file: https://github.com/NREL/latex_editing/blob/master/intro_to_NREL_latex.pdf
+* LaTeX class file: https://github.com/NREL/latex_editing/blob/master/nrel.cls
+* Bibliography style file: https://github.com/NREL/latex_editing/blob/master/nrel.bst
+* Template .tex file: https://github.com/NREL/latex_editing/blob/master/intro_to_NREL_latex.tex
+* Example .pdf file: https://github.com/NREL/latex_editing/blob/master/intro_to_NREL_latex.pdf
 
 #Installing and using the latex class file
 The nrel.cls and nrel.bst files should be installed either in your local latex tree or in the same directory as your .tex source files.
