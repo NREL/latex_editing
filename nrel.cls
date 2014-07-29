@@ -13,7 +13,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{nrel}
 \typeout{ }
-\typeout{NREL.cls -- v1.0, April 2013}
+\typeout{NREL.cls -- v1.0, July 2014}
 \typeout{Formats documents according to the NREL style guide}
 \typeout{ }
 
@@ -211,6 +211,24 @@
 	\setlength{\cftaftertoctitleskip}{\baselineskip}
 	\setlength{\cftafterloftitleskip}{\baselineskip}
 	\setlength{\cftafterlottitleskip}{\baselineskip}
+	
+	% footers
+	% need to add page number and availability information to every page, including new chapters.
+	\RequirePackage{fancyhdr}
+	\pagestyle{plain}
+	\fancypagestyle{nrel}{%		\fancyhf{} % clear all header and footer fields		\fancyfoot[CO,CE]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\url{www.nrel.gov/publications}}} % except the center		\renewcommand{\headrulewidth}{0pt}		\renewcommand{\footrulewidth}{0pt}}
+	\pagestyle{nrel}
+	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
+	\let\ps@plain\ps@nrel
+	\AtBeginDocument{\pagestyle{nrel}}
+	
+	% add front matter etc
+	\ifthenelse{\boolean{IsBook}}{%TRUE
+	}{%FALSE
+	\newcommand\frontmatter{\ }
+	\newcommand\mainmatter{\ }
+	\newcommand\backmatter{\ }
+	}	
 
 }{  % else IsMemoir
 
@@ -356,6 +374,37 @@
 	\counterwithout{table}{chapter}
 }
 
+% well, sort of...
+\ifthenelse{\boolean{IsMemoir}}{% True
+}{%FALSE
+% not memoir class
+	
+% need to renew those commands
+	\renewcommand{\frontmatter}{
+		\cleardoublepage
+		\pagenumbering{roman}
+		\setcounter{page}{3}
+		\setcounter{figure}{0}
+		\renewcommand{\thefigure}{\Alph{figure}}
+		\setcounter{table}{0}
+		\renewcommand{\thetable}{\Alph{table}}
+	}
+	\renewcommand{\mainmatter}{
+		\cleardoublepage
+		\pagenumbering{arabic}		
+		\setcounter{figure}{0}
+		\renewcommand{\thefigure}{\arabic{figure}}
+		\setcounter{table}{0}
+		\renewcommand{\thetable}{\arabic{table}}		
+	}
+	\renewcommand{\backmatter}{
+	\if@openright
+			\cleardoublepage
+		\else
+			\clearpage
+		\fi
+	}
+}
 
 % Create some figure and table caption styles that are narrower than textwidth. These look better with small floats.
 \DeclareCaptionStyle{narrow}{width=4.5in,

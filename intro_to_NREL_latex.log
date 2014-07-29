@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.12.17)  18 DEC 2013 18:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.12)  29 JUL 2014 17:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -6,11 +6,11 @@ entering extended mode
 **intro_to_NREL_latex.tex
 (./intro_to_NREL_latex.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (./nrel.cls
 Document Class: nrel 
  
-NREL.cls -- v1.0, April 2013
+NREL.cls -- v1.0, July 2014
 Formats documents according to the NREL style guide
  
 (/usr/local/texlive/2013/texmf-dist/tex/latex/xifthen/xifthen.sty
@@ -295,13 +295,13 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/12/03 3.9h The Babel package
+Package: babel 2014/03/24 3.9k The Babel package
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/12/03 3.9h Babel common definitions
+File: babel.def 2014/03/24 3.9k Babel common definitions
 \babel@savecnt=\count115
 \U@D=\dimen137
 )
@@ -372,20 +372,24 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks24
-)
+\pgfutil@tempdima=\dimen146
+\pgfutil@tempdimb=\dimen147
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+sts.tex))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box28
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
 ))
-Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks25
 \pgfkeys@temptoks=\toks26
@@ -394,37 +398,40 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 ode.tex
 \pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen146
-\pgf@y=\dimen147
-\pgf@xa=\dimen148
-\pgf@ya=\dimen149
-\pgf@xb=\dimen150
-\pgf@yb=\dimen151
-\pgf@xc=\dimen152
-\pgf@yc=\dimen153
+\pgf@x=\dimen148
+\pgf@y=\dimen149
+\pgf@xa=\dimen150
+\pgf@ya=\dimen151
+\pgf@xb=\dimen152
+\pgf@yb=\dimen153
+\pgf@xc=\dimen154
+\pgf@yc=\dimen155
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
 \c@pgf@counta=\count125
 \c@pgf@countb=\count126
 \c@pgf@countc=\count127
 \c@pgf@countd=\count128
+\t@pgf@toka=\toks28
+\t@pgf@tokb=\toks29
+\t@pgf@tokc=\toks30
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
+Driver file for pgf: pgfsys-pdftex.def
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
 ef
-File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
 df.def
-File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
-File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count129
 \pgfsyssoftpath@bigbuffer@items=\count130
 )
@@ -433,17 +440,17 @@ code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen154
+\pgfmath@dimen=\dimen156
 \pgfmath@count=\count131
 \pgfmath@box=\box29
-\pgfmath@toks=\toks28
-\pgfmath@stack@operand=\toks29
-\pgfmath@stack@operation=\toks30
+\pgfmath@toks=\toks31
+\pgfmath@stack@operand=\toks32
+\pgfmath@stack@operation=\toks33
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
@@ -460,43 +467,45 @@ code.tex)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
 .code.tex)
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)))
+code.tex)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count132
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
-File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
-\pgf@picminx=\dimen155
-\pgf@picmaxx=\dimen156
-\pgf@picminy=\dimen157
-\pgf@picmaxy=\dimen158
-\pgf@pathminx=\dimen159
-\pgf@pathmaxx=\dimen160
-\pgf@pathminy=\dimen161
-\pgf@pathmaxy=\dimen162
-\pgf@xx=\dimen163
-\pgf@xy=\dimen164
-\pgf@yx=\dimen165
-\pgf@yy=\dimen166
-\pgf@zx=\dimen167
-\pgf@zy=\dimen168
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen157
+\pgf@picmaxx=\dimen158
+\pgf@picminy=\dimen159
+\pgf@picmaxy=\dimen160
+\pgf@pathminx=\dimen161
+\pgf@pathmaxx=\dimen162
+\pgf@pathminy=\dimen163
+\pgf@pathmaxy=\dimen164
+\pgf@xx=\dimen165
+\pgf@xy=\dimen166
+\pgf@yx=\dimen167
+\pgf@yy=\dimen168
+\pgf@zx=\dimen169
+\pgf@zy=\dimen170
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
-File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
-\pgf@path@lastx=\dimen169
-\pgf@path@lasty=\dimen170
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen171
+\pgf@path@lasty=\dimen172
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
-File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
-\pgf@shorten@end@additional=\dimen171
-\pgf@shorten@start@additional=\dimen172
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen173
+\pgf@shorten@start@additional=\dimen174
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
-File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
 \pgfpic=\box30
 \pgf@hbox=\box31
 \pgf@layerbox@main=\box32
@@ -504,15 +513,15 @@ File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
-File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
-\pgflinewidth=\dimen173
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen175
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
-File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
-\pgf@pt@x=\dimen174
-\pgf@pt@y=\dimen175
-\pgf@pt@temp=\dimen176
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen176
+\pgf@pt@y=\dimen177
+\pgf@pt@temp=\dimen178
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
@@ -524,86 +533,93 @@ File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
 ssing.code.tex
-File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
-File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen179
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
-File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
-\pgf@max=\dimen177
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen180
 \pgf@sys@shading@range@num=\count134
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
-File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
-File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
 \pgfexternal@startupbox=\box33
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
-File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
 ncy.code.tex
-File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
 code.tex
-File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
-File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
 \pgfnodeparttextbox=\box34
 )
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
-File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
-Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen178
-\pgf@nodesepend=\dimen179
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen181
+\pgf@nodesepend=\dimen182
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
-Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
-\pgffor@iter=\dimen180
-\pgffor@skip=\dimen181
-\pgffor@stack=\toks31
-\pgffor@toks=\toks32
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen183
+\pgffor@skip=\dimen184
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
 ))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
-Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
-File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
 \pgf@plot@mark@count=\count135
-\pgfplotmarksize=\dimen182
+\pgfplotmarksize=\dimen185
 )
-\tikz@lastx=\dimen183
-\tikz@lasty=\dimen184
-\tikz@lastxsaved=\dimen185
-\tikz@lastysaved=\dimen186
-\tikzleveldistance=\dimen187
-\tikzsiblingdistance=\dimen188
+\tikz@lastx=\dimen186
+\tikz@lasty=\dimen187
+\tikz@lastxsaved=\dimen188
+\tikz@lastysaved=\dimen189
+\tikzleveldistance=\dimen190
+\tikzsiblingdistance=\dimen191
 \tikz@figbox=\box35
-\tikz@tempbox=\box36
+\tikz@figbox@bg=\box36
+\tikz@tempbox=\box37
+\tikz@tempbox@bg=\box38
 \tikztreelevel=\count136
 \tikznumberofchildren=\count137
 \tikznumberofcurrentchild=\count138
@@ -611,7 +627,7 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
-File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count140
 \pgfmatrixcurrentcolumn=\count141
 \pgf@matrix@numberofcolumns=\count142
@@ -620,38 +636,38 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
 )))
 (/usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypositioning.code.tex
-File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
 )
 \c@@todonotes@numberoftodonotes=\count144
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count145
-\lst@gtempboxa=\box37
-\lst@token=\toks33
+\lst@gtempboxa=\box39
+\lst@token=\toks36
 \lst@length=\count146
-\lst@currlwidth=\dimen189
+\lst@currlwidth=\dimen192
 \lst@column=\count147
 \lst@pos=\count148
-\lst@lostspace=\dimen190
-\lst@width=\dimen191
+\lst@lostspace=\dimen193
+\lst@width=\dimen194
 \lst@newlines=\count149
 \lst@lineno=\count150
-\lst@maxwidth=\dimen192
+\lst@maxwidth=\dimen195
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 \c@lstnumber=\count151
 \lst@skipnumbers=\count152
-\lst@framebox=\box38
+\lst@framebox=\box40
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2013/08/26 1.5b listings configuration
+File: listings.cfg 2014/03/04 1.5c listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
@@ -665,8 +681,8 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks34
-\footnotemargin=\dimen193
+\FN@temptoken=\toks37
+\footnotemargin=\dimen196
 \c@pp@next@reset=\count153
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
@@ -743,7 +759,22 @@ Package tocbibind Info: The document has chapter divisions on input line 50.
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) (/usr/local/texlive/2013/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip110
+\f@ncyO@elh=\skip111
+\f@ncyO@erh=\skip112
+\f@ncyO@olh=\skip113
+\f@ncyO@orh=\skip114
+\f@ncyO@elf=\skip115
+\f@ncyO@erf=\skip116
+\f@ncyO@olf=\skip117
+\f@ncyO@orf=\skip118
+)
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 261.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -798,7 +829,7 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen194
+\@linkdim=\dimen197
 \Hy@linkcounter=\count154
 \Hy@pagecounter=\count155
 
@@ -829,13 +860,13 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen195
+\XeTeXLinkMargin=\dimen198
 \Fld@menulength=\count158
-\Field@Width=\dimen196
-\Fld@charsize=\dimen197
+\Field@Width=\dimen199
+\Fld@charsize=\dimen200
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -862,7 +893,7 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip110
+\Hy@SectionHShift=\skip119
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/pdfcomment/pdfcomment.sty
 Package: pdfcomment 2012/09/28 pdfcomment.sty v2.3a - Josef Kleber (C) 2008-201
@@ -871,17 +902,17 @@ Package: pdfcomment 2012/09/28 pdfcomment.sty v2.3a - Josef Kleber (C) 2008-201
 \c@pc@count@ii=\count165
 \c@pc@count@iii=\count166
 \c@pc@count@iv=\count167
-\pc@mathannot@box=\box39
-\pc@dima=\skip111
-\pc@dimb=\skip112
-\pc@Sposx=\skip113
-\pc@Sposy=\skip114
-\pc@Eposx=\skip115
-\pc@Eposy=\skip116
-\pc@column=\skip117
-\pc@box@width=\skip118
-\pc@box@height=\skip119
-\pc@box@depth=\skip120
+\pc@mathannot@box=\box41
+\pc@dima=\skip120
+\pc@dimb=\skip121
+\pc@Sposx=\skip122
+\pc@Sposy=\skip123
+\pc@Eposx=\skip124
+\pc@Eposy=\skip125
+\pc@column=\skip126
+\pc@box@width=\skip127
+\pc@box@height=\skip128
+\pc@box@depth=\skip129
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/zref-savepos.sty
 Package: zref-savepos 2012/04/04 v2.24 Module savepos for zref (HO)
@@ -954,8 +985,8 @@ put line 308.
 \dayofyear=\count194
 \dayofweek=\count195
 LaTeX Info: Redefining \today on input line 736.
-\dt@a=\toks35
-\dt@b=\toks36
+\dt@a=\toks38
+\dt@b=\toks39
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/bezos/soulpos.sty
 Package: soulpos 2012/02/25 v1.0 Fancy underlining
@@ -963,7 +994,7 @@ Package: soulpos 2012/02/25 v1.0 Fancy underlining
 \ulp@cnt=\count197
 \ulp@out=\write4
 \ulp@in=\read2
-\ulwidth=\dimen198
+\ulwidth=\dimen201
 )
 
 Package hyperref Warning: Option `pdftex' has already been used,
@@ -1046,16 +1077,16 @@ Package gensymb Warning: Not defining \micro.
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count198
-\scratchdimen=\dimen199
-\scratchbox=\box40
+\scratchdimen=\dimen202
+\scratchbox=\box42
 \nofMPsegments=\count199
 \nofMParguments=\count200
-\everyMPshowfont=\toks37
+\everyMPshowfont=\toks40
 \MPscratchCnt=\count201
-\MPscratchDim=\dimen200
+\MPscratchDim=\dimen203
 \MPnumerator=\count202
 \makeMPintoPDFobject=\count203
-\everyMPtoPDFconversion=\toks38
+\everyMPtoPDFconversion=\toks41
 ) (/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1082,9 +1113,13 @@ ABD: EveryShipout initializing macros
 Package ragged2e Info: ABD: executing \RaggedRight on input line 28.
  ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 28.
-\AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 28.
 
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 28.
+
+\AtBeginShipoutBox=\box43
+Package hyperref Info: Link coloring ON on input line 28.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1110,15 +1145,15 @@ Package: soulutf8 2007/09/09 v1.0 Permit use of UTF-8 characters in soul (HO)
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/soul/soul.sty
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
-\SOUL@word=\toks39
-\SOUL@lasttoken=\toks40
-\SOUL@cmds=\toks41
-\SOUL@buffer=\toks42
-\SOUL@token=\toks43
-\SOUL@spaceskip=\skip121
-\SOUL@ttwidth=\dimen201
-\SOUL@uldp=\dimen202
-\SOUL@ulht=\dimen203
+\SOUL@word=\toks42
+\SOUL@lasttoken=\toks43
+\SOUL@cmds=\toks44
+\SOUL@buffer=\toks45
+\SOUL@token=\toks46
+\SOUL@spaceskip=\skip130
+\SOUL@ttwidth=\dimen204
+\SOUL@uldp=\dimen205
+\SOUL@ulht=\dimen206
 ))
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 30
 .
@@ -1171,7 +1206,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--30
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 30--30
- []\T1/ptm/m/n/12 Wednesday 18$[]$ December, 2013 
+ []\T1/ptm/m/n/12 Tuesday 29$[]$ July, 2014 
  []
 
 [1
@@ -1179,37 +1214,180 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--30
 \openout4 = `intro_to_NREL_latex.upa'.
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 33.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 31.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 33.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 31.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
- [3
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 34.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 iii 
+ []
+
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 34.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[3
+
 
 ]
-(./intro_to_NREL_latex.toc
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 41.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 iv 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[4
+
+] (./intro_to_NREL_latex.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 5.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 32.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 43.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 v 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[5
+
+])
 \tf@toc=\write6
 \openout6 = `intro_to_NREL_latex.toc'.
 
- [4
 
-] [5]
-(./intro_to_NREL_latex.lof)
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 vi 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[6] (./intro_to_NREL_latex.lof)
 \tf@lof=\write7
 \openout7 = `intro_to_NREL_latex.lof'.
 
@@ -1220,213 +1398,863 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 \tf@lot=\write8
 \openout8 = `intro_to_NREL_latex.lot'.
 
- [6
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 47.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 vii 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[7
 
 ]
 Chapter 1.
 
-Overfull \hbox (24.94325pt too wide) in paragraph at lines 54--55
+Overfull \hbox (24.94325pt too wide) in paragraph at lines 57--58
 \T1/ptm/m/n/10 The NREL in-house style is de-scribed at [][]$\T1/pcr/m/n/10 htt
 p : / / www . nrel . gov / extranet / communications / styleguide . 
+ []
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 64.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 1 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.59 \chapter
-             {How to Make \LaTeX\ documents that meet NREL's requirements}
+l.64 \chapter
+             {How to make \LaTeX\ documents that meet NREL's requirements}
 [1
 
 
 ]
 Chapter 2.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 59.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 64.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.36008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.40009> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 80.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 85.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <7> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 80.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 85.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--80
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
  []\T1/phv/b/n/9 Table 1. |NREL's pro-cess for pro-duc-ing and re-view-ing L[]T
 []X files| 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 91.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 96.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
 
-Underfull \hbox (badness 10000) in alignment at lines 82--100
+Underfull \hbox (badness 10000) in alignment at lines 87--105
 [][][][]
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 106.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 111.
 LaTeX Font Info:    Font shape `T1/phv/bx/sl' in size <10> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 106.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 111.
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 116.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 2 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
 [2
 
-] [3]
+]
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 161.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 157.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <9> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 161.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 157.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 161.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 157.
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
  []\T1/phv/b/n/9 Table 2. |Pack-ages sup-ported by the \T1/phv/b/sl/9 nrel.cls 
 \T1/phv/b/n/9 class. Un-less oth- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--161
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
  \T1/phv/b/n/9 er-wise stated, pack-ages are not sup-ported by \T1/pcr/b/n/9 la
 tex2rtf\T1/phv/b/n/9 .| 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 163--189
+Underfull \hbox (badness 10000) in alignment at lines 159--185
 [][][][]
  []
 
-[4]
-Chapter 3.
-[5
 
-] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 299--299
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 3 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[3]
+Overfull \hbox (29.77237pt too wide) in paragraph at lines 191--192
+[]\T1/ptm/m/n/10 This change in page and float num-ber-ing is im-ple-mented us-
+ing the []\T1/pcr/m/n/10 \frontmatter\T1/ptm/m/n/10 , []\T1/pcr/m/n/10 \mainmat
+ter\T1/ptm/m/n/10 , and []\T1/pcr/m/n/10 \backmatter 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 4 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[4]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 5 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[5]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 6 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[6]
+Chapter 3.
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 337.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 7 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[7
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 380--380
  []\T1/phv/b/n/9 Table 3. |[]An ex-am-ple ta-ble.| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--305
+Underfull \hbox (badness 10000) in paragraph at lines 381--386
  [][] 
  []
 
 
-Overfull \hbox (16.21118pt too wide) in paragraph at lines 320--321
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 8 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[8]
+Overfull \hbox (16.21118pt too wide) in paragraph at lines 401--402
 \T1/ptm/m/n/10 Subfigures are im-ple-mented us-ing the \T1/pcr/m/n/10 subfig \T
 1/ptm/m/n/10 pack-age. Al-though this pack-age is dep-re-cated (ap-par-ently \T
 1/pcr/m/n/10 subcaption 
  []
 
-[7] <21206.png, id=358, 252.945pt x 189.8292pt>
+<21206.png, id=416, 252.945pt x 189.8292pt>
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 343.
+Package pdftex.def Info: 21206.png used on input line 424.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 
-<20018.png, id=359, 252.945pt x 258.2448pt>
+<20018.png, id=417, 252.945pt x 258.2448pt>
 File: 20018.png Graphic file (type png)
  <use 20018.png>
-Package pdftex.def Info: 20018.png used on input line 346.
+Package pdftex.def Info: 20018.png used on input line 427.
 (pdftex.def)             Requested size: 176.97151pt x 180.67499pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--348
+Underfull \hbox (badness 10000) in paragraph at lines 429--429
  []\T1/phv/b/n/9 Figure 1. |NREL im-ages| 
  []
 
-[8 <./21206.png> <./20018.png>]
-Overfull \hbox (106.95206pt too wide) in paragraph at lines 386--387
-\T1/ptm/m/n/10 Always use \T1/pcr/m/n/10 biblatex \T1/ptm/m/n/10 to or-ga-nize 
-ref-er-ences and store them in a sin-gle file (e.g. []\T1/pcr/m/n/10 /Documents
-/bibliography/bibliography.bib\T1/ptm/m/n/10 ). 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 9 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
  []
 
 [9]
+Overfull \hbox (64.32234pt too wide) in paragraph at lines 467--468
+\T1/ptm/m/n/10 Use \T1/pcr/m/n/10 bibtex \T1/ptm/m/n/10 to or-ga-nize ref-er-en
+ces and store them in a sin-gle file (e.g. []\T1/pcr/m/n/10 /Documents/bibliogr
+aphy/bibliography.bib\T1/ptm/m/n/10 ). 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 10 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[10 <./21206.png> <./20018.png>]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 11 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[11]
 Chapter 4.
 
-Overfull \hbox (14.69273pt too wide) in paragraph at lines 456--457
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 532.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 12 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[12
+
+]
+Overfull \hbox (14.69273pt too wide) in paragraph at lines 533--534
 \T1/ptm/m/n/10 Because \T1/pcr/m/n/10 latex2rtf \T1/ptm/m/n/10 only knows a sub
 -set of L[]T[]X, it is im-por-tant to ac-count for this when prepar-ing a L[]T[
 ]Xdocument. 
  []
 
-[10
 
-]
-Overfull \hbox (16.24498pt too wide) in paragraph at lines 506--506
+Overfull \hbox (16.24498pt too wide) in paragraph at lines 583--583
 []\T1/pcr/m/n/10 % redefine \pdftooltip so that it behaves differently with and
  without latextortf[] 
  []
 
-[11] [12]
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 13 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[13]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 14 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[14]
 Chapter 5.
-Package marginnote Info: Margin note 18.1 is on absolute page 18
-(marginnote)              on input line 567.
-Package marginnote Info: right page because not two side mode on input line 567
+Package marginnote Info: Margin note 21.1 is on absolute page 21
+(marginnote)              on input line 635.
+Package marginnote Info: right page because not two side mode on input line 635
 .
 Package marginnote Info: xpos seems to be 282.24661pt,
-(marginnote)             \marginnoterightadjust ignored on input line 567.
-[13
+(marginnote)             \marginnoterightadjust ignored on input line 635.
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 640.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 15 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[15
 
 ]
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 606.
+Package pdftex.def Info: 21206.png used on input line 674.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 606.
+Package pdftex.def Info: 21206.png used on input line 674.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 606.
+Package pdftex.def Info: 21206.png used on input line 674.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 606.
+Package pdftex.def Info: 21206.png used on input line 674.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 20018.png Graphic file (type png)
 
 <use 20018.png>
-Package pdftex.def Info: 20018.png used on input line 609.
+Package pdftex.def Info: 20018.png used on input line 677.
 (pdftex.def)             Requested size: 176.97151pt x 180.67499pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 611--611
+Underfull \hbox (badness 10000) in paragraph at lines 679--679
  []\T1/phv/b/n/9 Figure 2. |NREL im-ages| 
  []
 
-[14] [15] (./intro_to_NREL_latex.bbl)
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 16 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[16]
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 17 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[17] (./intro_to_NREL_latex.bbl)
 No complaints by nag.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 637.
-[16
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 705.
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []\T1/ptm/m/n/10 18 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ [][]\T1/ptm/m/n/10 This re-port is avail-able at no cost from the National Ren
+ewable 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ \T1/ptm/m/n/10 Energy Laboratory at [][][][]$\T1/pcr/m/n/10 www . nrel . gov /
+ publications$[][][]| 
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+ []
+ []
+
+[18
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 637.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 705.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 705.
  (./intro_to_NREL_latex.aux
 * soulpos - computing points - it may take a few seconds *
 \openout4 = `intro_to_NREL_latex.upb'.
 
 
 (./intro_to_NREL_latex.upa))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 637.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 637.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 705.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 705.
 Package rerunfilecheck Info: File `intro_to_NREL_latex.out' has not changed.
-(rerunfilecheck)             Checksum: 2FFE35F6FACBA353E681E42B239053B8;6430.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 637.
+(rerunfilecheck)             Checksum: 8EBA757D2B38D70B8B07419ADE5325D3;7126.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 705.
  ) 
 Here is how much of TeX's memory you used:
- 25684 strings out of 493308
- 431981 string characters out of 6137815
- 512123 words of memory out of 5000000
- 28480 multiletter control sequences out of 15000+600000
- 110587 words of font info for 166 fonts, out of 8000000 for 9000
+ 27366 strings out of 493308
+ 476417 string characters out of 6137816
+ 557160 words of memory out of 5000000
+ 30135 multiletter control sequences out of 15000+600000
+ 109433 words of font info for 165 fonts, out of 8000000 for 9000
  973 hyphenation exceptions out of 8191
- 70i,13n,85p,1044b,663s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,13n,85p,1044b,665s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -1443,10 +2271,10 @@ tic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/symbol/usyr
 local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on intro_to_NREL_latex.pdf (21 pages, 2974153 bytes).
+Output written on intro_to_NREL_latex.pdf (24 pages, 2983017 bytes).
 PDF statistics:
- 536 PDF objects out of 1000 (max. 8388607)
- 489 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
- 343 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
+ 123 named destinations out of 1000 (max. 500000)
+ 375 words of extra memory for PDF output out of 10000 (max. 10000000)
 

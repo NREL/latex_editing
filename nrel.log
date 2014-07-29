@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.4.25)  3 JUN 2013 09:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.12)  29 JUL 2014 15:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -6,34 +6,24 @@ entering extended mode
 **nrel.cls
 (./nrel.cls
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- piedmontese, polish, portuguese, romanian, romansh, russian, sanskrit, serbian
-, serbianc, slovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, u
-ppersorbian, welsh, loaded.
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 
 LaTeX Warning: You have requested package `',
                but the package provides `nrel'.
 
 Package: nrel 
  
-NREL.cls -- v1.0, April 2013
+NREL.cls -- v1.0, July 2014
 Formats documents according to the NREL style guide
  
-(/usr/local/texlive/2012/texmf-dist/tex/latex/xifthen/xifthen.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/xifthen/xifthen.sty
 Package: xifthen 2009/04/17 v1.3 Extended ifthen features
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/etex-pkg/etex.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/etex-pkg/etex.sty
 Package: etex 1998/03/26 v2.0 eTeX basic definition package (PEB)
 \et@xins=\count79
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/calc.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count80
 \calc@Bcount=\count81
@@ -46,10 +36,10 @@ LaTeX Info: Redefining \addtolength on input line 77.
 \calc@Ccount=\count82
 \calc@Cskip=\skip43
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
 ))
 ./nrel.cls:87: Undefined control sequence.
@@ -67,11 +57,11 @@ End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 268 strings out of 493481
- 3657 string characters out of 3140965
- 49445 words of memory out of 3000000
- 3655 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 268 strings out of 493308
+ 3657 string characters out of 6137816
+ 52434 words of memory out of 5000000
+ 3806 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 23i,0n,19p,134b,10s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 23i,0n,19p,134b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
 ./nrel.cls:87:  ==> Fatal error occurred, no output PDF file produced!

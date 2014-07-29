@@ -8,7 +8,7 @@
  \documentclass[12pt,letterpaper]{report}
  \input{NRELLatex2rtf.tex}
 \else
- \documentclass[report]{nrel} 
+ \documentclass[report]{nrel}
 \fi
 
 % -----------
@@ -27,11 +27,16 @@
 % -------------------------------------
 \begin{document}
 \maketitle
-\pagenumbering{roman}
-\setcounter{page}{3}
+\frontmatter
+\chapter*{Executive Summary}
+\LaTeX\ is a document preparation system that is very popular for preparing technical documents. However, it is \emph{not} WYSIWYG and has different reviewing and editing tools compared to typical word processing software. For this reason special care has to be taken when preparing NREL documents in \LaTeX. This document serves both as a guide to implementing NREL's style and formatting guidelines in \LaTeX, and as a template. This document is intended for people with some familiarity with \LaTeX.
 
-\chapter*{Abstract}
-\LaTeX\ is a document preparation system that is very popular for preparing technical documents. However, it is \emph{not} WYSIWYG and lacks some of the reviewing and editing tools of other word processing software. For this reason special care has to be taken when preparing NREL documents in \LaTeX. This document serves as a template and combines a short introduction to \LaTeX\ with details of how to implement NREL's style and formatting guidelines.
+\chapter*{Acknowledgments}
+This document and the NREL \LaTeX\ class file were developed by staff at the National Wind Technology Center, including Andrew Platt, Andrew Clifton, Andrew Ning, Mike Lawson, and Paul Fleming. Alexsandra Lemke provided support relating to NREL communications. A first demonstration of an NREL class file was created by Chuck Booten from NREL's Electricity, Resources, and Building Systems Integration group, which inspired this effort. The class file and this template were developed as part of work on several NREL reports, journal articles, and conference publications. 
+
+We thank members of the \TeX\ -- \LaTeX\ StackExchange site for useful suggestions concerning \LaTeX\ and typography \citep{texstackexchange}.
+
+This report was typeset using the \LaTeX\ typesetting system originally developed by Leslie Lamport, based on TeX created by Donald Knuth.
 
 \clearpage
 \renewcommand{\contentsname}{Table of Contents}
@@ -39,13 +44,11 @@
 \clearpage
 \listoffigures
 \listoftables
-\clearpage
-\pagenumbering{arabic}
+\mainmatter
 
+%% CHAPTER: ABOUT
 
-% ---------------------------------------
-% CHAPTER 1. LATEX AT NREL
-% ---------------------------------------
+%% CHAPTER: REQUIREMENTS FOR NREL DOCUMENTS
 \chapter{Requirements for NREL documents}
 
 There are well-defined requirements for all documents that are published by NREL. 
@@ -56,7 +59,9 @@ The NREL in-house style is described at \url{http://www.nrel.gov/extranet/commun
 \section{Formatting}
 NREL publishes templates for reports and other technical documents. These are designed to be used with most common WYSIWYG programs and \LaTeX{}. Templates are posted online at \url{http://www.nrel.gov/extranet/communications/report_template.html} and updated regularly. 
 
-\chapter{How to Make \LaTeX\ documents that meet NREL's requirements}
+%% CHAPTER: HOW TO MAKE NREL LATEX DOCUMENTS %%
+
+\chapter{How to make \LaTeX\ documents that meet NREL's requirements}
 
 \section{What is \LaTeX?}
 \label{sec:examples}
@@ -83,45 +88,36 @@ An outline of the process for producing NREL documents using \LaTeX{} is given i
 \toprule
 Phase & Lead & Steps & More Information \\
 \midrule
-Draft & Author & Prepare document in \LaTeX\ using the NREL class file & Section \ref{sec:nrel.cls} \\
- & & Prepare PDF & Section \ref{sec:PDFprep} \\
- & & Converts the tex document to RTF using \texttt{latex2rtf} & Chapter \ref{sec:latextortf}\\
- & & Archive all files, including:
+Draft & Author & 1. Prepare document in \LaTeX\ using the \emph{nrel.cls} class file & Section \ref{sec:nrel.cls} \\
+ & & 2. Prepare PDF & Section \ref{sec:PDFprep} \\
+ & & 3. Convert the tex document to rich text format (\emph{.rtf}) using \texttt{latex2rtf} & Chapter \ref{sec:latextortf}\\
+ & & 4. Archive all files, including:
 \begin{itemize}  
- \item tex source
- \item images
- \item PDF 
+ \item \LaTeX\ source files
+ \item Images
+ \item Final PDF 
  \end{itemize} & \\
 Review & Communications & Review the structure of the PDF & \\
- & & Edit the supplied .DOC or .DOCX file using track changes & \\
+ & & Edit the supplied \emph{.doc} or \emph{.docx} file using track changes & \\
 Revision & Author & Implements required changes in the \LaTeX\ files. & \\
-Publish & Publications & combine the PDF with the appropriate cover sheet(s) & \\
+Publish & Publications & Combine the PDF with the appropriate cover sheet(s) & \\
 \bottomrule
 \end{tabular*}
 \end{table}
 
 \section{The NREL \LaTeX\ style file\label{sec:nrel.cls}}
-A \LaTeX class called \emph{nrel.cls} has been written that implements the NREL formatting requirements in \LaTeX.
+A \LaTeX\ class called \emph{nrel.cls} has been written that implements the NREL formatting requirements in \LaTeX.
 
 \subsection{Getting \emph{nrel.cls}}
-The current version of \emph{nrel.cls} can be downloaded from \url{https://wind-dev.nrel.gov/svn/latex_editing/branches/nrel_class_template/}. Users will be prompted to provide their NREL network username and password.
+The current version of \emph{nrel.cls} can be downloaded from \url{https://github.com/NREL/latex_editing}. This is a public repository.
 
 \subsection{Installing \emph{nrel.cls}}
-Any of the following methods can be used to install the class files on a computer.
-\begin{description}
-\item[All platforms] place the \emph{nrel.cls} and \emph{nrel.bst} in the directory that the \LaTeX\ files are in. This will make the files available to that project, only.
-\item[Mac / OSX] place the \emph{nrel.cls} and \emph{nrel.bst} in the user's library in the TexMF tree. For example, place these two files in \emph{~/Library/texmf/tex/latex/nrel}. This will make these files available to all projects.
-\item[Windows]
-\item[Online, colalborative tools] will require that \emph{nrel.cls} and \emph{nrel.bst} are uploaded to that website.
-\end{description}
+Place \emph{nrel.cls} and \emph{nrel.bst} in the same directory as the \LaTeX\ files you are trying to compile. This will make the files available to that project, only. This approach can be used on a desktop computer, or on a network drive, or for online collaborative tools such as \url{www.writelatex.com} or \url{www.sharelatex.com}. Advanced \LaTeX users may wish to copy these files to their local tree.
 
 \subsection{Using \emph{nrel.cls}}
-To use the class file, insert the following text in the preamble:
+To use the class file, insert the following text in the preamble, before \verb+\begin{document}+:
 
 \begin{verbatim}
-% ---------------
-% PREAMBLE
-% ---------------
 \newif\iflatextortf
 
 \iflatextortf
@@ -189,27 +185,112 @@ pdfcomment & & tool-tips. Also calls the package \texttt{hyper ref} & \checkmark
 \end{tabular*}
 \end{table}
 
-\chapter{Some LaTeX examples}
-This chapter includes examples of how to do common tasks using \LaTeX{}. Although most users will be familiar with these commands and environments, these serve as a) a test of the class file and conversion process, and b) examples that are known to work with the class and conversion process. So, when all else fails, users can copy these examples and tailor them to their particular case.
+\section{Front, main, and back matter}
+NREL's convention is to have Roman numerals in the front matter, and then arabic numerals in the main matter of the document (after the tables of contents, figures and tables). Tables and figures in the front matter are also numbered differently (Table A, B, C, ...) than in the main matter (Table 1, 2, 3, ...).
 
-\section{Page numbering}
-NREL's convention is to have Roman numerals in the front matter, and then arabic numerals in the main matter of the document (after the tables of contents, figures and tables). This is implemented using the following structure in the document:
+This change in page and float numbering is implemented using the \verb+\frontmatter+, \verb+\mainmatter+, and \verb+\backmatter+ commands in the document:
 
 \begin{verbatim}
 \begin{document}
 
 \maketitle
-\pagenumbering{roman}
-\setcounter{page}{3}
+\frontmatter
+...
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+\mainmatter
+...
+\backmatter
+\end{document}
+\end{verbatim}
+
+Page numbering in the front matter (i.e. the Abstract, Summary, and Foreword chapters or sections) starts at page 3 to allow for NREL cover pages.
+
+If you don't use the \verb+\frontmatter+ commands, you may need to increment the page counter manually. To increment the counter $n$ pages, use \verb+\setcounter{page}{n}+ after \verb+\begin{document}+.
+
+\section{NREL-style bibliographies}
+Use \emph{nrel.bst} to create a bibliography that conforms to NREL's requirements. To include a bibliography in the document, use the following commands where you want the bibliography to occur:
+
+\begin{verbatim}
+...
+\cleardoublepage
+\bibliographystyle{nrel}
+\label{sec:Bib}
+\bibliography{/Users/me/Documents/bibliography/bibliography}
+...
+\end{verbatim}
+
+This will probably be somewhere near to the end of the document.
+
+\section{Putting it all together}
+The source of your \LaTeX document should probably look like this:
+
+\begin{verbatim}
+\newif\iflatextortf
+
+\iflatextortf
+ % tell latex2tortf if this is an article or report
+ \documentclass[10pt,letterpaper]{report}
+ \input{NRELLatex2rtf.tex}
+\else
+ \documentclass[draft,report]{nrel} 
+\fi
+
+\title{Writing NREL documents using \LaTeX}
+\author{A. Clifton, A. Platt, P. Fleming, M. Lawson}
+
+\begin{document}
+
+\maketitle
+\frontmatter
+
+\input{ExecSummary}
 
 \renewcommand{\contentsname}{Table of Contents}
 \tableofcontents
 \clearpage
 \listoffigures
 \listoftables
-\clearpage
-\pagenumbering{arabic}
+\mainmatter
+
+\input{Introduction}
+\input{Theory}
+
+...
+
+\cleardoublepage
+\bibliographystyle{nrel}
+\label{sec:Bib}
+\bibliography{/Users/me/Documents/bibliography/bibliography}
+
+\end{document}
+
 \end{verbatim}
+
+\section{Best practice in writing a document in \LaTeX}
+\begin{description}
+\item[Create a structure before you get too far.] Authors will find it easier to write documents and make changes if they separate the content of the document from the structure.
+\begin{enumerate}
+\item Each new \LaTeX\ document should be placed in it's own directory. 
+\item Create a main \LaTeX\ file that just contains the preamble, custom commands and uses \texttt{input} to call the content. See Section \ref{sec:FileStructure} for an example where each \texttt{chapter} is contained in its own file. In an article, each \texttt{section} could be contained in its own file.
+\item Keep the number of packages used to a minimum. If authors feel that something is desperately missing, they can contact the maintainers of the \emph{nrel.cls} file. Not all packages can be used as they lack compatibility.
+\end{enumerate}
+\item[Focus on content, not appearance.] Don't spend hours trying to adjust fonts, headers or spacing between lines. 
+\begin{enumerate}
+\item The document produced should meet NREL's requirements if it is compiled using \emph{nrel.cls}. 
+\item Don't throw in lots of \texttt{clearpage}s or other commands to push material around. \LaTeX\ is designed to handle that. 
+\item Resist the temptation to add or subtract space, change lengths or do other things to modify the layout. 
+\item Write!
+\end{enumerate}
+\end{description}
+
+%% CHAPTER: LATEX EXAMPLES %%
+
+\chapter{Some LaTeX examples}
+This chapter includes examples of how to do common tasks using \LaTeX{}. Although most users will be familiar with these commands and environments, these serve as a) a test of the class file and conversion process, and b) examples that are known to work with the class and conversion process. So, when all else fails, users can copy these examples and tailor them to their particular case.
 
 \section{Headings}
 \LaTeX{} allows a very simple definition of the document's structure. This document has the following structure:
@@ -286,7 +367,7 @@ Use the \texttt{tabular} environment to produce basic tables. Table~\ref{tab:wid
 \begin{table}[!h]
 \centering
 \caption{\label{tab:widgets}An example table.}
-\begin{tabular}{l|r}
+\begin{tabular}{lr}
 Item & Quantity \\\hline
 Widgets & 42 \\
 Gadgets & 13
@@ -297,7 +378,7 @@ Gadgets & 13
 \begin{table}[!h]
 \centering
 \caption{\label{tab:widgets}An example table.}
-\begin{tabular}{l|r}
+\begin{tabular}{lr}
 Item & Quantity \\\hline
 Widgets & 42 \\
 Gadgets & 13
@@ -369,7 +450,7 @@ Use the \texttt{verbatim} environment to display code. Alternatives like \texttt
 
 \section{Creating a file structure}
 \label{sec:FileStructure}
-Use the \texttt{input} command to import other files into your main file. 
+Use the \texttt{input} command to import other files into your main file. For example, each of the chapters in this report could be in separate files, called \emph{NRELRequirements} (Chapter 1), \emph{LatexAtNREL} (Chapter 2), and so-on. 
 
 \begin{verbatim}
 ...
@@ -377,22 +458,13 @@ Use the \texttt{input} command to import other files into your main file.
 \input{NRELRequirements}
 \input{LatexAtNREL}
 \input{LatexExamples}
-\input{ConvertingToWord}
+\input{ConvertingToDoc}
 ...
 \end{verbatim}
 
-\section{Bibliographies and citations}
+\section{Citations}
 \label{Sec:Bib}
-Always use \texttt{biblatex} to organize references and store them in a single file (e.g. \verb+/Documents/bibliography/bibliography.bib+). Add a bibliography to a document using the following commands:
-
-\begin{verbatim}
-\cleardoublepage
-\bibliographystyle{nrel}
-\label{sec:Bib}
-\bibliography{/Users/me/Documents/bibliography/bibliography}
-\end{verbatim}
-
-The bibliography will then contain entries with `keys', like \texttt{Lamport\_1986\_a}. Authors can then insert citations to this key throughout their document, using different styles of citation:
+Use \texttt{bibtex} to organize references and store them in a single file (e.g. \verb+/Documents/bibliography/bibliography.bib+). The bibliography will then contain entries with `keys', like \texttt{Lamport\_1986\_a}. Authors can then insert citations to this key throughout their document, using different styles of citation:
 \begin{itemize}
 \item \verb+\cite{Lamport_1986_a}+ prints a simple \cite{Lamport_1986_a}.
 \item \verb+\citep{Lamport_1986_a}+ puts parentheses around it \citep{Lamport_1986_a}.
@@ -400,30 +472,35 @@ The bibliography will then contain entries with `keys', like \texttt{Lamport\_19
 \item \verb+\citet{Lamport_1986_a}+ prints it inline, so that according to \citet{Lamport_1986_a}, \ldots.
 \end{itemize}
 
+To cite URLs, use the 'misc' style. For example, the bibtex entry for \url{http://tex.stackexchange.com}\cite{texstackexchange} looks like this:
+
+\begin{verbatim}
+@misc{texstackexchange,
+	Author = {Anon.},
+	Howpublished = {Accessed July 21, 2014: \url{http://tex.stackexchange.com}},
+	Title = {\TeX -- \LaTeX Stack Exchange},
+	Year = {2014}}
+\end{verbatim}
+
+This format will allow you to include the date on which a URL was accessed.
+
+\section{Bibliography}
 The command \verb+\bibliographystyle{nrel}+ prints a bibliography that follows NREL's style guide. See Chapter \ref{sec:Bib} for an example.
 
-\section{Best practice in writing a document in \LaTeX}
-\begin{description}
-\item[Create a structure before you get too far.] Authors will find it easier to write documents and make changes if they separate the content of the document from the structure.
-\begin{enumerate}
-\item Each new \LaTeX\ document should be placed in it's own directory. 
-\item Create a main \LaTeX\ file that just contains the preamble, custom commands and uses \texttt{input} to call the content. See Section \ref{sec:FileStructure} for an example where each \texttt{chapter} is contained in its own file. In an article, each \texttt{section} could be contained in its own file.
-\item Keep the number of pacakges used to a minimum. If authors feel that something is desperately missing, they can contact the maintainers of the \emph{nrel.cls} file. Not all packages can be used as they lack compatibility.
-\end{enumerate}
-\item[Focus on content, not appearance.] Don't spend hours trying to adjust fonts, headers or spacing between lines. 
-\begin{enumerate}
-\item The document produced should meet NREL's requirements if it is compiled using \emph{nrel.cls}. 
-\item Don't throw in lots of \texttt{clearpage}s or other commands to push material around. \LaTeX\ is designed to handle that. 
-\item Resist the temptation to add or subtract space, change lengths or do other things to modify the layout. 
-\item Write!
-\end{enumerate}
-\end{description}
-
 \chapter{Preparing a .DOC or .DOCX file from \LaTeX \label{sec:latextortf}}
-The current preferred method of editing documents that have been produced using \LaTeX\ is to use \texttt{latex2rtf} to convert the tex files to a rich-text format (RTF) document, and then to .DOC or .DOCX format. Communications will edit this document, which could then be used to complete the publications process.
+\LaTeX\ users may find that they are required to convert their files into other formats for review or  editing. This section describes how \LaTeX\ files can be converted into \emph{.doc} or \emph{.docx} files for use with Microsoft Word.
+
+\section{The conversion process} 
+The NREL style has been designed to be converted into \emph{.doc} or \emph{.docx} via rich text format (\emph{.rtf}). The process is:
+\begin{enumerate}
+\item Use \texttt{latex2rtf} to convert \emph{.tex} files into \emph{.rtf}
+\item Use a WYSIWYG word processor such as Microsoft Word to open the \emph{.rtf} file and save it as a \emph{.doc} or \emph{.docx} file.
+\end{enumerate}
+
+Although other tools such as Pandoc may appear to offer some of this capability, they have not been tested with the NREL class.
 
 \section{How does \texttt{latex2rtf} work?}
-The \texttt{latex2rtf} program reads \LaTeX\ files and converts common \LaTeX\ commands into their RTF equivalent. It is effectively another \LaTeX\ interpreter that knows a limited subset of \LaTeX.
+The \texttt{latex2rtf} program reads \LaTeX\ files and converts common \LaTeX\ commands into their RTF equivalent. It is effectively another \LaTeX\ interpreter that knows a limited subset of \LaTeX. See the documentation at \url{http://sourceforge.net/projects/latex2rtf/} for details.
 
 \section{Using \texttt{latex2rtf}}
 To convert a document from \LaTeX\ to RTF, follow these steps:
@@ -508,19 +585,10 @@ An example of the content of \emph{NRELLatex2rtf.tex} follows:
 Authors are encouraged to copy this approach, adjusting the content of \emph{NRELLatex2rtf.tex} according to their needs. 
 
 \section{Indexes}
-Index entries will not be correctly converted to an RTF document. If an index is required in the PDF version, redefine the index command so that it doesn't generate an output during the conversion to RTF. Try
+Index entries will not be correctly converted to an \emph{.rtf} file. \emph{NRELLatex2rtf.tex} redefines the \verb+index+ command to do nothing when creating an \emph{.rtf} file. 
 
-\begin{verbatim}
-\iflatextortf
-\else
-\newcommand{\index}[1]{}
-\fi
-\end{verbatim}
-
-in the preamble to kill index entries. Alternatively, the \verb+\newcommand+ could go in the  \emph{NRELLatex2rtf.tex} file.
-
-\section{What to do when the conversion to RTF fails}
-It is more than likely that the conversion to RTF will fail at some point. There are a few ways to deal with this:
+\section{What to do when the conversion to rich text format fails}
+It is more than likely that the conversion to an \emph{.rtf} file will fail at some point. There are a few ways to deal with this:
 
 \begin{description}
 \item[Convert early and often.] Check that the document converts using \texttt{latex2rtf} every time a new environment is added.
@@ -528,7 +596,7 @@ It is more than likely that the conversion to RTF will fail at some point. There
 \item[Check new packages.] Please avoid using new packages. If a package has to be used, try the conversion immediately. If \texttt{latex2rtf} doesn't support the package, edit the file \emph{NRELLatex2rtf.tex} to redefine those commands to something that will convert appropriately. Put \emph{NRELLatex2rtf.tex} in the same directory as the \LaTeX\ file to be converted.
 \item[Avoid custom commands.] \texttt{latex2rtf} sometimes chokes on custom commands. A list of all recognized commands is available in the manual at \url{http://latex2rtf.sourceforge.net/latex2rtf.pdf}. If custom commands are used, they may need to be redefined to work with the commands that \texttt{latex2rtf} does recognize. This can also be done in \emph{NRELLatex2rtf.tex}. You can check macros using the flag \verb+-d2+ when running \texttt{latex2rtf}.
 \item[Use copy-paste.] Compile the whole document as a PDF, and save it somewhere. Then recompile using the reduced document that works with \texttt{latex2rtf}. Edit this in word and copy in the bits that killed the conversion.
-\item[Talk to a communications rep.] If a document cannot be produced any other way than \LaTeX\ with lots of packages, and \texttt{latex2rtf} just refuses to process it, discuss the process for having the PDF processed.
+\item[Talk to a communications rep.] If a document cannot be produced any other way than \LaTeX\ with lots of packages, and \texttt{latex2rtf} just refuses to process it into a rich text file, discuss the process for having the PDF processed.
 \end{description}
 
 \chapter{Preparing a high-quality PDF from LaTeX\label{sec:PDFprep}}

@@ -1,0 +1,58 @@
+\newif\iflatextortf
+
+\iflatextortf
+ % tell latex2tortf if this is an article or report
+ \documentclass[10pt,letterpaper]{article}
+ \input{NRELLatex2rtf.tex}
+\else
+ \documentclass[draft,article]{nrel} 
+\fi
+
+\title{Testing the NREL \LaTeX class file on an article}
+\author{A. Clifton}
+
+\usepackage{blindtext}
+\blindmathtrue
+
+\begin{document}
+
+\maketitle
+\frontmatter
+
+\section*{Executive Summary}
+This is a test of the NREL style file used with the \verb+article+ option. This document was prepared using \LaTeX\ \citep{Knuth_1984_a}. Text has been generated automatically using the \verb+blindtext+ package described at \url{http://www.ctan.org/pkg/blindtext}.
+
+\section*{Acknowledgments}
+\blindtext[1]
+
+\cleardoublepage
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\clearpage
+\listoffigures
+\listoftables
+\mainmatter
+
+\section{Introduction}
+\blindtext[5]
+\begin{table}[!h]
+\centering
+\caption{\label{tab:widgets}An example table.}
+\begin{tabular}{lr}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\end{table}
+
+\section{Theory}
+\blindmathpaper
+\section{Conclusions}
+\blindtext[3]
+
+\cleardoublepage
+\bibliographystyle{nrel}
+\label{sec:Bib}
+\bibliography{bibliography}
+
+\end{document}

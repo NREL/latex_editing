@@ -4,44 +4,44 @@ The top-level auxiliary file: intro_to_NREL_latex.aux
 The style file: nrel.bst
 Database file #1: bibliography.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 1 entry,
+You've used 2 entries,
             3322 wiz_defined-function locations,
-            668 strings with 5065 characters,
-and the built_in function-call counts, 436 in all, are:
-= -- 30
-> -- 10
-< -- 1
-+ -- 4
-- -- 3
-* -- 23
-:= -- 78
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 5
-chr.to.int$ -- 1
-cite$ -- 1
-duplicate$ -- 32
-empty$ -- 40
-format.name$ -- 4
-if$ -- 83
+            673 strings with 5177 characters,
+and the built_in function-call counts, 796 in all, are:
+= -- 63
+> -- 20
+< -- 2
++ -- 8
+- -- 6
+* -- 40
+:= -- 146
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 10
+chr.to.int$ -- 2
+cite$ -- 2
+duplicate$ -- 58
+empty$ -- 66
+format.name$ -- 8
+if$ -- 152
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 8
-newline$ -- 12
-num.names$ -- 4
-pop$ -- 17
+missing$ -- 13
+newline$ -- 17
+num.names$ -- 8
+pop$ -- 27
 preamble$ -- 1
-purify$ -- 5
+purify$ -- 10
 quote$ -- 0
-skip$ -- 18
+skip$ -- 32
 stack$ -- 0
-substring$ -- 11
-swap$ -- 12
+substring$ -- 22
+swap$ -- 22
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 6
+type$ -- 15
 warning$ -- 0
-while$ -- 3
+while$ -- 6
 width$ -- 0
-write$ -- 18
+write$ -- 30

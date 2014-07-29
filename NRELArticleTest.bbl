@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem[{Knuth(1984)}]{Knuth_1984_a}
+Knuth, D.E. (1984).
+\newblock \emph{The {{\TeX}book}}.
+\newblock Addison-Wesley.
+
+\end{thebibliography}
