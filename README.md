@@ -24,8 +24,11 @@ Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to 
 #Wiki
 Please use the wiki at https://github.com/NREL/latex_editing/wiki as you feel fit. Useful examples may be rolled in to the template file over time.
 
-#Current Code Maintainers
-* [Andy CLifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
+#Recent changes
+7.31.2014 Added \frontmatter, \mainmatter, and \backmatter commands to customize numbering for all document classes (article, report). These are normally only available for the book class. Also updated the example template, and figured out how to add URLs to the bibliography.
+
+#Code Maintainers
+* [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
 
 #Project Contributors
 * Andy Platt(National Renewable Energy Laboratory)
