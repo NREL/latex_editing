@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.12)  29 JUL 2014 17:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.12)  29 JUL 2014 18:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -772,7 +772,7 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 261.
+less on input line 263.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
@@ -1663,6 +1663,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [4]
+Overfull \hbox (64.32234pt too wide) in paragraph at lines 216--217
+\T1/ptm/m/n/10 Use \T1/pcr/m/n/10 bibtex \T1/ptm/m/n/10 to or-ga-nize ref-er-en
+ces and store them in a sin-gle file (e.g. []\T1/pcr/m/n/10 /Documents/bibliogr
+aphy/bibliography.bib\T1/ptm/m/n/10 ). 
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
  [] 
  []
@@ -1727,12 +1734,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [6]
-Chapter 3.
-
-Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 337.
-
-
 Underfull \hbox (badness 10000) has occurred while \output is active
  [] 
  []
@@ -1764,17 +1765,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
  []
 
-[7
+[7]
+Chapter 3.
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 380--380
- []\T1/phv/b/n/9 Table 3. |[]An ex-am-ple ta-ble.| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 381--386
- [][] 
- []
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 361.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1808,31 +1803,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
  []
 
-[8]
-Overfull \hbox (16.21118pt too wide) in paragraph at lines 401--402
-\T1/ptm/m/n/10 Subfigures are im-ple-mented us-ing the \T1/pcr/m/n/10 subfig \T
-1/ptm/m/n/10 pack-age. Al-though this pack-age is dep-re-cated (ap-par-ently \T
-1/pcr/m/n/10 subcaption 
- []
+[8
 
-<21206.png, id=416, 252.945pt x 189.8292pt>
-File: 21206.png Graphic file (type png)
- <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 424.
-(pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
-
-<20018.png, id=417, 252.945pt x 258.2448pt>
-File: 20018.png Graphic file (type png)
- <use 20018.png>
-Package pdftex.def Info: 20018.png used on input line 427.
-(pdftex.def)             Requested size: 176.97151pt x 180.67499pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--429
- []\T1/phv/b/n/9 Figure 1. |NREL im-ages| 
+]
+Underfull \hbox (badness 10000) in paragraph at lines 404--404
+ []\T1/phv/b/n/9 Table 3. |[]An ex-am-ple ta-ble.| 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 405--410
+ [][] 
+ []
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1867,11 +1848,30 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [9]
-Overfull \hbox (64.32234pt too wide) in paragraph at lines 467--468
-\T1/ptm/m/n/10 Use \T1/pcr/m/n/10 bibtex \T1/ptm/m/n/10 to or-ga-nize ref-er-en
-ces and store them in a sin-gle file (e.g. []\T1/pcr/m/n/10 /Documents/bibliogr
-aphy/bibliography.bib\T1/ptm/m/n/10 ). 
+Overfull \hbox (16.21118pt too wide) in paragraph at lines 425--426
+\T1/ptm/m/n/10 Subfigures are im-ple-mented us-ing the \T1/pcr/m/n/10 subfig \T
+1/ptm/m/n/10 pack-age. Al-though this pack-age is dep-re-cated (ap-par-ently \T
+1/pcr/m/n/10 subcaption 
  []
+
+<21206.png, id=434, 252.945pt x 189.8292pt>
+File: 21206.png Graphic file (type png)
+ <use 21206.png>
+Package pdftex.def Info: 21206.png used on input line 448.
+(pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
+
+<20018.png, id=435, 252.945pt x 258.2448pt>
+File: 20018.png Graphic file (type png)
+ <use 20018.png>
+Package pdftex.def Info: 20018.png used on input line 451.
+(pdftex.def)             Requested size: 176.97151pt x 180.67499pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--453
+ []\T1/phv/b/n/9 Figure 1. |NREL im-ages| 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1905,7 +1905,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
  []
 
-[10 <./21206.png> <./20018.png>]
+[10]
 Underfull \hbox (badness 10000) has occurred while \output is active
  [] 
  []
@@ -1937,11 +1937,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
  []
 
-[11]
+[11 <./21206.png> <./20018.png>]
 Chapter 4.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 532.
+less on input line 533.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1978,14 +1978,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [12
 
 ]
-Overfull \hbox (14.69273pt too wide) in paragraph at lines 533--534
+Overfull \hbox (14.69273pt too wide) in paragraph at lines 534--535
 \T1/ptm/m/n/10 Because \T1/pcr/m/n/10 latex2rtf \T1/ptm/m/n/10 only knows a sub
 -set of L[]T[]X, it is im-por-tant to ac-count for this when prepar-ing a L[]T[
 ]Xdocument. 
  []
 
 
-Overfull \hbox (16.24498pt too wide) in paragraph at lines 583--583
+Overfull \hbox (16.24498pt too wide) in paragraph at lines 584--584
 []\T1/pcr/m/n/10 % redefine \pdftooltip so that it behaves differently with and
  without latextortf[] 
  []
@@ -2057,14 +2057,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [14]
 Chapter 5.
 Package marginnote Info: Margin note 21.1 is on absolute page 21
-(marginnote)              on input line 635.
-Package marginnote Info: right page because not two side mode on input line 635
+(marginnote)              on input line 636.
+Package marginnote Info: right page because not two side mode on input line 636
 .
 Package marginnote Info: xpos seems to be 282.24661pt,
-(marginnote)             \marginnoterightadjust ignored on input line 635.
+(marginnote)             \marginnoterightadjust ignored on input line 636.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 640.
+less on input line 641.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -2103,27 +2103,27 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 674.
+Package pdftex.def Info: 21206.png used on input line 675.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 674.
+Package pdftex.def Info: 21206.png used on input line 675.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 674.
+Package pdftex.def Info: 21206.png used on input line 675.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 21206.png Graphic file (type png)
  <use 21206.png>
-Package pdftex.def Info: 21206.png used on input line 674.
+Package pdftex.def Info: 21206.png used on input line 675.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 File: 20018.png Graphic file (type png)
 
 <use 20018.png>
-Package pdftex.def Info: 20018.png used on input line 677.
+Package pdftex.def Info: 20018.png used on input line 678.
 (pdftex.def)             Requested size: 176.97151pt x 180.67499pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--679
+Underfull \hbox (badness 10000) in paragraph at lines 680--680
  []\T1/phv/b/n/9 Figure 2. |NREL im-ages| 
  []
 
@@ -2195,7 +2195,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 No complaints by nag.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 705.
+less on input line 706.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -2233,25 +2233,25 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 705.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 705.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 706.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 706.
  (./intro_to_NREL_latex.aux
 * soulpos - computing points - it may take a few seconds *
 \openout4 = `intro_to_NREL_latex.upb'.
 
 
 (./intro_to_NREL_latex.upa))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 705.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 705.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 706.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 706.
 Package rerunfilecheck Info: File `intro_to_NREL_latex.out' has not changed.
-(rerunfilecheck)             Checksum: 8EBA757D2B38D70B8B07419ADE5325D3;7126.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 705.
+(rerunfilecheck)             Checksum: CC6A3536E65367C000CDD9920E5E1D4B;7000.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 706.
  ) 
 Here is how much of TeX's memory you used:
- 27366 strings out of 493308
- 476417 string characters out of 6137816
- 557160 words of memory out of 5000000
- 30135 multiletter control sequences out of 15000+600000
+ 27368 strings out of 493308
+ 476476 string characters out of 6137816
+ 557208 words of memory out of 5000000
+ 30137 multiletter control sequences out of 15000+600000
  109433 words of font info for 165 fonts, out of 8000000 for 9000
  973 hyphenation exceptions out of 8191
  69i,13n,85p,1044b,665s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2271,10 +2271,10 @@ tic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/symbol/usyr
 local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on intro_to_NREL_latex.pdf (24 pages, 2983017 bytes).
+Output written on intro_to_NREL_latex.pdf (24 pages, 2982725 bytes).
 PDF statistics:
- 611 PDF objects out of 1000 (max. 8388607)
- 560 compressed objects within 6 object streams
+ 612 PDF objects out of 1000 (max. 8388607)
+ 561 compressed objects within 6 object streams
  123 named destinations out of 1000 (max. 500000)
- 375 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 367 words of extra memory for PDF output out of 10000 (max. 10000000)
 

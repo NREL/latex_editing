@@ -211,6 +211,30 @@ Page numbering in the front matter (i.e. the Abstract, Summary, and Foreword cha
 
 If you don't use the \verb+\frontmatter+ commands, you may need to increment the page counter manually. To increment the counter $n$ pages, use \verb+\setcounter{page}{n}+ after \verb+\begin{document}+.
 
+\section{Citations}
+\label{Sec:Bib}
+Use \texttt{bibtex} to organize references and store them in a single file (e.g. \verb+/Documents/bibliography/bibliography.bib+). The bibliography will then contain entries with `keys', like \texttt{Lamport\_1986\_a}. Authors can then insert citations to this key throughout their document, using different styles of citation:
+\begin{itemize}
+\item \verb+\cite{Lamport_1986_a}+ prints a simple \cite{Lamport_1986_a}.
+\item \verb+\citep{Lamport_1986_a}+ puts parentheses around it \citep{Lamport_1986_a}.
+\item \verb+\citep[e.g][]{Lamport_1986_a}+ puts parentheses around it, and some text in there as well \citep[e.g.][]{Lamport_1986_a}.
+\item \verb+\citet{Lamport_1986_a}+ prints it inline, so that according to \citet{Lamport_1986_a}, \ldots.
+\end{itemize}
+
+To cite URLs, use the 'misc' style. For example, the bibtex entry for \url{http://tex.stackexchange.com}\cite{texstackexchange} looks like this:
+
+\begin{verbatim}
+@misc{texstackexchange,
+	Author = {Anon.},
+	Howpublished = {Accessed July 21, 2014: \url{http://tex.stackexchange.com}},
+	Title = {\TeX -- \LaTeX Stack Exchange},
+	Year = {2014}}
+\end{verbatim}
+
+This format will allow you to include the date on which a URL was accessed.
+
+The citations should work with journal articles, books \citep{Lamport_1986_a}, technical reports \citep{TechReportTest}, and URLS \citep{texstackexchange}
+
 \section{NREL-style bibliographies}
 Use \emph{nrel.bst} to create a bibliography that conforms to NREL's requirements. To include a bibliography in the document, use the following commands where you want the bibliography to occur:
 
@@ -462,30 +486,7 @@ Use the \texttt{input} command to import other files into your main file. For ex
 ...
 \end{verbatim}
 
-\section{Citations}
-\label{Sec:Bib}
-Use \texttt{bibtex} to organize references and store them in a single file (e.g. \verb+/Documents/bibliography/bibliography.bib+). The bibliography will then contain entries with `keys', like \texttt{Lamport\_1986\_a}. Authors can then insert citations to this key throughout their document, using different styles of citation:
-\begin{itemize}
-\item \verb+\cite{Lamport_1986_a}+ prints a simple \cite{Lamport_1986_a}.
-\item \verb+\citep{Lamport_1986_a}+ puts parentheses around it \citep{Lamport_1986_a}.
-\item \verb+\citep[e.g][]{Lamport_1986_a}+ puts parentheses around it, and some text in there as well \citep[e.g.][]{Lamport_1986_a}.
-\item \verb+\citet{Lamport_1986_a}+ prints it inline, so that according to \citet{Lamport_1986_a}, \ldots.
-\end{itemize}
-
-To cite URLs, use the 'misc' style. For example, the bibtex entry for \url{http://tex.stackexchange.com}\cite{texstackexchange} looks like this:
-
-\begin{verbatim}
-@misc{texstackexchange,
-	Author = {Anon.},
-	Howpublished = {Accessed July 21, 2014: \url{http://tex.stackexchange.com}},
-	Title = {\TeX -- \LaTeX Stack Exchange},
-	Year = {2014}}
-\end{verbatim}
-
-This format will allow you to include the date on which a URL was accessed.
-
-\section{Bibliography}
-The command \verb+\bibliographystyle{nrel}+ prints a bibliography that follows NREL's style guide. See Chapter \ref{sec:Bib} for an example.
+% MAKING DOC FILES
 
 \chapter{Preparing a .DOC or .DOCX file from \LaTeX \label{sec:latextortf}}
 \LaTeX\ users may find that they are required to convert their files into other formats for review or  editing. This section describes how \LaTeX\ files can be converted into \emph{.doc} or \emph{.docx} files for use with Microsoft Word.

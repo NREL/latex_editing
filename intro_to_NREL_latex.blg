@@ -4,44 +4,46 @@ The top-level auxiliary file: intro_to_NREL_latex.aux
 The style file: nrel.bst
 Database file #1: bibliography.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 2 entries,
-            3322 wiz_defined-function locations,
-            673 strings with 5177 characters,
-and the built_in function-call counts, 796 in all, are:
-= -- 63
-> -- 20
-< -- 2
-+ -- 8
-- -- 6
-* -- 40
-:= -- 146
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 10
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 58
-empty$ -- 66
-format.name$ -- 8
-if$ -- 152
+Warning--empty number in TechReportTest
+You've used 3 entries,
+            3331 wiz_defined-function locations,
+            679 strings with 5334 characters,
+and the built_in function-call counts, 1324 in all, are:
+= -- 106
+> -- 39
+< -- 3
++ -- 17
+- -- 12
+* -- 75
+:= -- 229
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 16
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 101
+empty$ -- 101
+format.name$ -- 19
+if$ -- 252
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 13
-newline$ -- 17
-num.names$ -- 8
-pop$ -- 27
+missing$ -- 24
+newline$ -- 23
+num.names$ -- 12
+pop$ -- 54
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 16
 quote$ -- 0
-skip$ -- 32
+skip$ -- 46
 stack$ -- 0
-substring$ -- 22
-swap$ -- 22
+substring$ -- 35
+swap$ -- 43
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 15
-warning$ -- 0
-while$ -- 6
+type$ -- 24
+warning$ -- 1
+while$ -- 9
 width$ -- 0
-write$ -- 30
+write$ -- 44
+(There was 1 warning)

@@ -1125,6 +1125,8 @@ FUNCTION {article}
 		}
 	if$
 	new.block
+	howpublished "howpublished" bibinfo.check output
+	new.block
 	format.note output
 	fin.entry
 	write.url
@@ -1387,6 +1389,8 @@ FUNCTION {techreport}
 	format.tr.number "number" output.check
 	institution "institution" bibinfo.warn output
 	address "address" bibinfo.check output
+	new.block
+	howpublished "howpublished" bibinfo.check output
 	new.block
 	format.note output
 	fin.entry

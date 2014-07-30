@@ -127,6 +127,8 @@
 
 % set languages
 \RequirePackage[english]{babel}
+\usepackage{babel}%.................. Language setup
+    \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
 
 % enable subfigures
 \RequirePackage{subfig}
@@ -216,7 +218,11 @@
 	% need to add page number and availability information to every page, including new chapters.
 	\RequirePackage{fancyhdr}
 	\pagestyle{plain}
-	\fancypagestyle{nrel}{%		\fancyhf{} % clear all header and footer fields		\fancyfoot[CO,CE]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\url{www.nrel.gov/publications}}} % except the center		\renewcommand{\headrulewidth}{0pt}		\renewcommand{\footrulewidth}{0pt}}
+	\fancypagestyle{nrel}{%
+		\fancyhf{} % clear all header and footer fields
+		\fancyfoot[CO,CE]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\url{www.nrel.gov/publications}}} % except the center
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0pt}}
 	\pagestyle{nrel}
 	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
 	\let\ps@plain\ps@nrel

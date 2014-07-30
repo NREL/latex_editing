@@ -12,25 +12,24 @@
 \contentsline {subsection}{\numberline {2.3.4}Options in \emph {nrel.cls}}{3}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Classes and packages in \emph {nrel.cls}}{3}{subsection.2.3.5}
 \contentsline {section}{\numberline {2.4}Front, main, and back matter}{4}{section.2.4}
-\contentsline {section}{\numberline {2.5}NREL-style bibliographies}{5}{section.2.5}
-\contentsline {section}{\numberline {2.6}Putting it all together}{5}{section.2.6}
-\contentsline {section}{\numberline {2.7}Best practice in writing a document in \LaTeX }{6}{section.2.7}
-\contentsline {chapter}{\numberline {3}Some LaTeX examples}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Headings}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Chapter}{7}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Sections}{7}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Body text}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Mathematics}{7}{section.3.3}
-\contentsline {section}{\numberline {3.4}Cross references}{8}{section.3.4}
-\contentsline {section}{\numberline {3.5}Floats}{8}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Tables}{8}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Figures}{9}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Subfigures}{9}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Lists}{9}{section.3.6}
-\contentsline {section}{\numberline {3.7}Computer code}{9}{section.3.7}
-\contentsline {section}{\numberline {3.8}Creating a file structure}{10}{section.3.8}
-\contentsline {section}{\numberline {3.9}Citations}{10}{section.3.9}
-\contentsline {section}{\numberline {3.10}Bibliography}{11}{section.3.10}
+\contentsline {section}{\numberline {2.5}Citations}{5}{section.2.5}
+\contentsline {section}{\numberline {2.6}NREL-style bibliographies}{5}{section.2.6}
+\contentsline {section}{\numberline {2.7}Putting it all together}{6}{section.2.7}
+\contentsline {section}{\numberline {2.8}Best practice in writing a document in \LaTeX }{6}{section.2.8}
+\contentsline {chapter}{\numberline {3}Some LaTeX examples}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}Headings}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Chapter}{8}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Sections}{8}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Body text}{8}{section.3.2}
+\contentsline {section}{\numberline {3.3}Mathematics}{8}{section.3.3}
+\contentsline {section}{\numberline {3.4}Cross references}{9}{section.3.4}
+\contentsline {section}{\numberline {3.5}Floats}{9}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Tables}{9}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Figures}{10}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Subfigures}{10}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Lists}{10}{section.3.6}
+\contentsline {section}{\numberline {3.7}Computer code}{10}{section.3.7}
+\contentsline {section}{\numberline {3.8}Creating a file structure}{11}{section.3.8}
 \contentsline {chapter}{\numberline {4}Preparing a .DOC or .DOCX file from \LaTeX }{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}The conversion process}{12}{section.4.1}
 \contentsline {section}{\numberline {4.2}How does \texttt {latex2rtf} work?}{12}{section.4.2}
@@ -42,4 +41,4 @@
 \contentsline {section}{\numberline {5.1}PDF tagging}{15}{section.5.1}
 \contentsline {section}{\numberline {5.2}Alt-text on images and equations}{15}{section.5.2}
 \contentsline {section}{\numberline {5.3}Embedded fonts}{17}{section.5.3}
-\contentsline {chapter}{Bibliography}{18}{chapter*.8}
+\contentsline {chapter}{References}{18}{chapter*.8}
