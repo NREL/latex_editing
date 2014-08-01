@@ -1,58 +1,54 @@
 \newif\iflatextortf
 
 \iflatextortf
- % tell latex2tortf if this is an article or report
- \documentclass[10pt,letterpaper]{article}
- \input{NRELLatex2rtf.tex}
+	% tell latex2tortf if this is an article or report
+	\documentclass[10pt,letterpaper]{article}
+	\input{NRELLatex2rtf.tex}
 \else
- \documentclass[draft,article]{nrel} 
+	\documentclass[article,tagged]{nrel} 
 \fi
 
 \title{Testing the NREL \LaTeX class file on an article}
 \author{A. Clifton}
 
-\usepackage{blindtext}
-\blindmathtrue
-
 \begin{document}
-
 \maketitle
 \frontmatter
 
 \section*{Executive Summary}
-This is a test of the NREL style file used with the \verb+article+ option. This document was prepared using \LaTeX\ \citep{Knuth_1984_a}. Text has been generated automatically using the \verb+blindtext+ package described at \url{http://www.ctan.org/pkg/blindtext}.
+This is a test of the NREL style file used with the `article' option. This document was prepared using LaTeX \citep{Knuth_1984_a}.
 
 \section*{Acknowledgments}
-\blindtext[1]
+Test
 
-\cleardoublepage
-\renewcommand{\contentsname}{Table of Contents}
+%\clearpage
 \tableofcontents
-\clearpage
 \listoffigures
 \listoftables
 \mainmatter
 
 \section{Introduction}
-\blindtext[5]
-\begin{table}[!h]
+Blah. 
+
+\begin{table}[ht]
 \centering
-\caption{\label{tab:widgets}An example table.}
+\caption[test]{An example table.}%\label{tab:widgets}
 \begin{tabular}{lr}
-Item & Quantity \\\hline
+\thead{Item} & \thead{Quantity} \\
+\hline
 Widgets & 42 \\
 Gadgets & 13
 \end{tabular}
 \end{table}
 
-\section{Theory}
-\blindmathpaper
-\section{Conclusions}
-\blindtext[3]
+And more testing.
 
-\cleardoublepage
+\section{Theory}
+More testing.
+\section{Conclusions}
+And yet more testing.
+
 \bibliographystyle{nrel}
-\label{sec:Bib}
 \bibliography{bibliography}
 
 \end{document}

@@ -1,44 +1,37 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Requirements for NREL documents}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Use of english and other conventions}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Formatting}{1}{section.1.2}
-\contentsline {chapter}{\numberline {2}How to make \LaTeX \ documents that meet NREL's requirements}{2}{chapter.2}
-\contentsline {section}{\numberline {2.1}What is \LaTeX ?}{2}{section.2.1}
-\contentsline {section}{\numberline {2.2}General Process}{2}{section.2.2}
-\contentsline {section}{\numberline {2.3}The NREL \LaTeX \ style file}{2}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Getting \emph {nrel.cls}}{2}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Installing \emph {nrel.cls}}{3}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Using \emph {nrel.cls}}{3}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Options in \emph {nrel.cls}}{3}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Classes and packages in \emph {nrel.cls}}{3}{subsection.2.3.5}
-\contentsline {section}{\numberline {2.4}Front, main, and back matter}{4}{section.2.4}
-\contentsline {section}{\numberline {2.5}Citations}{5}{section.2.5}
-\contentsline {section}{\numberline {2.6}NREL-style bibliographies}{5}{section.2.6}
-\contentsline {section}{\numberline {2.7}Putting it all together}{6}{section.2.7}
-\contentsline {section}{\numberline {2.8}Best practice in writing a document in \LaTeX }{6}{section.2.8}
-\contentsline {chapter}{\numberline {3}Some LaTeX examples}{8}{chapter.3}
-\contentsline {section}{\numberline {3.1}Headings}{8}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Chapter}{8}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Sections}{8}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Body text}{8}{section.3.2}
-\contentsline {section}{\numberline {3.3}Mathematics}{8}{section.3.3}
-\contentsline {section}{\numberline {3.4}Cross references}{9}{section.3.4}
-\contentsline {section}{\numberline {3.5}Floats}{9}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Tables}{9}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Figures}{10}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Subfigures}{10}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Lists}{10}{section.3.6}
-\contentsline {section}{\numberline {3.7}Computer code}{10}{section.3.7}
-\contentsline {section}{\numberline {3.8}Creating a file structure}{11}{section.3.8}
-\contentsline {chapter}{\numberline {4}Preparing a .DOC or .DOCX file from \LaTeX }{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}The conversion process}{12}{section.4.1}
-\contentsline {section}{\numberline {4.2}How does \texttt {latex2rtf} work?}{12}{section.4.2}
-\contentsline {section}{\numberline {4.3}Using \texttt {latex2rtf}}{12}{section.4.3}
-\contentsline {section}{\numberline {4.4}Using \texttt {latex2rtf} and \LaTeX \ together}{13}{section.4.4}
-\contentsline {section}{\numberline {4.5}Indexes}{14}{section.4.5}
-\contentsline {section}{\numberline {4.6}What to do when the conversion to rich text format fails}{14}{section.4.6}
-\contentsline {chapter}{\numberline {5}Preparing a high-quality PDF from LaTeX}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}PDF tagging}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}Alt-text on images and equations}{15}{section.5.2}
-\contentsline {section}{\numberline {5.3}Embedded fonts}{17}{section.5.3}
-\contentsline {chapter}{References}{18}{chapter*.8}
+\contentsline {chapter}{\numberline {1}Requirements for NREL documents}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Use of english and other conventions}{3}{section.0.1}
+\contentsline {section}{\numberline {1.2}Formatting}{3}{section.0.2}
+\contentsline {chapter}{\numberline {2}Using LaTeX to make documents that meet NREL's requirements}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}What is LaTeX?}{4}{section.0.1}
+\contentsline {section}{\numberline {2.2}General Process}{4}{section.0.2}
+\contentsline {section}{\numberline {2.3}The NREL LaTeX style file}{4}{section.0.3}
+\contentsline {subsection}{\numberline {2.3.1}Getting nrel.cls}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.3.2}Installing nrel.cls}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3.3}Using nrel.cls}{5}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3.4}Options in nrel.cls}{5}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.3.5}Classes and packages in nrel.cls}{5}{subsection.2.5}
+\contentsline {section}{\numberline {2.4}Front, main, and back matter}{6}{section.0.4}
+\contentsline {section}{\numberline {2.5}Citations}{7}{section.0.5}
+\contentsline {section}{\numberline {2.6}NREL-style bibliographies}{7}{section.0.6}
+\contentsline {section}{\numberline {2.7}Putting it all together}{8}{section.0.7}
+\contentsline {section}{\numberline {2.8}Best practice in writing a document in LaTeX}{8}{section.0.8}
+\contentsline {chapter}{\numberline {3}Some LaTeX examples}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Headings}{9}{section.0.1}
+\contentsline {subsection}{\numberline {3.1.1}Chapter}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1.2}Sections}{9}{subsection.3.2}
+\contentsline {section}{\numberline {3.2}Body text}{9}{section.0.2}
+\contentsline {section}{\numberline {3.3}Mathematics}{10}{section.0.3}
+\contentsline {section}{\numberline {3.4}Cross references}{10}{section.0.4}
+\contentsline {section}{\numberline {3.5}Floats}{10}{section.0.5}
+\contentsline {subsection}{\numberline {3.5.1}Tables}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.5.2}Figures}{11}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.5.3}Subfigures}{11}{subsection.3.3}
+\contentsline {section}{\numberline {3.6}Lists}{11}{section.0.6}
+\contentsline {section}{\numberline {3.7}Computer code}{12}{section.0.7}
+\contentsline {section}{\numberline {3.8}Creating a file structure}{12}{section.0.8}
+\contentsline {chapter}{\numberline {4}Preparing a high-quality PDF from LaTeX}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}PDF tagging}{13}{section.0.1}
+\contentsline {section}{\numberline {4.2}Alt-text on images and equations}{13}{section.0.2}
+\contentsline {section}{\numberline {4.3}Embedded fonts}{15}{section.0.3}
+\contentsline {chapter}{References}{16}{chapter*.8}

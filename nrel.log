@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.12)  29 JUL 2014 15:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.12)  31 JUL 2014 17:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -42,26 +42,26 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2009/09/02 v1.2a check for an empty argument
 ))
-./nrel.cls:87: Undefined control sequence.
+./nrel.cls:90: Undefined control sequence.
 <argument> \NREL 
                  @class
-l.87 
+l.90 
      
 ? 
-./nrel.cls:87: Emergency stop.
+./nrel.cls:90: Emergency stop.
 <argument> \NREL 
                  @class
-l.87 
+l.90 
      
 End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 268 strings out of 493308
- 3657 string characters out of 6137816
+ 272 strings out of 493308
+ 3701 string characters out of 6137816
  52434 words of memory out of 5000000
- 3806 multiletter control sequences out of 15000+600000
+ 3810 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  23i,0n,19p,134b,10s stack positions out of 5000i,500n,10000p,200000b,80000s
-./nrel.cls:87:  ==> Fatal error occurred, no output PDF file produced!
+./nrel.cls:90:  ==> Fatal error occurred, no output PDF file produced!
