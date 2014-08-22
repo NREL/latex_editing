@@ -15,6 +15,10 @@
 % -------------------------------------------------------------
 % Create Options
 % -------------------------------------------------------------
+%% PDF properties
+\pdfinterwordspaceon
+\pdfminorversion=8
+
 \RequirePackage{xifthen}
 
 % Mark as draft
@@ -448,8 +452,8 @@
 	\RequirePackage[final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=blue, citecolor=blue, menucolor=blue, urlcolor=blue, pdfborder={0 0 0},unicode, pdflang={en-US}]{hyperref}
 	}
 
-%% PDF properties
-\pdfminorversion=8
+% use the cmap package to make the PDF edit and copyable
+\RequirePackage{cmap}
 
 % Enable tooltips
 \RequirePackage[linewidth = 0]{pdfcomment}
