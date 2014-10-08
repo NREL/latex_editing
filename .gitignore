@@ -27,7 +27,6 @@
 *.mtc1
 *.out
 *.synctex.gz
-*.pdf
  
 # Mac IDE files
 *.swp
