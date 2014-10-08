@@ -7,7 +7,8 @@
 \bibitem[{Anon.(2014)}]{texstackexchange}
 Anon. (2014).
 \newblock \TeX -- \LaTeX Stack Exchange.
-\newblock Accessed July 21, 2014: \url{http://tex.stackexchange.com}.
+\newblock Accessed July 21, 2014:
+  \href{http://tex.stackexchange.com}{http://tex.stackexchange.com}.
 
 \bibitem[{Lamport(1986)}]{Lamport_1986_a}
 Lamport, L. (1986).

@@ -31,8 +31,16 @@
 \contentsline {section}{\numberline {3.6}Lists}{12}{section.0.6}
 \contentsline {section}{\numberline {3.7}Computer code}{13}{section.0.7}
 \contentsline {section}{\numberline {3.8}Creating a file structure}{13}{section.0.8}
-\contentsline {chapter}{\numberline {4}Preparing a high-quality PDF from LaTeX}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}PDF tagging}{14}{section.0.1}
-\contentsline {section}{\numberline {4.2}Alt-text on images and equations}{14}{section.0.2}
-\contentsline {section}{\numberline {4.3}Embedded fonts}{16}{section.0.3}
-\contentsline {chapter}{References}{17}{chapter*.8}
+\contentsline {chapter}{\numberline {4}Preparing a .DOC or .DOCX file from LaTeX}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}The conversion process}{14}{section.0.1}
+\contentsline {section}{\numberline {4.2}Using latex2rtf to convert files}{14}{section.0.2}
+\contentsline {subsection}{\numberline {4.2.1}Using latex2rtf}{14}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2.2}Using latex2rtf and LaTeX together}{15}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2.3}Indexes}{15}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.2.4}What to do when the conversion to rich text format fails}{15}{subsection.4.4}
+\contentsline {section}{\numberline {4.3}Using pandoc}{16}{section.0.3}
+\contentsline {chapter}{\numberline {5}Preparing a high-quality PDF from LaTeX}{17}{chapter.5}
+\contentsline {section}{\numberline {5.1}PDF tagging}{17}{section.0.1}
+\contentsline {section}{\numberline {5.2}Alt-text on images and equations}{17}{section.0.2}
+\contentsline {section}{\numberline {5.3}Embedded fonts}{19}{section.0.3}
+\contentsline {chapter}{References}{20}{chapter*.9}

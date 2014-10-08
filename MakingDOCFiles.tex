@@ -1,30 +1,47 @@
-\section{Preparing a .DOC or .DOCX file from LaTeX}\label{sec:latextortf}
-LaTeX users may find that they are required to convert their files into other formats for review or  editing. This section describes how LaTeX files can be converted into \emph{.doc} or \emph{.docx} files for use with Microsoft Word.
+\chapter{Preparing a .DOC or .DOCX file from LaTeX}\label{sec:latextodoc}
+LaTeX users may find that they are required to convert their files into other formats for review or  editing. This section describes how LaTeX files can be converted into files that can be used with Microsoft Word.
 
-\subsection{The conversion process} 
-The NREL style has been designed to be converted into \emph{.doc} or \emph{.docx} via rich text format (\emph{.rtf}). The process is:
+\section{The conversion process} 
+The NREL style has been designed to be converted into \emph{.doc} or \emph{.docx}. This can be achieved via one of two routes:
 \begin{enumerate}
-\item Use \texttt{latex2rtf} to convert \emph{.tex} files into \emph{.rtf}
-\item Use a WYSIWYG word processor such as Microsoft Word to open the \emph{.rtf} file and save it as a \emph{.doc} or \emph{.docx} file.
+\item converting the latex file to rich text format (\emph{.rtf}) using \texttt{latex2rtf}, then importing the file into a word processor, or
+\item converting the latex file to doc using pandoc.
 \end{enumerate}
 
-Although other tools such as Pandoc may appear to offer some of this capability, they have not been tested with the NREL class.
+The performance of \texttt{Latex2rtf} and \texttt{pandoc} are compared in Table \ref{tab:conversioncomparison}.
 
-\subsection{How does \texttt{latex2rtf} work?}
+\begin{table}[!h]
+\centering
+\caption{A comparison of latex2rtf and pandoc for document conversion.}\label{tab:conversioncomparison}
+\begin{tabular}{lcc}
+consideration & latex2rtf & pandoc \\\hline
+requires changes to latex preamble & yes & no\\
+output format & .rtf & .docx \\
+supports cross references & yes & no\\
+supports subfigures & partially & no\\
+\end{tabular}
+\end{table}
+
+\texttt{latex2rtf} is the recommended tool for the NREL class file at this time.
+
+\section{Using latex2rtf to convert files}
 The \texttt{latex2rtf} program reads LaTeX files and converts common LaTeX commands into their RTF equivalent. It is effectively another LaTeX interpreter that knows a limited subset of LaTeX. See the documentation at \href{http://sourceforge.net/projects/latex2rtf/}{http://sourceforge.net/projects/latex2rtf/} for details.
 
-\subsection{Using \texttt{latex2rtf}}
+\subsection{Using latex2rtf}
 To convert a document from LaTeX to RTF, follow these steps:
 \begin{enumerate}
 \item Install \texttt{latex2rtf}
 \item Compile the document in LaTeX using the NREL class with the \texttt{book,report}, or \texttt{article} option, remembering to update the bibliography and cross references. The sequence of commands is:
-\item Convert the document to RTF format using \texttt{latex2rtf}. 
+\item Convert the document to RTF format using \texttt{latex2rtf}. The example .rtf file included with this document is created as follows:
+\begin{verbatim}
+latex2rtf -o latex2rtf_demo.rtf -f3 intro_to_NREL_latex
+\end{verbatim}
 \item Open the RTF file in Microsoft Word.
 \item If the document contains tables of contents, tables of figures, tables of tables, or cross-references, select that text and update the fields.
 \item Save the RTF file as a word-format document.
 \end{enumerate}
 
-\subsection{Using \texttt{latex2rtf} and LaTeX together}
+\subsection{Using latex2rtf and LaTeX together}
 Because \texttt{latex2rtf} only knows a subset of LaTeX, it is important to account for this when preparing a LaTeX document. The biggest problem is the lack of many packages, which is why authors are encouraged to use the NREL class file, which is known to work well with \texttt{latex2rtf}. Sometimes, though, it is important to be able to remove formatting for compatibility with \texttt{latex2rtf}, and so the preamble to this document includes a check to see if \texttt{latex2rtf} is being used:
 
 \begin{verbatim}
@@ -59,3 +76,21 @@ It is more than likely that the conversion to an \emph{.rtf} file will fail at s
 \item[Use copy-paste.] Compile the whole document as a PDF, and save it somewhere. Then recompile using the reduced document that works with \texttt{latex2rtf}. Edit this in word and copy in the bits that killed the conversion.
 \item[Talk to a communications rep.] If a document cannot be produced any other way than LaTeX with lots of packages, and \texttt{latex2rtf} just refuses to process it into a rich text file, discuss the process for having the PDF processed.
 \end{description}
+
+\section{Using pandoc}
+Pandoc is a tool for converting documents between different formats. Pandoc is available at \href{http://johnmacfarlane.net/pandoc/}{http://johnmacfarlane.net/pandoc/}. Like \texttt{latex2rtf}, pandoc only supports a subset of latex commands and is not guaranteed to work for all applications.
+
+Pandoc has several advantages over latex2rtf:
+\begin{itemize}
+\item Pandoc it supports conversion from latex to many other document formats (e.g. .html as well as .docx). However, there are other well-established tools to go directly from latex source code to other formats that may have better performance.
+\item Pandoc does not require any changes to the latex source files.
+\end{itemize}
+
+Pandoc has se
+
+To use pandoc, follow the installation instructions on the pandoc website, and then run pandoc from the command line. To convert this file, use the following command:
+
+\begin{verbatim}
+pandoc -o pandoc_demo.docx intro_to_NREL_latex.tex --bibliography bibliography.bib --default-image-extension=.jpg
+\end{verbatim}
+

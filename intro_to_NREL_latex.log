@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  22 AUG 2014 17:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 OCT 2014 12:07
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1243,7 +1243,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--23
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
- [][]\T1/ptm/m/n/12 Friday 22$[]$ August, 2014 
+ [][]\T1/ptm/m/n/12 Wednesday 8$[]$ October, 2014 
  []
 
 [1.2
@@ -1274,27 +1274,28 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-)
-\tf@toc=\write6
-\openout6 = `intro_to_NREL_latex.toc'.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 \listoffigures
-                    [1.5.0.0.0.0.0.0.0.1
+l.42 ...igh-quality PDF from LaTeX}{17}{chapter.5}
+                                                   [1.5.0.0.0.0.0.0.0.1
 
-] (./intro_to_NREL_latex.lof)
+])
+\tf@toc=\write6
+\openout6 = `intro_to_NREL_latex.toc'.
+
+
+(./intro_to_NREL_latex.lof)
 \tf@lof=\write7
 \openout7 = `intro_to_NREL_latex.lof'.
 
-
-(./intro_to_NREL_latex.lot)
+ (./intro_to_NREL_latex.lot)
 \tf@lot=\write8
 \openout8 = `intro_to_NREL_latex.lot'.
 
- (./RequirementsForNRELDocs.tex [2.6]
+
+(./RequirementsForNRELDocs.tex [2.6]
 Chapter 1.
 ) (./LatexForNRELDocs.tex
 Overfull \hbox (27.58pt too wide) in paragraph at lines 9--1
@@ -1335,11 +1336,8 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 28.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-
-LaTeX Warning: Reference `sec:latextortf' on page 4 undefined on input line 28.
-
-
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 31.
+
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
@@ -1570,13 +1568,13 @@ Package accessibility Warning: begin code on input line 114.
 
 Package accessibility Warning: end code on input line 128.
 
-<21206.png, id=844, 252.945pt x 189.8292pt>
+<21206.png, id=902, 252.945pt x 189.8292pt>
 File: 21206.png Graphic file (type png)
  <use 21206.png>
 Package pdftex.def Info: 21206.png used on input line 133.
 (pdftex.def)             Requested size: 240.7441pt x 180.67499pt.
 
-<20018.png, id=847, 252.945pt x 258.2448pt>
+<20018.png, id=905, 252.945pt x 258.2448pt>
 File: 20018.png Graphic file (type png)
  <use 20018.png>
 Package pdftex.def Info: 20018.png used on input line 136.
@@ -1616,8 +1614,74 @@ Package accessibility Warning: begin code on input line 164.
 
 Package accessibility Warning: end code on input line 172.
 
-) (./MakingPDFFiles.tex [13.17.0.3.8.0.0.0.0.1 <./21206.png> <./20018.png>]
+) (./MakingDOCFiles.tex [13.17.0.3.8.0.0.0.0.1 <./21206.png> <./20018.png>]
 Chapter 4.
+pdfTeX warning (ext4): destination with the same identifier (name{section.0.1})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4 \section{The conversion process}
+                                    
+
+Package accessibility Warning: begin makecaption on input line 15.
+
+
+Underfull \hbox (badness 6396) in paragraph at lines 15--15
+ []\T1/phv/b/n/9 Table 4. |A com-par-i-son of la-tex2rtf and pan-doc for doc-u-
+ment con-ver-sion.| 
+ []
+
+
+Package accessibility Warning: end makecaption on input line 15.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--23
+ [][][][][][][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{section.0.2})
+ has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.27 \section{Using latex2rtf to convert files}
+                                               
+
+Package accessibility Warning: begin code on input line 36.
+
+
+Package accessibility Warning: end code on input line 38.
+
+
+pdfTeX warning (\pdfobj): invalid object number being ignored
+[14.18.0.4.2.2
+
+]
+
+Package accessibility Warning: begin code on input line 47.
+
+
+Package accessibility Warning: end code on input line 55.
+
+[15.19.0.4.2.4.0.0.0.1]pdfTeX warning (ext4): destination with the same identif
+ier (name{section.0.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.80 \section{Using pandoc}
+                           
+Overfull \hbox (36.0497pt too wide) in paragraph at lines 81--82
+[]\T1/ptm/m/n/10 Pandoc is a tool for con-vert-ing doc-u-ments be-tween dif-fer
+-ent for-mats. Pan-doc is avail-able at [][][][]http://johnmacfarlane.net/pando
+c/[][][][][]. 
+ []
+
+
+Package accessibility Warning: begin code on input line 93.
+
+
+Package accessibility Warning: end code on input line 95.
+
+) (./MakingPDFFiles.tex [16.20.0.4.3]
+Chapter 5.
 pdfTeX warning (ext4): destination with the same identifier (name{section.0.1})
  has been already used, duplicate ignored
 <to be read again> 
@@ -1630,13 +1694,13 @@ e ignored
                    \relax 
 l.31 \section{Alt-text on images and equations}
                                                
-Package marginnote Info: Margin note 17.1 is on absolute page 17
+Package marginnote Info: Margin note 20.1 is on absolute page 20
 (marginnote)              on input line 34.
 Package marginnote Info: right page because not two side mode on input line 34.
 
 Package marginnote Info: xpos seems to be 282.24661pt,
 (marginnote)             \marginnoterightadjust ignored on input line 34.
- [14.18.0.4.2
+ [17.21.0.5.2.0.0.0.0.1
 
 ]
 
@@ -1695,18 +1759,18 @@ pdfTeX warning (ext4): destination with the same identifier (name{section.0.3})
 <to be read again> 
                    \relax 
 l.81 \section{Embedded fonts}
-                              [15.19.0.4.3.0.0.0.0.1]
+                              [18.22.0.5.3]
 
 Package accessibility Warning: begin code on input line 86.
 
 
 Package accessibility Warning: end code on input line 91.
 
-) [16.20.0.4.3] (./intro_to_NREL_latex.bbl)
+) [19.23.0.5.3.0.0.0.0.1] (./intro_to_NREL_latex.bbl)
 \c@ClassMap=\count224
 
 No complaints by nag.
-[17.21.0.4.3.0.0.0.0.1
+[20.24.0.5.3
 
 
 ]
@@ -1721,7 +1785,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
 Package rerunfilecheck Info: File `intro_to_NREL_latex.out' has not changed.
-(rerunfilecheck)             Checksum: C4E1526169152837853F0826AB2D4863;5554.
+(rerunfilecheck)             Checksum: 6059DE17F05DF5C4E70BD463AF03D9A6;7185.
 
 
 LaTeX Warning: There were undefined references.
@@ -1729,14 +1793,14 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 53.
  ) 
 Here is how much of TeX's memory you used:
- 29490 strings out of 493117
- 507429 string characters out of 6135433
- 640851 words of memory out of 5000000
- 32145 multiletter control sequences out of 15000+600000
+ 29553 strings out of 493117
+ 508124 string characters out of 6135433
+ 642567 words of memory out of 5000000
+ 32180 multiletter control sequences out of 15000+600000
  80595 words of font info for 122 fonts, out of 8000000 for 9000
  1157 hyphenation exceptions out of 8191
  69i,12n,122p,1031b,2258s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): Page 21 has been referenced but does not exist!
+pdfTeX warning (dest): Page 24 has been referenced but does not exist!
 
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
@@ -1756,9 +1820,9 @@ live/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
 pdfTeX warning: /usr/texbin/pdflatex: no GlyphToUnicode entry has been inserted
  yet!
-Output written on intro_to_NREL_latex.pdf (20 pages, 8849492 bytes).
+Output written on intro_to_NREL_latex.pdf (23 pages, 8983059 bytes).
 PDF statistics:
- 1124 PDF objects out of 1200 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 2715 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1364 PDF objects out of 1440 (max. 8388607)
+ 141 named destinations out of 1000 (max. 500000)
+ 3387 words of extra memory for PDF output out of 10000 (max. 10000000)
 
