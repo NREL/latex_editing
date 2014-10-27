@@ -22,7 +22,7 @@ supports subfigures & partially & no\\
 \end{tabular}
 \end{table}
 
-\texttt{latex2rtf} is the recommended tool for the NREL class file at this time.
+At this time, \texttt{latex2rtf} is the recommended tool for converting LaTeX files that have been made with the NREL class file, into word processor-readable files.
 
 \section{Using latex2rtf to convert files}
 The \texttt{latex2rtf} program reads LaTeX files and converts common LaTeX commands into their RTF equivalent. It is effectively another LaTeX interpreter that knows a limited subset of LaTeX. See the documentation at \href{http://sourceforge.net/projects/latex2rtf/}{http://sourceforge.net/projects/latex2rtf/} for details.
@@ -86,11 +86,9 @@ Pandoc has several advantages over latex2rtf:
 \item Pandoc does not require any changes to the latex source files.
 \end{itemize}
 
-Pandoc has se
-
-To use pandoc, follow the installation instructions on the pandoc website, and then run pandoc from the command line. To convert this file, use the following command:
+To use pandoc, follow the installation instructions on the pandoc website, and then run pandoc from the command line. To convert this file, use the following command at the command line:
 
 \begin{verbatim}
-pandoc -o pandoc_demo.docx intro_to_NREL_latex.tex --bibliography bibliography.bib --default-image-extension=.jpg
+pandoc -o conversion_demo/pandoc_demo.docx intro_to_NREL_latex.tex --bibliography bibliography.bib --default-image-extension=.jpg
 \end{verbatim}
 
