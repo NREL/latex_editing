@@ -36,13 +36,14 @@ NREL staff should check on [The Source](http://thesource.nrel.gov/communications
 
 #Recent changes
 10.8.2014 Added details of how to convert using `pandoc`.
+
 7.31.2014 Added \frontmatter, \mainmatter, and \backmatter commands to customize numbering for all document classes (article, report). These are normally only available for the book class. Also updated the example template, and figured out how to add URLs to the bibliography.
 
 #Code Maintainers
 * [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
 
 #Project Contributors
-* Andy Platt(National Renewable Energy Laboratory)
+* Andy Platt (National Renewable Energy Laboratory)
 * Paul Fleming (National Renewable Energy Laboratory)
 * Michael Lawson (National Renewable Energy Laboratory)
 * Andrew Ning (National Renewable Energy Laboratory)
