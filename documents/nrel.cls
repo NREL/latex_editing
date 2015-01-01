@@ -151,13 +151,18 @@
 % code listings
 \RequirePackage{listings}
 
-% For formatting the bibliography
+% For formatting the bibliography. See guidance 
 \RequirePackage[babel]{csquotes}
 \RequirePackage[style=chicago-authordate,strict,backend=bibtex,%
-natbib=true,bibencoding=inputenc,sorting=nyt]{biblatex}
-\DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
-\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
-\DeclareBibliographyAlias{*}{misc} % map unknown bibliogrpahy entry types to the misc type
+natbib=true,bibencoding=inputenc,sorting=nyt,doi=true]{biblatex}
+% see NREL formatting guidelines at https://communications_resources.nrel.gov/style_guide/references
+% technical reports
+\DeclareBibliographyAlias{techreport}{book}
+% make one type of publication look like another
+\DeclareBibliographyAlias{*}{misc} % map unknown bibliography entry types to the misc type
+
+% make sure URLs in the bibliography are shown in roman fonts
+\urlstyle{same}
 
 % --------------
 % Main Code
@@ -403,6 +408,9 @@ natbib=true,bibencoding=inputenc,sorting=nyt]{biblatex}
 						labelfont=bf,
 						format=plain}
 
+% check that the default san-serif font is sort-of-arial	(required for tables)					
+\renewcommand{\sfdefault}{phv} % Arial
+
 % Indenting and spacing between paragraphs
 \setlength{\parindent}{0pt}
 \ifthenelse{\boolean{IsMemoir}}{% True
@@ -455,28 +463,6 @@ natbib=true,bibencoding=inputenc,sorting=nyt]{biblatex}
 	\renewcommand{\printlottitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
 }
 
-%% CODE / VERBATIM
-%\@ifundefined{lstlisting}{}{%
-%  \let\verbatim\relax%
-%  \lstnewenvironment{verbatim}{\lstset{language=[LaTeX]TeX,                     % the language of the code
-%  basicstyle=\small\sffamily,
-%  numbers=none,                   % where to put the line-numbers
-%  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
-%  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line will be numbered
-%  numbersep=5pt,                  % how far the line-numbers are from the code
-%  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
-%  showspaces=false,               % show spaces adding particular underscores
-%  showstringspaces=false,         % underline spaces within strings
-%  breaklines=true,                % sets automatic line breaking
-%  breakatwhitespace=true,        % sets if automatic breaks should only happen at whitespace
-%  keywordstyle=\color{blue},      % keyword style
-%  commentstyle=\color{gray},   % comment style
-%  stringstyle=\color{green},      % string literal style
-%  escapeinside={\%*}{*)},         % if you want to add a comment within your code
-%  morekeywords={*,...}}%            % if you want to add more keywords to the set
-%}{}%
-%}
-
 %% ACCESSIBILITY
 \ifthenelse{\boolean{IsTagged}}{% True
 	\RequirePackage[tagged,highstructure]{accessibility-meta}
@@ -499,6 +485,16 @@ natbib=true,bibencoding=inputenc,sorting=nyt]{biblatex}
 
 %% THINGS WE NEED TO DO AT THE START OF THE DOCUMENT
 \AtBeginDocument{
+	% table font should be sans-serif
+	\makeatletter
+	\appto\@floatboxreset{%
+	  \ifx\@captype\nrel@table
+	    \sffamily
+	  \fi
+	}
+	\def\nrel@table{table}
+\makeatother
+% fix hyperlinks
 	\makeatletter
 	\hypersetup{
 		pdftitle = {\@title},

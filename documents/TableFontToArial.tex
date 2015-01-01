@@ -1,0 +1,41 @@
+\documentclass[preview]{standalone}
+
+\usepackage{setspace}
+\usepackage{booktabs}
+
+\makeatletter
+ \renewenvironment{table}
+     {\@float{table} \fontfamily{phv}\selectfont}
+     {\end@float}
+ \makeatother
+
+\RequirePackage[format=plain,
+	labelformat=simple,
+	font={small,sf,bf},
+	indention=0cm,
+	labelsep=period,
+	justification=centering,
+	singlelinecheck=true,
+	tableposition=top,
+	figureposition=bottom]{caption}
+
+\begin{document}
+
+Blah blah. Should be a serif font.
+
+\begin{table}[h!]
+\caption{Some caption, which should be bold.}
+\label{tab:xxx}\centering
+\begin{tabular}{ccc}
+test1 & test2 & test3 \\
+\toprule
+test1 & test2 & test3 \\
+test1 & test2 & test3 \\
+test1 & test2 & test3 \\
+\bottomrule            
+\end{tabular}
+\end{table}
+
+Blah blah. Should be a serif font.
+
+\end{document}  
