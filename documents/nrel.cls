@@ -105,7 +105,7 @@
 \RequirePackage{mathptmx}
 
 % Helvetica for sans serif (family phv)
-\RequirePackage{helvet}
+\RequirePackage[scaled=0.83]{helvet}
 
 % Courier for typewriter font (family pcr)
 \RequirePackage{courier}
@@ -487,14 +487,18 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true]{biblatex}
 \AtBeginDocument{
 	% table font should be sans-serif
 	\makeatletter
-	\appto\@floatboxreset{%
-	  \ifx\@captype\nrel@table
-	    \sffamily
-	  \fi
-	}
-	\def\nrel@table{table}
-\makeatother
-% fix hyperlinks
+%	\appto\@floatboxreset{%
+%	  \ifx\@captype\nrel@table
+%	    \sffamily
+%	  \fi
+%	}
+%	\def\nrel@table{table}
+	\renewenvironment{table}
+		{\renewcommand\familydefault\sfdefault\selectfont
+		\@float{table}}
+		{\end@float}
+	\makeatother
+	% fix hyperlinks
 	\makeatletter
 	\hypersetup{
 		pdftitle = {\@title},
