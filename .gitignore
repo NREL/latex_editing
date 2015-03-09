@@ -1,5 +1,5 @@
 # Latex files
- 
+*.*(busy) 
 *.aux
 *.glo
 *.idx
