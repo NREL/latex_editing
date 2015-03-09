@@ -124,6 +124,7 @@
 
 % For formatting the bibliography
 \RequirePackage[sort]{natbib}
+\setcitestyle{aysep={}}
 
 % use fonts of type T1
 \RequirePackage[T1]{fontenc}
@@ -224,14 +225,15 @@
 	
 	% footers
 	% need to add page number and availability information to every page, including new chapters.
-%	\RequirePackage{fancyhdr}
-%	\fancypagestyle{nrel}{%
-%		\fancyhf{} % clear all header and footer fields
-%		\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
-%		\renewcommand{\headrulewidth}{0pt}
-%		\renewcommand{\footrulewidth}{0pt}}
-%	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
-%	\let\ps@plain\ps@nrel
+	\RequirePackage{fancyhdr}
+	\fancypagestyle{nrel}{%
+		\fancyhf{} % clear all header and footer fields
+		\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0pt}}
+	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
+	\let\ps@plain\ps@nrel
+	\pagestyle{nrel}
 	
 	% add front matter etc
 	\ifthenelse{\boolean{IsBook}}{%TRUE
