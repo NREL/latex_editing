@@ -132,7 +132,7 @@
                \PackageInfo{accessibility}{Standardklasse}}{}%
 
 \pdfcompresslevel=0% Damit wird die PDF-Quelldatei lesbar
-\pdfoptionpdfminorversion=6% Bestimmt die PDF - Version der Ausgabe
+%\pdfoptionpdfminorversion=6% Bestimmt die PDF - Version der Ausgabe
  %\pdfadjustspacing=0% 0, 1 oder 2 ?nderung nicht erkannt
 
 \newcommand{\alt}[1]{\xdef\altAttr{#1}}%
@@ -426,6 +426,7 @@
        %\PackageWarning{accessibility}{unterschiedlich \thepage<>\themypage; MCID \theTaggedObj}
     %}%
     \xdef\TextArray{\TextArray \space <</Type /MCR %
+    	% this fix allows roman numerals to be used
         %/Pg \pdfpageref\thepage \space \space 0 R %
         /Pg \pdfpageref\count1 \space \space 0 R %
         /MCID \theTaggedObj>>}%
@@ -460,9 +461,8 @@
     /P \theTextObjNum \space 0 R %
     /C /Normal %
     /K <</Type /MCR %
-    	% this fix allows roman numerals to be used
-         % /Pg \pdfpageref\thepage \space \space 0 R %
-         /Pg \pdfpageref\count1 \space \space 0 R %
+    	% No fix required to use roman numerals
+         /Pg \pdfpageref\thepage \space \space 0 R %
          /MCID #1>> %
     /S /#2 %
     \space\LanguageCode %
@@ -480,8 +480,8 @@
   \ifthenelse{\equal{#5}{Page}}{% Seitenreferenz angeben
     \immediate \pdfobj useobjnum#1{<</Type /StructElem %
       /P #4\space 0 R %
-      % /Pg \pdfpageref\thepage \space \space 0 R %
-      /Pg \pdfpageref\count1 \space \space 0 R %
+  	% No fix required to use roman numerals
+      /Pg \pdfpageref\thepage \space \space 0 R %
       /C /Normal %
       /K [#2] %
       /S #3 \space\LanguageCode>>}%
@@ -554,6 +554,7 @@
             /BibItem /LI % BibligraphyItem
             /ParagraphSpan /Span % geteilte Paragraphen am Seitenumbruch
             /Footnote /Note %  Fu?notentext
+            /fancy /Note
             /Chapter /Sect%
             /Section /Sect%
             /Subsection /Sect%

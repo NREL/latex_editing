@@ -1,7 +1,12 @@
 % File: nrel.cls v1.0
 % This class file provides basic functionality for producing
 % PDFs that meet NREL's style and formatting requirements.
-
+%
+% 1. Use specific fonts with the correct sizes and formatting
+%		for headings and body text
+% 2. Format captions for tables and figures
+% 3. Add headers and footers
+% 4. Correctly format in-document links
 % -------------------------------------------------------------
 % Identification Part
 % -------------------------------------------------------------
@@ -15,10 +20,6 @@
 % -------------------------------------------------------------
 % Create Options
 % -------------------------------------------------------------
-%% PDF properties
-\pdfinterwordspaceon
-\pdfminorversion=8
-
 \RequirePackage{xifthen}
 
 % Mark as draft
@@ -42,10 +43,6 @@
 % do we have chapters?
 \newboolean{HasChapters}
 \setboolean{HasChapters}{false}
-
-% tagged?
-\newboolean{IsTagged}
-\setboolean{IsTagged}{false}
 
 % -------------------------------------------------------------
 % Check for choice of package and formatting options
@@ -78,10 +75,6 @@
 	\setboolean{HasChapters}{false}
 	\def\NREL@class{article}
 	\typeout{Using modified article class}
-	}
-\DeclareOption{tagged}{
-	\setboolean{IsTagged}{true}
-	\typeout{PDF will be tagged}
 	}
 
 % -------------------------------------------------------------
@@ -124,23 +117,21 @@
 
 % For formatting the bibliography
 \RequirePackage[sort]{natbib}
-\setcitestyle{aysep={}}
 
 % use fonts of type T1
 \RequirePackage[T1]{fontenc}
 
 % colours
-\RequirePackage{color}
 \RequirePackage{xcolor}
 \definecolor{nrelblue}{RGB}{0, 121, 193}
 
 % set languages
 \RequirePackage[english]{babel}
+\usepackage{babel}%.................. Language setup
     \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
-    \addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
 
 % enable subfigures
-\RequirePackage{subfigure}
+\RequirePackage{subfig}
 
 % To stop hyphenation in titles etc
 \RequirePackage{hyphenat}
@@ -224,13 +215,25 @@
 	\setlength{\cftafterlottitleskip}{\baselineskip}
 	
 	% footers
+	% need to add page number and availability information to every page, including new chapters.
+	\RequirePackage{fancyhdr}
+	\pagestyle{plain}
+	\fancypagestyle{nrel}{%
+		\fancyhf{} % clear all header and footer fields
+		\fancyfoot[CO,CE]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\url{www.nrel.gov/publications}}} % except the center
+		\renewcommand{\headrulewidth}{0pt}
+		\renewcommand{\footrulewidth}{0pt}}
+	\pagestyle{nrel}
+	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
+	\let\ps@plain\ps@nrel
+	\AtBeginDocument{\pagestyle{nrel}}
 	
 	% add front matter etc
 	\ifthenelse{\boolean{IsBook}}{%TRUE
-		}{%FALSE
-		\newcommand{\frontmatter}{\textbf{Error defining front matter!}}
-		\newcommand{\mainmatter}{\textbf{Error defining main matter!}}
-		\newcommand{\backmatter}{\textbf{Error defining back matter!}}
+	}{%FALSE
+	\newcommand\frontmatter{\ }
+	\newcommand\mainmatter{\ }
+	\newcommand\backmatter{\ }
 	}	
 
 }{  % else IsMemoir
@@ -256,6 +259,7 @@
 	% additional spacing
 	\setlength{\cftbeforefigureskip}{5pt}
 	\setlength{\cftbeforetableskip}{5pt}
+
 }
 
 
@@ -344,9 +348,16 @@
 	}{% False
 	}
 
+% make the whole table of contents line the URL
+% from http://tex.stackexchange.com/questions/28806/how-to-make-a-hyperlink-cover-the-whole-line-in-table-of-contents-including-the
+
+
 % inherit fonts etc from TOC
 \let\printlottitle\printtoctitle
 \let\printloftitle\printtoctitle
+
+% Format Table of Contents, figures, etc
+\renewcommand{\contentsname}{Table of Contents}
 
 % Format Captions
 \RequirePackage[format=plain,
@@ -361,6 +372,7 @@
 	tableposition=top,
 	figureposition=bottom]{caption}
 
+
 % number continuously across chapters
 \ifthenelse{\boolean{HasChapters}}{
 	\RequirePackage{chngcntr}
@@ -368,38 +380,44 @@
 	\counterwithout{table}{chapter}
 }
 
-% Note that if we use the front matter / main matter, we have to change numbers
+% well, sort of...
 \ifthenelse{\boolean{IsMemoir}}{% True
-	}{%FALSE
-	% not memoir class
-	% need to renew the front, main, and back matter commands
-	\renewcommand{\frontmatter}{%
-		\pagenumbering{roman} %
-		\setcounter{page}{3} %
-		\setcounter{figure}{0} %
-		\renewcommand{\thefigure}{\Alph{figure}} %
-		\setcounter{table}{0} %
+}{%FALSE
+% not memoir class
+	
+% need to renew those commands
+	\renewcommand{\frontmatter}{
+		\cleardoublepage
+		\pagenumbering{roman}
+		\setcounter{page}{3}
+		\setcounter{figure}{0}
+		\renewcommand{\thefigure}{\Alph{figure}}
+		\setcounter{table}{0}
 		\renewcommand{\thetable}{\Alph{table}}
 	}
-	\renewcommand{\mainmatter}{%
-		\clearpage %
-		\pagenumbering{arabic} %
-		\setcounter{figure}{0} %
-		\renewcommand{\thefigure}{\arabic{figure}} %
-		\setcounter{table}{0} %
-		\renewcommand{\thetable}{\arabic{table}}%
+	\renewcommand{\mainmatter}{
+		\cleardoublepage
+		\pagenumbering{arabic}		
+		\setcounter{figure}{0}
+		\renewcommand{\thefigure}{\arabic{figure}}
+		\setcounter{table}{0}
+		\renewcommand{\thetable}{\arabic{table}}		
 	}
-	\renewcommand{\backmatter}{%
-	%
+	\renewcommand{\backmatter}{
+	\if@openright
+			\cleardoublepage
+		\else
+			\clearpage
+		\fi
 	}
 }
 
 % Create some figure and table caption styles that are narrower than textwidth. These look better with small floats.
 \DeclareCaptionStyle{narrow}{width=4.5in,
-						labelsep=period,
-						font={sf,normalsize},
-						labelfont=bf,
-						format=plain}
+							labelsep=period,
+							font={sf,normalsize},
+							labelfont=bf,
+							format=plain}
 
 % Indenting and spacing between paragraphs
 \setlength{\parindent}{0pt}
@@ -439,72 +457,44 @@
 
 % Add .pdf links
 \ifthenelse{\boolean{blacklinks}}{% True
-	\RequirePackage[final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=black, citecolor=black, menucolor=black, urlcolor=black, pdfborder={0 0 0}, unicode, pdflang={en-US}]{hyperref}
+	\RequirePackage[final, linktocpage, colorlinks, linktoc=all, linkcolor=black, citecolor=black, menucolor=black, urlcolor=black, pdfborder={0 0 0}, unicode]{hyperref}
 	}{% False
-	\RequirePackage[final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=blue, citecolor=blue, menucolor=blue, urlcolor=blue, pdfborder={0 0 0},unicode, pdflang={en-US}]{hyperref}
+	\RequirePackage[final, linktocpage, colorlinks, linktoc=all, linkcolor=blue, citecolor=blue, menucolor=blue, urlcolor=blue, pdfborder={0 0 0},unicode]{hyperref}
 	}
+
+% Format Bibliography
+\ifthenelse{\boolean{HasChapters}}{% True
+	\renewcommand{\bibsection}{\chapter{References}}
+	}{% False
+	\renewcommand{\bibsection}{\section{References}}
+	}
+
+% PDF properties
+\pdfminorversion=8
+\hypersetup{pdfauthor = {Author},
+	pdftitle = {Title of document},
+	pdfsubject = {Subject} }
 
 % Enable tooltips
 \RequirePackage[linewidth = 0]{pdfcomment}
+% Fix incorrect display of tooltips (http://tex.stackexchange.com/a/74340/3323)
+\makeatletter
+\renewcommand{\pc@annot@tooltip}%
+{%
+  /TU (\pc@pdfenc@contents)\space%
+  /T (tooltip \thezref@unique)\space%
+  /C [0 0 0]\space%
+  /FT/Btn\space%
+  /Ff 65536\space%
+  /H/N\space%
+}%
+\makeatother
+
 
 \ifthenelse{\boolean{IsMemoir}}{ % for some reason this is overriden from above so need to define at end
 	\renewcommand{\printtoctitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
 	\renewcommand{\printloftitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
 	\renewcommand{\printlottitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
-}
-
-% CODE / VERBATIM
-\@ifundefined{lstlisting}{}{%
-  \let\verbatim\relax%
-  \lstnewenvironment{verbatim}{\lstset{language=[LaTeX]TeX,                     % the language of the code
-  basicstyle=\small\sffamily,
-  numbers=none,                   % where to put the line-numbers
-  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
-  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line will be numbered
-  numbersep=5pt,                  % how far the line-numbers are from the code
-  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
-  showspaces=false,               % show spaces adding particular underscores
-  showstringspaces=false,         % underline spaces within strings
-  breaklines=true,                % sets automatic line breaking
-  breakatwhitespace=true,        % sets if automatic breaks should only happen at whitespace
-  keywordstyle=\color{blue},      % keyword style
-  commentstyle=\color{gray},   % comment style
-  stringstyle=\color{green},      % string literal style
-  escapeinside={\%*}{*)},         % if you want to add a comment within your code
-  morekeywords={*,...}}%            % if you want to add more keywords to the set
-}{}%
-}
-
-%% ACCESSIBILITY
-\ifthenelse{\boolean{IsTagged}}{% True
-	\RequirePackage[tagged,highstructure]{accessibility_nrel}
-	}{% can use the footnote
-	\ifthenelse{\boolean{IsMemoir}}{% TRU
-	}{
-		% need to add page number and availability information to every page, including new chapters.
-	\RequirePackage{fancyhdr}
-	\fancypagestyle{nrel}{%
-		\fancyhf{} % clear all header and footer fields
-		\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
-		\renewcommand{\headrulewidth}{0pt}
-		\renewcommand{\footrulewidth}{0pt}}
-	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
-	\let\ps@plain\ps@nrel
-	\pagestyle{nrel}
-
-	}
-}
-
-%% THINGS WE NEED TO DO AT THE START OF THE DOCUMENT
-\AtBeginDocument{
-	\makeatletter
-	\hypersetup{
-		pdftitle = {\@title},
-		pdfauthor = {\@author}
-	}
-	\makeatother
-	\maketitle
-	\clearpage
 }
 
 % end of file
