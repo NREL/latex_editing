@@ -122,12 +122,6 @@
 % For including figures, ignoring the draft status
 \RequirePackage[final]{graphicx}
 
-% For formatting the bibliography
-\RequirePackage{csquotes}
-\RequirePackage[authordate,backend=bibtex,natbib=true]{biblatex-chicago}
-\DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
-\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
-
 % use fonts of type T1
 \RequirePackage[T1]{fontenc}
 
@@ -156,6 +150,13 @@
 
 % code listings
 \RequirePackage{listings}
+
+% For formatting the bibliography
+\RequirePackage[babel]{csquotes}
+\usepackage[style=chicago-authordate,strict,backend=bibtex,%
+natbib=true,babel=other,bibencoding=inputenc,sorting=nyt]{biblatex}
+\DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
+\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
 
 
 % --------------

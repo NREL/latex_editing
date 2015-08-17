@@ -53,11 +53,10 @@
     <requires type="static">
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
+      <file>blx-natbib.def</file>
       <file>chicago-authordate.bbx</file>
       <file>chicago-authordate.cbx</file>
       <file>biblatex.cfg</file>
-      <file>cms-american.lbx</file>
-      <file>american.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>

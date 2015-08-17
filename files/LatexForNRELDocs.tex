@@ -159,7 +159,9 @@ If you don't use the \verb+\frontmatter+ commands, you may need to increment the
 \label{Sec:Bib}
 Use \texttt{bibtex} to organize references and store them in a single file (e.g. \verb+/Documents/bibliography/bibliography.bib+). The bibliography will then contain entries with `keys', like \texttt{Lamport\_1986\_a}. Authors can then insert citations to this key throughout their document, using different styles of citation. These are describe in the \emph{achicago.sty} documentation.
 \begin{itemize}
-\item \verb+\cite{Lamport_1986_a}+ prints a simple \cite{Lamport_1986_a}.
+\item \verb+\cite{Lamport_1986_a}+ prints \cite{Lamport_1986_a}.
+\item \verb+\citep{Lamport_1986_a}+ prints \citep{Lamport_1986_a}.
+\item \verb+\citet{Lamport_1986_a}+ prints \citet{Lamport_1986_a}.
 \end{itemize}
 
 To cite URLs, use the 'misc' style. For example, the bibtex entry for \href{http://tex.stackexchange.com}{http://tex.stackexchange.com}\ \cite{texstackexchange} looks like this:
@@ -174,10 +176,10 @@ To cite URLs, use the 'misc' style. For example, the bibtex entry for \href{http
 
 This format will allow you to include the date on which a URL was accessed.
 
-The citations should work with journal articles, books \cite{Lamport_1986_a}, technical reports \cite{TechReportTest}, and URLs \cite{texstackexchange}.
+The citations should work with journal articles, books \citep{Lamport_1986_a}, technical reports \citep{TechReportTest}, and URLs \citep{texstackexchange}.
 
 \section{NREL-style bibliographies}
-NREL uses "Chicago A" style-references. The nrel.cls file uses Biblatex to produce these references. To include a bibliography in the document, use the following commands where you want the bibliography to occur:
+NREL uses "Chicago A" style-references. The \emph{nrel.cls} file uses Biblatex to produce these references. To include a bibliography in the document, use the following commands where you want the bibliography to occur:
 
 \begin{verbatim}
 \bibliography{files/bibliography.bib}
@@ -188,11 +190,8 @@ NREL uses "Chicago A" style-references. The nrel.cls file uses Biblatex to produ
 \label{sec:Bib}
 \printbibliography
 ...
+\end{document}
 \end{verbatim}
-
-This will probably be somewhere near to the end of the document.
-
-
 
 \section{Putting it all together}
 The source of your LaTeX document should probably look like this:
@@ -208,6 +207,7 @@ The source of your LaTeX document should probably look like this:
 \fi
 \title{Writing NREL documents using LaTeX}
 \author{A. Clifton, A. Platt, P. Fleming, M. Lawson}
+\bibliography{files/bibliography.bib}
 \begin{document}
 \maketitle
 \frontmatter
@@ -220,9 +220,9 @@ The source of your LaTeX document should probably look like this:
 \input{Introduction}
 \input{Theory}
 \cleardoublepage
-\bibliographystyle{chicago}
 \label{sec:Bib}
-\bibliography{~/Documents/bibliography/bibliography}
+\printbibliography
+
 \end{document}
 \end{verbatim}
 
