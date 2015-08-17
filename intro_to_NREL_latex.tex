@@ -8,8 +8,8 @@
  	\documentclass[12pt,letterpaper]{article}
 	\input{NRELLatex2rtf.tex}
 \else
-	%\documentclass[report,tagged]{nrel}
-	\documentclass[report]{nrel}
+	\documentclass[report,tagged]{nrel}
+	%\documentclass[report]{nrel}
 \fi
 
 % -----------------------------------
@@ -17,6 +17,7 @@
 % -----------------------------------
 \title{Writing NREL documents using LaTeX}
 \author{A. Clifton, A. Platt, P. Fleming, M. Lawson}
+\addbibresource{files/bibliography.bib}
 
 % -------------------------------------
 % DOCUMENT STARTS HERE
@@ -45,9 +46,6 @@
 
 % bibliography
 \cleardoublepage
-\bibliographystyle{nrel}
-%\bibintoc
 \label{sec:Bib}
-\bibliography{files/bibliography}
-
+\printbibliography
 \end{document}
