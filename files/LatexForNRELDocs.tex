@@ -155,6 +155,85 @@ Page numbering in the front matter (i.e. the Abstract, Summary, and Foreword cha
 
 If you don't use the \verb+\frontmatter+ commands, you may need to increment the page counter manually. To increment the counter $n$ pages, use \verb+\setcounter{page}{n}+ after \verb+\begin{document}+.
 
+\section{Cross references}
+Use labels and references to refer back and forth to figures, equations, tables and sections. For example, \verb+Eqn. \ref{eqn:line}+ gives a reference to Eqn. \ref{eqn:line}.
+
+\section{Floats}
+Floats are images, tables or other pieces of the document that are free to move to the best place in the document for them. Literally, they `float'. The two most common floats are the tabular environment (for tables) and the figure environment for figures.
+
+\subsection{Tables}
+Use the \texttt{tabular} environment to produce basic tables. Table~\ref{tab:widgets} is produced using this code: 
+
+\begin{verbatim}
+\begin{table}[!h]
+\centering
+\caption{An example table.}\label{tab:widgets}
+\begin{tabular}{lr}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\end{table}
+\end{verbatim}
+
+\begin{table}[!h]
+\centering
+\caption{An example table.}\label{tab:widgets}
+\begin{tabular}{lr}
+Item & Quantity \\\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\end{table}
+
+Resist the temptation to stop table rows early. If all of the delimiters  (\&) are included in each row, the table will be complete and will better translate to RTF later.
+
+\subsection{Figures}
+To include a figure in a document, use the \texttt{figure} environment and the \texttt{includegraphics} command.
+
+\begin{verbatim}
+\begin{figure}
+\includegraphics[width=\textwidth]{figure's-file-name}
+\caption{Caption goes here.}\label{fig:figuresLabel}
+\end{figure}
+\end{verbatim}
+
+
+\subsection{Subfigures}
+
+Subfigures are implemented using the \texttt{subfig} package. Although this package is deprecated (apparently \texttt{subcaption} is now the preferred package), it plays fairly nicely with \texttt{latex2rtf} so will be used for the foreseeable future. 
+
+The \texttt{label}s in the example below allow us to make references using the \texttt{ref} command, both to the overall figure (Figure \ref{fig:NRELimages}) and the subfigures (Figures \ref{fig:21206} and \ref{fig:20018}) directly. Unfortunately, \texttt{latex2rtf} does not allow multiple \texttt{label}s in a Figure environment, and so only the first label will be kept: therefore, it's best to just use a single label in any one \texttt{figure} environment.
+
+\begin{verbatim}
+\begin{figure}
+\centering
+\hfill
+\subfigure[Wind turbines at the Forward Wind Energy Center in Fond du Lac 
+ and Dodge Counties, Wisconsin. (Photo by Ruth Baranowski / NREL)
+ \label{fig:21206}]{\includegraphics[height=2.5in]{files/21206}}
+\hfill 
+\subfigure[Aerial view of the National Wind Technology Center. 
+ (Photo by Dennis Schroeder / NREL)\label{fig:20018}]
+ {\includegraphics[height=2.5in]{files/20018}}
+\hfill
+\caption{NREL images}\label{fig:NRELimages}
+\end{figure}
+\end{verbatim}
+ 
+\begin{figure*}[htp]
+\centering
+\hfill
+\subfigure[Wind turbines at the Forward Wind Energy Center in Fond du Lac and Dodge Counties, Wisconsin. (Photo by Ruth Baranowski / NREL)\label{fig:21206}]{\includegraphics[height=2.5in]{files/21206}}
+~ %add desired spacing between images, e. g. ~, \quad, \qquad etc. (or a blank line to force the subfigure onto a new line)
+\hfill
+\subfigure[Aerial view of the National Wind Technology Center. (Photo by Dennis Schroeder / NREL)\label{fig:20018}]{\includegraphics[height=2.5in]{files/20018}}
+\hfill
+\caption{NREL images}\label{fig:NRELimages}
+\end{figure*}
+
+If a subfigure is split over two lines using \verb+\\+, make sure those symbols are on their own line.
+
 \section{Citations}
 \label{Sec:Bib}
 Use \texttt{bibtex} to organize references and store them in a single file (e.g. \verb+/Documents/bibliography/bibliography.bib+). The bibliography will then contain entries with `keys', like \texttt{Lamport\_1986\_a}. Authors can then insert citations to this key throughout their document, using different styles of citation. These are describe in the \emph{achicago.sty} documentation.
@@ -178,6 +257,9 @@ This format will allow you to include the date on which a URL was accessed.
 
 The citations should work with journal articles, books \citep{Lamport_1986_a}, technical reports \citep{TechReportTest}, and URLs \citep{texstackexchange}.
 
+\section{Computer code}
+The \texttt{lstlisting} package has been loaded.
+
 \section{NREL-style bibliographies}
 NREL uses "Chicago A" style-references. The \emph{nrel.cls} file uses Biblatex to produce these references. To include a bibliography in the document, use the following commands where you want the bibliography to occur:
 
@@ -191,6 +273,20 @@ NREL uses "Chicago A" style-references. The \emph{nrel.cls} file uses Biblatex t
 \printbibliography
 ...
 \end{document}
+\end{verbatim}
+
+\section{Creating a file structure}
+\label{sec:FileStructure}
+Use the \texttt{input} command to import other files into your main file. For example, each of the chapters in this report could be in separate files, called \emph{NRELRequirements.tex} (Chapter 1), \emph{LatexAtNREL.tex} (Chapter 2), and so-on. 
+
+\begin{verbatim}
+...
+\begin{document}
+% content
+\input{NRELRequirements}
+\input{LatexAtNREL}
+\input{ConvertingToDoc}
+...
 \end{verbatim}
 
 \section{Putting it all together}
