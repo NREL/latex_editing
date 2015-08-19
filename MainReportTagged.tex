@@ -1,0 +1,47 @@
+% this file demonstrates the use of the `report` option with the NREL style file.
+
+% ---------------
+% PREAMBLE
+% ---------------
+\documentclass[report,tagged]{nrel}
+
+% -----------------------------------
+% DOCUMENT PROPERTIES
+% -----------------------------------
+\title{Writing NREL documents using LaTeX}
+\author{A. Clifton, M. Dennis, A. Platt, P. Fleming, M. Lawson}
+\addbibresource{files/bibliography.bib}
+
+% -------------------------------------
+% DOCUMENT STARTS HERE
+% -------------------------------------
+\begin{document}
+
+\frontmatter
+\input{files/ExecutiveSummary}
+\input{files/Acknowledgments}
+
+\mainmatter
+\tableofcontents
+\listoffigures
+\listoftables
+
+\lstset{language=[LaTeX]Tex,columns=fullflexible,keepspaces=true,breaklines=true}
+%% CHAPTER: WHAT IS LATEX
+\input{files/WhatIsLatex}
+%% CHAPTER: REQUIREMENTS FOR NREL DOCUMENTS
+\input{files/RequirementsForNRELDocs}
+%% CHAPTER: HOW TO MAKE NREL LATEX DOCUMENTS %%
+\input{files/LatexForNRELDocs}
+%% CHAPTER: LATEX EXAMPLES %%
+%\input{files/LatexExamples}
+%% CHAPTER:MAKING DOC FILES
+%\input{files/MakingDOCFiles}
+%% CHAPTER: MAKING PDFS
+\input{files/MakingPDFFiles}
+
+% bibliography
+\cleardoublepage
+\label{sec:Bib}
+\printbibliography
+\end{document}
