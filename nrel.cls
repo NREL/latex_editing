@@ -153,11 +153,10 @@
 
 % For formatting the bibliography
 \RequirePackage[babel]{csquotes}
-\usepackage[style=chicago-authordate,strict,backend=bibtex,%
-natbib=true,babel=other,bibencoding=inputenc,sorting=nyt]{biblatex}
+\RequirePackage[style=chicago-authordate,strict,backend=bibtex,%
+natbib=true,bibencoding=inputenc,sorting=nyt]{biblatex}
 \DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
 \DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
-
 
 % --------------
 % Main Code
