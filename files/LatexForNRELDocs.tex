@@ -4,7 +4,17 @@ A LaTeX class called \emph{nrel.cls} has been written that implements NREL's for
 
 \section{NREL's LaTeX Environment}
 \subsection{Web Interface}
-NREL authors are strongly encouraged to use the NREL-hosted web-based latex environment. This can be found at \href{latex.nrel.gov}{latex.nrel.gov} and is based on the sharelatex web interface.
+NREL authors are strongly encouraged to use the NREL-hosted web-based latex environment to produce documents from LaTeX. This can be found at \href{latex.nrel.gov}{latex.nrel.gov} and is based on the open source interface used by \href{sharelatex.com}{sharelatex.com}. More information can be found at \href{latex.nrel.gov}{latex.nrel.gov}.
+
+Advantages of \href{latex.nrel.gov}{latex.nrel.gov} include:
+\begin{enumerate}
+\item No need to maintain a local version of LaTeX
+\item Everyone uses the same version of LaTeX
+\item Editors and reviewers can work in a user-friendly environment
+\item There is an always-on ``track changes'' feature
+\item Secure hosting of documents within the NREL domain
+\item Ability to download source documents for archiving
+\end{enumerate}
 
 \subsection{Starting new documents}
 \begin{enumerate}
@@ -13,8 +23,34 @@ NREL authors are strongly encouraged to use the NREL-hosted web-based latex envi
 \item Modify \emph{main.tex} as required.
 \end{enumerate}
 
+Authors are welcome to use their own installation of LaTeX to prepare a document using the \emph{nrel.cls} file, but should note that they will need to transfer the document to \href{latex.nrel.gov}{latex.nrel.gov} at some point.
+
 \subsection{Working with pubhub}
-pubhub is NREL's publications management software. All files used to prepare the latex document should be downloaded from \href{latex.nrel.gov}{latex.nrel.gov} and stored in pubhub once the final document has been published.
+\href{pubhub.nrel.gov}{pubhub.nrel.gov} is NREL's web-based publications management software. Pubhub should be used in different ways depending on the stage that the document is at.
+\begin{itemize}
+\item Editing documents: 
+\begin{itemize} 
+\item Authors check in the PDF and provide a link to the \href{latex.nrel.gov}{latex.nrel.gov} document.
+\item Authors add the latex.editor@nrel.gov user to their document
+\item The editor logs in to the latex.editor@nrel.gov account on \href{latex.nrel.gov}{latex.nrel.gov} to make edits. The author may need to support some modifications. Comments should be added on a new line after the \% symbol, and will be found by the ``track changes'' feature.
+\end{itemize}
+\item Reviewing documents:
+\begin{itemize} 
+\item Approvers can work on either the PDF or the LaTeX document, noting that working on the  latex.nrel.gov document requires an internet connection.
+\end{itemize}
+\item Final documents: 
+\begin{itemize} 
+\item All files used to prepare the latex document should be downloaded from \href{latex.nrel.gov}{latex.nrel.gov} and stored in pubhub once the final document has been published.
+\end{itemize}
+\end{itemize}
+
+\subsection{FAQs for working with latex.nrel.gov}
+\begin{description}
+\item \textbf{I want to use a different compiler}. Only use the pdfLatex compiler, if possible.
+\item \textbf{I can't see the source code}. This should be in the middle window. Refresh the browser.
+\item \textbf{My document is not compiling}. Check the logs (small button to the right of ``compile''.) From this point, you're on your own. \href{tex.stackexchange.com}{tex.stackexchange.com} may be helpful for Latex-related issues.
+\item \textbf{My document crashes servers}. Try to keep the files you upload to Latex types (use .bib, .tex, .sty, etc; stay away from .pdf .xml, .md, etc).
+\end{description}
 
 \section{The nrel.cls class file}\label{sec:nrelcls}
 \emph{nrel.cls} provides the \emph{nrel} document style and controls the formatting and presentation of documents so that they meet NREL's requirements.
