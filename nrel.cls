@@ -157,6 +157,7 @@
 natbib=true,bibencoding=inputenc,sorting=nyt]{biblatex}
 \DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
 \DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
+\DeclareBibliographyAlias{*}{misc} % map unknown bibliogrpahy entry types to the misc type
 
 % --------------
 % Main Code
