@@ -1,8 +1,8 @@
 #Introduction
-This is the repository for a LaTeX class file and example template document that can be used to produce LaTeX documents that conform to NREL's style guide. The file also includes instructions for converting the document into formats that can be read by WYSIWYG editors such as Microsoft Word.
+This is the repository for a LaTeX class file and example template document that can be used to produce LaTeX documents that conform to NREL's style guide. 
 
 #Requirements
-1. A working installation of Latex 2014. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
+1. A working installation of Latex 2014 or 2015. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
 2. Some experience with using latex to produce journal articles or reports.
 3. Basic understanding of how to use command line programs.
 
@@ -32,9 +32,14 @@ Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to 
 Please use the wiki at https://github.com/NREL/latex_editing/wiki as you feel fit. Useful examples may be rolled in to the template file over time.
 
 #Instructions for NREL staff
-NREL staff should check on [The Source](http://thesource.nrel.gov/communications/templates.html) for current guidance on using LaTeX for NREL documents. NREL staff are strongly encouraged to check in with their communications rep before starting to use LaTeX for documents.
+NREL staff should check on [The Source](http://thesource.nrel.gov/communications/templates.html) for current guidance on using LaTeX for NREL documents.
+
+Please also note that there is an NREL-hosted latex server which is the preferred tool for preparing NREL documents. Details will be provided at a later date. 
+
+NREL staff are strongly encouraged to check in with their communications representatives before starting to use LaTeX for documents.
 
 #Recent changes
+12.18.2015 updated to reflect new internal publications process. 
 10.8.2014 Added details of how to convert using `pandoc`.
 
 7.31.2014 Added \frontmatter, \mainmatter, and \backmatter commands to customize numbering for all document classes (article, report). These are normally only available for the book class. Also updated the example template, and figured out how to add URLs to the bibliography.
