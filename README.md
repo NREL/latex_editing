@@ -30,6 +30,7 @@ Please also note that there is an NREL-hosted latex server which is the preferre
 NREL staff are strongly encouraged to check in with their communications representatives before starting to use LaTeX for documents.
 
 #Recent changes
+* 4th January 2016: changed directory structure to accomodate presentation files
 
 #Code Maintainers
 * [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
