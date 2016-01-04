@@ -1,6 +1,8 @@
 #Introduction
 This directory contains LaTeX class files and an example template document that can be used to produce LaTeX "beamer" presentations that conform to NREL's style guide.
 
+LaTeX-generate presentations are currently (2016) not supported by NREL's publications process.
+
 #Requirements
 1. A working installation of Latex 2014 or 2015. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
 2. Some experience with using latex to produce presentations.
@@ -32,7 +34,7 @@ Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to 
 Please use the wiki at https://github.com/NREL/latex_editing/wiki as you feel fit. Useful examples may be rolled in to the template file over time.
 
 #Instructions for NREL staff
-NREL staff should check on [The Source](http://thesource.nrel.gov/communications/templates.html) for current guidance on using LaTeX for NREL documents.
+NREL staff should check on [The Source](http://thesource.nrel.gov/communications/templates.html) for current guidance on using LaTeX for NREL documents, including presentations.
 
 Please also note that there is an NREL-hosted latex server which is the preferred tool for preparing NREL documents. Details will be provided at a later date. 
 
