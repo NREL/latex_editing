@@ -16,7 +16,7 @@ The following files are the important ones:
 * Example .pdf file: https://github.com/NREL/latex_editing/blob/master/documents/intro_to_NREL_latex.pdf
 
 #Installing and using the latex class file
-The nrel.cls and nrel.bst files should be installed either in your local latex tree or in the same directory as your .tex source files. 
+The `nrel.cls` and `nrel.bst` files should be installed either in your local latex tree or in the same directory as your .tex source files. 
 
 Call the class using something like `\documentclass[draft,report]{nrel}` in your preamble. Options for the nrel class are discussed in the `intro_to_NREL_latex.pdf` document.
 
@@ -41,8 +41,7 @@ NREL staff are strongly encouraged to check in with their communications represe
 #Recent changes
 12.18.2015 updated to reflect new internal publications process. 
 10.8.2014 Added details of how to convert using `pandoc`.
-
-7.31.2014 Added \frontmatter, \mainmatter, and \backmatter commands to customize numbering for all document classes (article, report). These are normally only available for the book class. Also updated the example template, and figured out how to add URLs to the bibliography.
+7.31.2014 Added `\frontmatter`, `\mainmatter`, and `\backmatter` commands to customize numbering for all document classes (article, report). These are normally only available for the book class. Also updated the example template, and figured out how to add URLs to the bibliography.
 
 #Code Maintainers
 * [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
