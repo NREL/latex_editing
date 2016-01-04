@@ -1,9 +1,9 @@
 #Introduction
-This is the repository for a LaTeX class file and example template document that can be used to produce LaTeX documents that conform to NREL's style guide. 
+This directory contains LaTeX class files and an example template document that can be used to produce LaTeX "beamer" presentations that conform to NREL's style guide.
 
 #Requirements
 1. A working installation of Latex 2014 or 2015. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
-2. Some experience with using latex to produce journal articles or reports.
+2. Some experience with using latex to produce presentations.
 3. Basic understanding of how to use command line programs.
 
 #Download
@@ -39,17 +39,10 @@ Please also note that there is an NREL-hosted latex server which is the preferre
 NREL staff are strongly encouraged to check in with their communications representatives before starting to use LaTeX for documents.
 
 #Recent changes
-12.18.2015 updated to reflect new internal publications process. 
-10.8.2014 Added details of how to convert using `pandoc`.
-
-7.31.2014 Added \frontmatter, \mainmatter, and \backmatter commands to customize numbering for all document classes (article, report). These are normally only available for the book class. Also updated the example template, and figured out how to add URLs to the bibliography.
+01.04.2016 First commit of the presentation files.
 
 #Code Maintainers
-* [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
+* [Dave Bielen](mailto:@nrel.gov) (National Renewable Energy Laboratory)
 
 #Project Contributors
-* Andy Platt (National Renewable Energy Laboratory)
-* Paul Fleming (National Renewable Energy Laboratory)
-* Michael Lawson (National Renewable Energy Laboratory)
-* Andrew Ning (National Renewable Energy Laboratory)
-* Alexsandra Lemke (National Renewable Energy Laboratory)
+* Dave Bielen
