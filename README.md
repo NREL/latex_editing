@@ -10,10 +10,11 @@ This is the repository for a LaTeX class file and example template document that
 Click on the "Download ZIP" button on the lower right of this page. 
 
 #Files
-* Files for documents (articles and reports) are in the `documents` folder
+* Files for documents (`article` and `report` classes) are in the `documents` folder
+* Files for presentations (`beamer` class) are in the `presentations` folder
 
 #Documentation
-Documentation for producing docuemnts or presentations is provided in the readme file  in each directory.
+Documentation for producing documents or presentations is provided in the `readme.md` file that can be found in each directory. A template is also provided.
 
 #Reporting issues and errors
 Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to report issues.
