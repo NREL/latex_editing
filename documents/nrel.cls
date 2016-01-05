@@ -99,7 +99,7 @@
 \RequirePackage[2tabu, orthodox]{nag}
 
 % GEOMETRY: set page size
-\RequirePackage[head=0.125in,top=1.5in,bottom=1in,inner=1in,outer=1in]{geometry}
+\RequirePackage[head=0.125in,top=0.9in,bottom=1in,inner=1in,outer=1in]{geometry}
 
 % MATHPTMX Times for roman text and math (family ptm)
 \RequirePackage{mathptmx}
@@ -226,8 +226,6 @@ natbib=true,bibencoding=inputenc,sorting=nyt]{biblatex}
 	\setlength{\cftaftertoctitleskip}{\baselineskip}
 	\setlength{\cftafterloftitleskip}{\baselineskip}
 	\setlength{\cftafterlottitleskip}{\baselineskip}
-	
-	% footers
 	
 	% add front matter etc
 	\ifthenelse{\boolean{IsBook}}{%TRUE
