@@ -1,5 +1,5 @@
 #Introduction
-This is the repository for a LaTeX class files and template documents that can be used to produce LaTeX documents and presentations that conform to NREL's style guide. 
+This is the repository for LaTeX class files and template documents that can be used to produce articles, reports, and presentations that conform to NREL's style guide. 
 
 #Requirements
 1. A working installation of Latex 2014 or 2015. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
