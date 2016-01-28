@@ -152,7 +152,7 @@
 % For formatting the bibliography. See guidance 
 \RequirePackage[babel]{csquotes}
 \RequirePackage[style=chicago-authordate,strict,backend=bibtex,%
-natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxcitenames = 10]{biblatex}
+natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcitenames =3 ]{biblatex}
 % change the name of the bib (see http://tex.stackexchange.com/questions/82993/how-to-change-the-name-of-document-elements-like-figure-contents-bibliogr)
 \DefineBibliographyStrings{english}{%
   bibliography = {References},
