@@ -132,8 +132,6 @@
 
 % set languages
 \RequirePackage[english]{babel}
-    \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
-    \addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
 
 % enable subfigures
 \RequirePackage{subfigure}
@@ -155,6 +153,10 @@
 \RequirePackage[babel]{csquotes}
 \RequirePackage[style=chicago-authordate,strict,backend=bibtex,%
 natbib=true,bibencoding=inputenc,sorting=nyt,doi=true]{biblatex}
+% change the name of the bib (see http://tex.stackexchange.com/questions/82993/how-to-change-the-name-of-document-elements-like-figure-contents-bibliogr)
+\DefineBibliographyStrings{english}{%
+  bibliography = {References},
+}
 % see NREL formatting guidelines at https://communications_resources.nrel.gov/style_guide/references
 % technical reports
 \DeclareBibliographyAlias{techreport}{book}
