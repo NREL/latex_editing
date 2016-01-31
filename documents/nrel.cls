@@ -131,7 +131,7 @@
 \definecolor{nrelblue}{RGB}{0, 121, 193}
 
 % set languages
-\RequirePackage[english]{babel}
+\RequirePackage[american]{babel}
 
 % enable subfigures
 \RequirePackage{subfigure}
@@ -154,7 +154,7 @@
 \RequirePackage[style=chicago-authordate,strict,backend=bibtex,%
 natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcitenames =3 ]{biblatex}
 % change the name of the bib (see http://tex.stackexchange.com/questions/82993/how-to-change-the-name-of-document-elements-like-figure-contents-bibliogr)
-\DefineBibliographyStrings{english}{%
+\DefineBibliographyStrings{american}{%
   bibliography = {References},
 }
 % see NREL formatting guidelines at https://communications_resources.nrel.gov/style_guide/references
