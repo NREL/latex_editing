@@ -371,8 +371,8 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 	figureposition=bottom]{caption}
 
 % number continuously across chapters
+\RequirePackage{chngcntr}
 \ifthenelse{\boolean{HasChapters}}{
-	\RequirePackage{chngcntr}
 	\counterwithout{figure}{chapter}
 	\counterwithout{table}{chapter}
 }
