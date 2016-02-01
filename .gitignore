@@ -1,4 +1,5 @@
 # Latex files
+*.*.*(busy) 
 *.*(busy) 
 *.aux
 *.glo
@@ -27,7 +28,7 @@
 *.mtc
 *.mtc1
 *.out
-*.synctex.gz
+*.synctex.*
 *.upa
 *.upb
  
@@ -41,3 +42,5 @@ Backup[ ]of[ ]*.numbers/
  
 # Mac finder files and hidden folders
 .DS_Store
+
+*.gz(busy)

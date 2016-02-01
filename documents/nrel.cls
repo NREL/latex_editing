@@ -374,15 +374,19 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 \RequirePackage{chngcntr}
 \ifthenelse{\boolean{HasChapters}}{
 	\counterwithout{figure}{chapter}
-	\counterwithout{table}{chapter}	
+	\counterwithout{table}{chapter}
+	\counterwithout{footnote}{chapter}
 
 	% deal with the appendix
 	\renewcommand\appendix{\par
 		\setcounter{chapter}{0} 
 		\setcounter{section}{0} 
 		\gdef\thechapter{\@Alph\c@chapter}
+		% counters should reset each chapter
 		\counterwithin{figure}{chapter}
-		\counterwithin{table}{chapter}}
+		\counterwithin{table}{chapter}
+		% footnote formatting
+		 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}}
 }{% else
 	\counterwithout{figure}{section}
 	\counterwithout{table}{section}	
@@ -391,8 +395,11 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 	\renewcommand\appendix{\par 
 		\setcounter{section}{0} 
 		\gdef\thesection{\@Alph\c@section}
+		% counters should reset each section
 		\counterwithin{figure}{section}
-		\counterwithin{table}{section}}
+		\counterwithin{table}{section}
+		% footnote formatting
+		 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}}
 }
 		
 % Note that if we use the front matter / main matter, we have to change numbers
