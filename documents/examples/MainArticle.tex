@@ -16,8 +16,6 @@
 % DOCUMENT STARTS HERE
 % -------------------------------------
 \begin{document}
-\frontmatter
-\mainmatter
 \tableofcontents
 \listoffigures
 \listoftables
@@ -70,6 +68,33 @@ Gadgets & 13
 
 \section{Preparing a high-quality PDF from LaTeX}
 \citet{Lamport_1986_a}
+
+\appendix
+\section{Appendix One}
+\begin{table}[!h]
+\centering
+\caption{An example table.}\label{tab:AppAWidgets}
+\begin{tabular}{lr}
+Item & Quantity \\
+\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\end{table}
+
+\section{Appendix Two}
+\begin{table}[!h]
+\centering
+\caption{An example table.}\label{tab:AppBWidgets}
+\begin{tabular}{lr}
+Item & Quantity \\
+\hline
+Widgets & 42 \\
+Gadgets & 13
+\end{tabular}
+\end{table}
+
+
 
 % bibliography
 \clearpage
