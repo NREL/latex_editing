@@ -1,26 +1,17 @@
 \chapter{How to Use Appendices}
-Appendices can be included in NREL documents.
+Appendices can be included in NREL documents. 
 
-\section{When using the article option}
+\section{How to switch to appendixes}
+To switch to appendices, simply use the \emph{appendix} command:
+
 \begin{lstlisting}
 \appendix
-\counterwithin{figure}{section}
-\counterwithin{table}{section}
-\input{files/AppendixA}
-\input{files/AppendixB}
-\end{lstlisting}
-
-\section{When using the report option}
-\begin{lstlisting}
-\appendix
-\counterwithin{figure}{chapter}
-\counterwithin{table}{chapter}
 \input{files/AppendixA}
 \input{files/AppendixB}
 \end{lstlisting}
 
 \section{Changes to Figure, Table, and Footnote Numbering}
-The following table (Table \ref{tab:AppAWidgets}) should have a different numbering style than Table \ref{tab:widgets}. The table number should start with the Appendix section or chapter number (in this case \thechapter,) and numbering should restart in each new appendix chapter (for reports) or section (for articles).
+The following table (Table \ref{tab:AppAWidgets}) should have a different caption numbering style than Table \ref{tab:widgets}. The table number should start with the appendix label (in this case \thechapter,) be followed by a period, and then be numbered. Numbering should restart in each new appendix.
 
 \begin{table}[!h]
 \centering

@@ -380,7 +380,8 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 	% deal with the appendix
 	\renewcommand\appendix{\par
 		\setcounter{chapter}{0} 
-		\setcounter{section}{0} 
+		\setcounter{section}{0}
+		\setcounter{footnote}{0} 
 		\gdef\thechapter{\@Alph\c@chapter}
 		% counters should reset each chapter
 		\counterwithin{figure}{chapter}
@@ -394,6 +395,7 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 	% deal with the appendix
 	\renewcommand\appendix{\par 
 		\setcounter{section}{0} 
+		\setcounter{footnote}{0} 
 		\gdef\thesection{\@Alph\c@section}
 		% counters should reset each section
 		\counterwithin{figure}{section}
