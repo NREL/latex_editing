@@ -8,7 +8,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{nrel}
 \typeout{ }
-\typeout{NREL.cls -- v1.0, July 2014}
+\typeout{NREL.cls -- v1.x, Last Updated March 1, 2016}
 \typeout{Formats documents according to the NREL style guide}
 \typeout{ }
 
@@ -133,9 +133,6 @@
 % set languages
 \RequirePackage[american]{babel}
 
-% enable subfigures
-\RequirePackage{subfigure}
-
 % To stop hyphenation in titles etc
 \RequirePackage{hyphenat}
 
@@ -187,7 +184,7 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 \ifthenelse{\NOT \boolean{IsMemoir}}{  % not memoir class
 
 	% improved table of contents and list of figures/tables
-	\RequirePackage[subfigure]{tocloft}
+	\RequirePackage{tocloft}
 
 	% remove numbering on bibliography but still allow in TOC
 	\RequirePackage[nottoc, notlot, notlof]{tocbibind}
@@ -220,9 +217,9 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 
 	% remove indentation
 	\setlength{\cftfigindent}{0pt}
-	\setlength{\cftsubfigindent}{0pt}
+	%\setlength{\cftsubfigindent}{0pt}
 	\setlength{\cfttabindent}{0pt}
-	\setlength{\cftsubtabindent}{0pt}
+	%\setlength{\cftsubtabindent}{0pt}
 
 	% don't add extra spaces in list of figures between chapters
 	\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
@@ -358,6 +355,7 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 \let\printloftitle\printtoctitle
 
 % Format Captions
+% see e.g. http://www.peteryu.ca/tutorials/publishing/latex_captions for details of how to adjust
 \RequirePackage[format=plain,
 	labelformat=simple,
 	font={small,sf,bf},
@@ -369,6 +367,7 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 	singlelinecheck=true,
 	tableposition=top,
 	figureposition=bottom]{caption}
+\RequirePackage{subcaption}
 
 % number figures and tables continuously across chapters
 \RequirePackage{chngcntr}
@@ -430,12 +429,6 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 	}
 }
 
-% Create some figure and table caption styles that are narrower than textwidth. These look better with small floats.
-\DeclareCaptionStyle{narrow}{width=4.5in,
-						labelsep=period,
-						font={sf,normalsize},
-						labelfont=bf,
-						format=plain}
 
 % check that the default san-serif font is sort-of-arial	(required for tables)					
 \renewcommand{\sfdefault}{phv} % Arial
