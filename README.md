@@ -1,42 +1,43 @@
-#Introduction
+# Introduction 
 This is the repository for LaTeX class files and template documents that can be used to produce articles, reports, and presentations that conform to NREL's style guide. 
 
-#Requirements
+# Requirements
 1. A working installation of Latex 2014 or 2015. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
 2. Some experience with using latex to produce journal articles or reports.
 3. Basic understanding of how to use command line programs.
 
-#Download
+# Download
 Click on the "Download ZIP" button on the lower right of this page. 
 
-#Files
+# Files
 * Files for documents (`article` and `report` classes) are in the `documents` folder
 * Files for presentations (`beamer` class) are in the `presentations` folder
 
-#Documentation
+# Documentation
 Documentation for producing documents or presentations is provided in the `readme.md` file that can be found in each directory. A template is also provided.
 
-#Reporting issues and errors
+# Reporting issues and errors
 Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to report issues.
 
-#Wiki
+# Wiki
 Please use the wiki at https://github.com/NREL/latex_editing/wiki as you feel fit. Useful examples may be rolled in to the template file over time.
 
-#Instructions for NREL staff
+# Instructions for NREL staff
 NREL staff should check on [The Source](http://thesource.nrel.gov/communications/templates.html) for current guidance on using LaTeX for NREL documents.
 
-Please also note that there is an NREL-hosted latex server which is the preferred tool for preparing NREL documents. Details will be provided at a later date. 
+Please also note that there is an NREL-hosted latex server at [latex.nrel.gov](latex.nrel.gov) which is the preferred tool for preparing NREL documents.
 
-NREL staff are strongly encouraged to check in with their communications representatives before starting to use LaTeX for documents.
+NREL staff must check in with their communications representatives before starting to use LaTeX for documents.
 
-#Recent changes
-* 4th January 2016: changed directory structure to accomodate presentation files
+# Recent changes
+* 16 March 2017: updates to accessibility class to remove some bugs
+* 4 January 2016: changed directory structure to accomodate presentation files
 
-#Code Maintainers
+# Code Maintainers
 * [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
 * [Dave Bielen]() (National Renewable Energy Laboratory)
 
-#Project Contributors
+# Project Contributors
 * Dave Bielen (National Renewable Energy Laboratory)
 * Andy Clifton (National Renewable Energy Laboratory)
 * Paul Fleming (National Renewable Energy Laboratory)
