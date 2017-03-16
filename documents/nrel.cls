@@ -8,7 +8,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{nrel}
 \typeout{ }
-\typeout{NREL.cls -- v1.x, Last Updated March 1, 2016}
+\typeout{NREL.cls -- v1.0, Last Updated March 16, 2017}
 \typeout{Formats documents according to the NREL style guide}
 \typeout{ }
 
@@ -529,7 +529,9 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 	}
 \AfterEndPreamble{
 	\maketitle
+	\ifthenelse{\boolean{IsReport}}{
 	\clearpage
+	}{}
 }
 
 % end of file
