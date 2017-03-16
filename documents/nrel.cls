@@ -15,7 +15,7 @@
 % -------------------------------------------------------------
 % Create Options
 % -------------------------------------------------------------
-%% PDF properties
+% PDF properties
 \pdfinterwordspaceon
 \pdfminorversion=8
 
@@ -163,6 +163,9 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 % make sure URLs in the bibliography are shown in roman fonts
 \urlstyle{same}
 
+% etoolbox (for \AfterEndPreamble}
+\RequirePackage{etoolbox}
+
 % --------------
 % Main Code
 % --------------
@@ -175,11 +178,9 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 %This changes parindent to 0
 \setlength{\RaggedRightRightskip}{0pt plus 3em}
 
-
 % -------------------------------------------
 % Changes to TOC and list of figures/tables
 % -------------------------------------------
-
 
 \ifthenelse{\NOT \boolean{IsMemoir}}{  % not memoir class
 
@@ -200,12 +201,10 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 		\renewcommand{\cfttoctitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
 		\renewcommand{\cftloftitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
 		\renewcommand{\cftlottitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
-
 	}{ % no chapters (section has a smaller font size)
 		\renewcommand{\cfttoctitlefont}{\color{nrelblue} \raggedright  \fontsize{12}{14}\sffamily\bfseries}
 		\renewcommand{\cftloftitlefont}{\color{nrelblue} \raggedright  \fontsize{12}{14}\sffamily\bfseries}
 		\renewcommand{\cftlottitlefont}{\color{nrelblue} \raggedright  \fontsize{12}{14}\sffamily\bfseries}
-
 	}
 
 	% add dotfill in toc
@@ -471,9 +470,9 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 
 % Add .pdf links
 \ifthenelse{\boolean{blacklinks}}{% True
-	\RequirePackage[final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=black, citecolor=black, menucolor=black, urlcolor=black, pdfborder={0 0 0}, unicode, pdflang={en-US}]{hyperref}
+	\RequirePackage[unicode, final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=black, citecolor=black, menucolor=black, urlcolor=black, pdfborder={0 0 0}, unicode, pdflang={en-US}]{hyperref}
 	}{% False
-	\RequirePackage[final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=blue, citecolor=blue, menucolor=blue, urlcolor=blue, pdfborder={0 0 0},unicode, pdflang={en-US}]{hyperref}
+	\RequirePackage[unicode, final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=blue, citecolor=blue, menucolor=blue, urlcolor=blue, pdfborder={0 0 0},unicode, pdflang={en-US}]{hyperref}
 	}
 
 % Enable tooltips
@@ -487,7 +486,7 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 
 %% ACCESSIBILITY
 \ifthenelse{\boolean{IsTagged}}{% True
-	\RequirePackage[tagged,highstructure]{accessibility-meta}
+	\RequirePackage[tagged,highstructure]{accessibilityMeta}
 	}{% can use the footnote
 	\ifthenelse{\boolean{IsMemoir}}{% TRU
 	}{
@@ -527,6 +526,8 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 		pdfauthor = {\@author}
 	}
 	\makeatother
+	}
+\AfterEndPreamble{
 	\maketitle
 	\clearpage
 }

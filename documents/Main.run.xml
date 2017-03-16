@@ -51,11 +51,14 @@
       <file>Main.bbl</file>
     </requires>
     <requires type="static">
+      <file>blx-dm.def</file>
       <file>blx-compat.def</file>
+      <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
       <file>blx-natbib.def</file>
       <file>chicago-authordate.bbx</file>
       <file>chicago-authordate.cbx</file>
+      <file>chicago-dates-common.cbx</file>
       <file>biblatex.cfg</file>
       <file>american.lbx</file>
       <file>english.lbx</file>
