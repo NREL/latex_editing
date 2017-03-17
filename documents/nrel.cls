@@ -216,9 +216,7 @@ natbib=true,bibencoding=inputenc,sorting=nyt,doi=true, maxbibnames = 10, maxcite
 
 	% remove indentation
 	\setlength{\cftfigindent}{0pt}
-	%\setlength{\cftsubfigindent}{0pt}
 	\setlength{\cfttabindent}{0pt}
-	%\setlength{\cftsubtabindent}{0pt}
 
 	% don't add extra spaces in list of figures between chapters
 	\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}

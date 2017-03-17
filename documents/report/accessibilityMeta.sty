@@ -188,7 +188,6 @@
     \immediate \pdfobj useobjnum\number\Objnum{<</Type /StructElem %
         /P \ParentElem\space 0 R %
         \TitleHelp %
-        /C /Normal %
         \space\LanguageCode %
         /K [\csname \KidsArray\endcsname] %
         /S /\StructElem>>}%
@@ -266,7 +265,6 @@
   %\convertLanguageInCode{\languagename}%
   \immediate \pdfobj useobjnum\theTextObjNum{<</Type /StructElem %
      /P \ParentElem \space 0 R %
-     /C /Normal %
      /K [\TextArray] %
      /S /\TextType %
     \space\LanguageCode>>}%
@@ -311,7 +309,6 @@
   \fi%
   \immediate \pdfobj useobjnum\theTextObjNum{<</Type /StructElem %
      /P \ParentElem \space 0 R %
-     /C /Normal %
      /K [\TextArray] %
      /S /\TextType %
     \space\LanguageCode %
@@ -425,7 +422,6 @@
   }%
   \immediate \pdfobj {<</Type /StructElem %
     /P \theTextObjNum \space 0 R %
-    /C /Normal %
     /K <</Type /MCR %
     	% this fix allows roman numerals to be used
          % /Pg \pdfpageref\thepage \space \space 0 R %
@@ -449,13 +445,11 @@
       /P #4\space 0 R %
       % /Pg \pdfpageref\thepage \space \space 0 R %
       /Pg \pdfpageref\count1 \space \space 0 R %
-      /C /Normal %
       /K [#2] %
       /S #3 \space\LanguageCode>>}%
     }{%keine Seitenreferenz angeben
     \immediate \pdfobj useobjnum#1{<</Type /StructElem %
       /P #4\space 0 R %
-      /C /Normal %
       /K [#2] %
       /S #3>>}%
   }%
