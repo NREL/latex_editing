@@ -17,7 +17,8 @@
 % -------------------------------------------------------------
 % PDF properties
 \pdfinterwordspaceon
-\pdfminorversion=8
+%\pdfminorversion=8
+\RequirePackage{pdf14}
 
 \RequirePackage{xifthen}
 
@@ -96,7 +97,7 @@
 % Package Loading
 % -------------------------------------------------------------
 % NAG: check for outdated packages
-\RequirePackage[2tabu, orthodox]{nag}
+\RequirePackage[l2tabu, orthodox]{nag}
 
 % GEOMETRY: set page size
 \RequirePackage[head=0.125in,top=0.9in,bottom=1in,inner=1in,outer=1in]{geometry}
@@ -114,6 +115,7 @@
 \RequirePackage{amsfonts,amssymb,amsmath}
 
 % gensymb. Required for degrees symbol
+\RequirePackage{textcomp}
 \RequirePackage{gensymb}
 
 % better tables

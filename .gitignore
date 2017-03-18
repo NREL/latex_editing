@@ -1,36 +1,45 @@
 # Latex files
 *.*.*(busy) 
 *.*(busy) 
-*.aux
-*.glo
-*.idx
-*.log
-*.toc
-*.ist
 *.acn
 *.acr
 *.alg
+*.aux
 *.bbl
 *.blg
-*.tui
-*.top
-*.tmp
-*.mp
 *.dvi
+*.fdb_latexmk
+*.fls
 *.glg
+*.glo
 *.gls
+*.idx
 *.ilg
 *.ind
+*.ist
 *.lof
 *.log
 *.lot
 *.maf
-*.mtc
-*.mtc1
+*.mp
+*.mtc*
+*.nav
+*.nlo
 *.out
+*.pdfsync
+*.ps
+*.run.*
+*.snm
 *.synctex.*
+*.tdo
+*.tmp
+*.toc
+*.top
+*.tui
 *.upa
 *.upb
+*.vrb
+*.xdy
  
 # Mac IDE files
 *.swp
@@ -43,4 +52,4 @@ Backup[ ]of[ ]*.numbers/
 # Mac finder files and hidden folders
 .DS_Store
 
-*.gz(busy)
+

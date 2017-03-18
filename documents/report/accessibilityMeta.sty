@@ -1,4 +1,3 @@
-
 %% accessibilityMeta.sty
 %% Additions and changes are copyright 2015 Andrew Clifton
 %% Code from accessibility.sty copyright 2007 Babett Schalitz (see below)
@@ -17,7 +16,7 @@
 %
 % This work consists of the file accessibilityMeta.sty.
 %
-% The file accessibility-meta.sty is a derived work under the terms of the 
+% The file accessibilityMeta.sty is a derived work under the terms of the 
 % LPPL. It is based on version 1 of accessibility.sty by Babett Schalitz.
 % A copy of accessibility.sty is available from http://www.babs.gmxhome.de/download/da_pdftex/accessibility.sty.
 
@@ -2096,6 +2095,19 @@ The command name specified by \string\newacronym already exists.}}}
   }{}%
 }{}
 
+
+% The count1to package confuses hyperref (see hyperref README), so fix \theH<...>:
+\@ifpackageloaded{hyperref}{%
+  \AtBeginDocument{%
+    \ifthenelse{\isundefined{\theHchapter}}{\newcommand{\theHchapter}{0}}{}%
+    \renewcommand*{\theHsection}{\theHchapter.\arabic{section}}%
+    \renewcommand*{\theHsubsection}{\theHsection.\arabic{subsection}}%
+    \renewcommand*{\theHsubsubsection}{\theHsubsection.\arabic{subsubsection}}%
+    \renewcommand*{\theHparagraph}{\theHsubsubsection.\arabic{paragraph}}%
+    \renewcommand*{\theHsubparagraph}{\theHparagraph.\arabic{subparagraph}}%
+  }%
+}%
+
 \endinput
 %%
-%% End of file `accessibility.sty'.
+%% End of file `accessibilityMeta.sty'.
