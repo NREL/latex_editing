@@ -2,9 +2,12 @@
 This is the repository for LaTeX class files and template documents that can be used to produce articles, reports, and presentations that conform to NREL's style guide. 
 
 # Requirements
-1. A working installation of Latex 2014 or 2015. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
+## Web-based documents
+1. NREL has implemented a web-based latex editor. This can be found at latex.nrel.gov
+
+## Desktop document preparation
+1. A working installation of Latex. Please install the most up-to-date version possible. LaTeX can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
 2. Some experience with using latex to produce journal articles or reports.
-3. Basic understanding of how to use command line programs.
 
 # Download
 Click on the "Download ZIP" button on the lower right of this page. 
