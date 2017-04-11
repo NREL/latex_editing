@@ -1,10 +1,9 @@
 \section{Using LaTeX to make documents that meet NREL's requirements}
-
-A LaTeX class called \emph{nrel.cls} has been written that implements NREL's formatting requirements in LaTeX. Authors are required to use this class file to create NREL documents.
+A series of LaTeX class files called \emph{NREL...cls} have been written to implement NREL's formatting requirements in LaTeX. Authors are required to use these class files to create NREL documents.
 
 \subsection{NREL's LaTeX Environment}
 \subsubsection{Web Interface}
-NREL authors are strongly encouraged to use the NREL-hosted web-based latex environment to produce documents from LaTeX. This can be found at \href{latex.nrel.gov}{latex.nrel.gov} and is based on the open source interface used by \href{sharelatex.com}{sharelatex.com}. More information can be found at \href{latex.nrel.gov}{latex.nrel.gov}.
+NREL authors are strongly encouraged to use the NREL-hosted web-based latex environment to produce documents from LaTeX. This can be found at \href{latex.nrel.gov}{latex.nrel.gov}. More information can be found at \href{latex.nrel.gov}{latex.nrel.gov}.
 
 Advantages of \href{latex.nrel.gov}{latex.nrel.gov} include:
 \begin{enumerate}
@@ -26,7 +25,7 @@ Advantages of \href{latex.nrel.gov}{latex.nrel.gov} include:
 Authors are welcome to use their own installation of LaTeX to prepare a document using the \emph{nrel.cls} file, but should note that they will need to transfer the document to \href{latex.nrel.gov}{latex.nrel.gov} at some point.
 
 \subsubsection{Working with pubhub}
-\href{pubhub.nrel.gov}{pubhub.nrel.gov} is NREL's web-based publications management software. Pubhub should be used in different ways depending on the stage that the document is at.
+NREL uses a web-based publications management system that can be found at \href{pubhub.nrel.gov}{pubhub.nrel.gov}. This system should be used in different ways, depending on the stage that the document is at.
 \begin{itemize}
 \item Editing documents: 
 \begin{itemize} 
@@ -36,7 +35,7 @@ Authors are welcome to use their own installation of LaTeX to prepare a document
 \end{itemize}
 \item Reviewing documents:
 \begin{itemize} 
-\item Approvers can work on either the PDF or the LaTeX document, noting that working on the  latex.nrel.gov document requires an internet connection.
+\item Approvers can work on either the PDF or the LaTeX document, noting that working on the \href{latex.nrel.gov}{latex.nrel.gov} document requires an internet connection.
 \end{itemize}
 \item Final documents: 
 \begin{itemize} 
@@ -47,32 +46,30 @@ Authors are welcome to use their own installation of LaTeX to prepare a document
 \subsubsection{FAQs for working with latex.nrel.gov}
 A separate FAQ that is updated regularly is available to NREL users at \href{latex.nrel.gov}{latex.nrel.gov}.
 
-\subsection{The nrel.cls class file}\label{sec:nrelcls}
-\emph{nrel.cls} provides the \emph{nrel} document style and controls the formatting and presentation of documents so that they meet NREL's requirements.
+\subsection{NREL class files}\label{sec:nrelcls}
+Class files control the formatting and presentation of documents. Several have been written that format documents so that they meet NREL's requirements. The class files currently available include:
+\begin{description}
+\item[NRELreport]{compiles the document using the LaTeX \emph{report} class, with NREL formatting. This is intended for longer documents and allows the use of chapters.}
+\item[NRELarticle.cls] compiles the document using the LaTeX \emph{article} class, with NREL formatting. This is intended for shorter documents such as journal articles. This class does not support the use of chapters.
+\end{description}
 
-The \emph{nrel} document class is a meta-class, in that documents must also be identified as being one of the basic \LaTeX\ document classes in the options that are passed to the class. Options are passed to the class in the \verb+\documentclass+ line:
+As with normal classes, options are passed to the class in the \verb+\documentclass+ line:
 
 \begin{lstlisting}
 \documentclass[option1,...,optionn]{nrel}
 \end{lstlisting}
 
-This line specifies the options (inside the square brackets) that will be passed to the \emph{nrel} class. The options include:
+NREL-specific options include:
 \begin{description}
-\item[book]{compile the document using the LaTeX \emph{book} class. This is intended for longer documents and allows the use of chapters.}
-\item[report]{compile the document using the LaTeX \emph{report} class. This is intended for longer documents and allows the use of chapters.}
-\item[article]{compile the document using the LaTeX \emph{article} class. This is intended for shorter documents such as journal articles. This class does not support the use of chapters. The Github repository includes an example of the article option being passed to the NREL class in \emph{mainArticle.tex}.}
-\item[memoir]{compile the document using the LaTeX \emph{memoir} class. This option is not recommended because of the challenge with later converting to RTF format for communications review.}
 \item[draft]{add a `draft' watermark to all pages and colours all links in blue.}
-\item[10pt, 12pt]{set the font size accordingly. The default is 12 point.}
-\item[letterpaper, a4paper]{set the paper size. the default is letter paper.}
-%\item[tagged]{create a tagged PDF}
+\item[tagged]{create a tagged PDF}
 \end{description}
 
-\emph{nrel.cls} calls a variety of other packages. Packages are codes that modify the appearance or behaviour of LaTeX to achieve something. Table \ref{Tab:Packages} lists the packages that are explicitly called by \emph{nrel.cls} in the order they are called in. These packages often call other packages, so this is not an exhaustive list.
+The \emph{NREL....cls} files call a variety of other packages. Packages are codes that modify the appearance or behaviour of LaTeX to achieve something. Table \ref{Tab:Packages} lists the packages that are explicitly called by \emph{nrel.cls} in the order they are called in. These packages often call other packages, so this is not an exhaustive list.
 
 \begin{table*}[!h]
 \centering
-\caption[Packages loaded by the nrel.cls class]{Packages loaded by nrel.cls.}
+\caption[Packages loaded by the NREL classes]{Packages loaded by the NREL classes.}
 \label{Tab:Packages}
 \begin{tabular*}{\textwidth}{llp{0.6\textwidth}}
 \toprule
@@ -104,7 +101,7 @@ xcolor & & Driver-independent color extensions for LaTeX and pdfLaTeX\\
 \end{tabular*}
 \end{table*}
 
-It should be noted that the `english` option to Babel really means \emph{American English}.
+It should be noted that the `english` option to Babel really means \emph{American} English.
 
 \subsection{Creating Content}
 \subsubsection{Front, main, and back matter}
