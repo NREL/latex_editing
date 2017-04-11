@@ -1,14 +1,10 @@
 # Introduction
-This is the repository for LaTeX class files and template documents that can be used to produce articles, reports, and presentations that conform to NREL's style guide. 
+This directory contains a LaTeX class file and example template document that can be used to produce LaTeX documents that conform to NREL's style guide. 
 
 # Requirements
-Either:
 1. A working installation of Latex 2014 or 2015. This can be obtained from e.g. http://tug.org/texlive/ or https://tug.org/mactex/.
-2. Access to the NREL latex.nrel.gov server
-
-And...
-1. Some experience with using latex to produce journal articles or reports.
-2. Basic understanding of how to use command line programs.
+2. Some experience with using latex to produce journal articles or reports.
+3. Basic understanding of how to use command line programs.
 
 # Download
 Click on the "Download ZIP" button on the lower right of this page. 
@@ -22,14 +18,14 @@ The following files are the important ones:
 # Installing and using the latex class file
 The `NREL*.cls` and `nrel.bst` files should be installed either in your local latex tree or in the same directory as your .tex source files. 
 
-Call the class using something like `\documentclass[draft]{NRELreport}` in your preamble. Options for the nrel class are discussed in the `NRELreport.pdf` and `NRELarticle.pdf` documents. Other classes include `NRELarticle` and `NRELbeamer`.
+Call the class using something like `\documentclass[draft]{NRELreport}` in your preamble. Options for the nrel class are discussed in the `NRELreport.pdf` and `NRELarticle.pdf` documents.
 
 If the above instructions don't mean anything to you, you may wish to rethink your idea of using LaTeX to produce your document. This is not meant to be cheeky; these are fundamental operations and should be understood by most LaTeX users.
 
 # Documentation
 Documentation is provided in an example .pdf file which can be found in each directory. The 'tex source used to create that file may be useful as a template.
 
-# Reporting issues and errors
+#Reporting issues and errors
 Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to report issues.
 
 # Wiki
@@ -47,10 +43,8 @@ NREL staff are strongly encouraged to check in with their communications represe
 
 # Code Maintainers
 * [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
-* [Dave Bielen]() (National Renewable Energy Laboratory)
 
 # Project Contributors
-* Dave Bielen (National Renewable Energy Laboratory)
 * Andy Platt (National Renewable Energy Laboratory)
 * Paul Fleming (National Renewable Energy Laboratory)
 * Michael Lawson (National Renewable Energy Laboratory)
