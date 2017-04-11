@@ -10,20 +10,20 @@ This directory contains a LaTeX class file and example template document that ca
 Click on the "Download ZIP" button on the lower right of this page. 
 
 The following files are the important ones:
-* LaTeX class file: https://github.com/NREL/latex_editing/blob/master/documents/nrel.cls
-* Bibliography style file: https://github.com/NREL/latex_editing/blob/master/documents/nrel.bst
-* Template .tex file: https://github.com/NREL/latex_editing/blob/master/documents/intro_to_NREL_latex.tex
-* Example .pdf file: https://github.com/NREL/latex_editing/blob/master/documents/intro_to_NREL_latex.pdf
+* LaTeX class file: each document style (article, report, one-pager) has it's own directory and associated class file (.cls) which defines the style
+* Bibliography style file: there's a .bst file in each directory which should be basically the same in each case. This is important if you are using bibtex instead of biblatex. If you are just using the normal class file, this won't make any difference to you.
+* Template .tex file: every directory includes a demonstration of the class file in use.
+* Example .pdf file: every directory includes a PDF produced from the demonstration .tex file.
 
 # Installing and using the latex class file
-The `nrel.cls` and `nrel.bst` files should be installed either in your local latex tree or in the same directory as your .tex source files. 
+The `NREL*.cls` and `nrel.bst` files should be installed either in your local latex tree or in the same directory as your .tex source files. 
 
-Call the class using something like `\documentclass[draft,report]{nrel}` in your preamble. Options for the nrel class are discussed in the `intro_to_NREL_latex.pdf` document.
+Call the class using something like `\documentclass[draft]{NRELreport}` in your preamble. Options for the nrel class are discussed in the `NRELreport.pdf` and `NRELarticle.pdf` documents.
 
 If the above instructions don't mean anything to you, you may wish to rethink your idea of using LaTeX to produce your document. This is not meant to be cheeky; these are fundamental operations and should be understood by most LaTeX users.
 
 # Documentation
-Documentation is provided in an example .pdf file which can be found at  https://github.com/NREL/latex_editing/blob/master/documents/intro_to_NREL_latex.pdf. The 'tex source used to create that file may be useful as a template.
+Documentation is provided in an example .pdf file which can be found in each directory. The 'tex source used to create that file may be useful as a template.
 
 #Reporting issues and errors
 Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to report issues.
@@ -39,9 +39,7 @@ Please also note that there is an NREL-hosted latex server which is the preferre
 NREL staff are strongly encouraged to check in with their communications representatives before starting to use LaTeX for documents.
 
 # Recent changes
-12.18.2015 updated to reflect new internal publications process. 
-10.8.2014 Added details of how to convert using `pandoc`.
-7.31.2014 Added `\frontmatter`, `\mainmatter`, and `\backmatter` commands to customize numbering for all document classes (article, report). These are normally only available for the book class. Also updated the example template, and figured out how to add URLs to the bibliography.
+4.10.17 Switch to class files for each major document class
 
 # Code Maintainers
 * [Andy Clifton](mailto:andrew.clifton@nrel.gov) (National Renewable Energy Laboratory)
