@@ -16,6 +16,7 @@
 % Create Options
 % -------------------------------------------------------------
 % PDF properties
+\pdfmapline{+dummy-space <dummy-space.pfb}
 \pdfinterwordspaceon
 %\pdfminorversion=8
 \RequirePackage{pdf14}
