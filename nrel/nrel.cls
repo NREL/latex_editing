@@ -16,10 +16,10 @@
 % Create Options
 % -------------------------------------------------------------
 %% PDF properties
-%\pdfinterwordspaceon
-%\pdfminorversion=8
+\pdfinterwordspaceon
+\pdfminorversion=6
 
-\RequirePackage{xifthen}
+\RequirePackage{xifthen,xcolor}
 
 % Mark as draft
 \newboolean{IsDraft}
@@ -27,7 +27,7 @@
 
 % print links in black
 \newboolean{blacklinks}
-\setboolean{blacklinks}{true}
+\setboolean{blacklinks}{false}
 
 % memoir, book, report, article?
 \newboolean{IsMemoir}
@@ -95,17 +95,23 @@
 % -------------------------------------------------------------
 % Package Loading
 % -------------------------------------------------------------
+
+\RequirePackage{titling}
+\RequirePackage{datetime}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+  
 % NAG: check for outdated packages
 \RequirePackage[2tabu, orthodox]{nag}
 
 % GEOMETRY: set page size
-\RequirePackage[head=0.125in,top=1.5in,bottom=1in,inner=1in,outer=1in]{geometry}
+\RequirePackage[head=0.125in,top=0.9in,bottom=1in,inner=1in,outer=1in,includefoot]{geometry}
 
 % MATHPTMX Times for roman text and math (family ptm)
 \RequirePackage{mathptmx}
 
 % Helvetica for sans serif (family phv)
-\RequirePackage{helvet}
+\RequirePackage[scaled=0.83]{helvet}
 
 % Courier for typewriter font (family pcr)
 \RequirePackage{courier}
@@ -122,10 +128,6 @@
 % For including figures, ignoring the draft status
 \RequirePackage[final]{graphicx}
 
-% For formatting the bibliography
-\RequirePackage[sort]{natbib}
-\setcitestyle{aysep={}}
-
 % use fonts of type T1
 \RequirePackage[T1]{fontenc}
 
@@ -135,12 +137,7 @@
 \definecolor{nrelblue}{RGB}{0, 121, 193}
 
 % set languages
-\RequirePackage[english]{babel}
-    \addto{\captionsenglish}{\renewcommand{\bibname}{References}}
-    \addto\captionsenglish{\renewcommand{\contentsname}{Table of Contents}}
-
-% enable subfigures
-\RequirePackage{subfigure}
+\RequirePackage[american]{babel}
 
 % To stop hyphenation in titles etc
 \RequirePackage{hyphenat}
@@ -155,9 +152,37 @@
 % code listings
 \RequirePackage{listings}
 
-% --------------
+% For formatting the bibliography. See guidance 
+\RequirePackage[babel]{csquotes}
+\RequirePackage[style=chicago-authordate,
+				strict,backend=bibtex,
+				natbib=true,
+				bibencoding=inputenc,
+				sorting=nyt,
+				doi=true, 
+				maxbibnames=10,
+				firstinits=true, 
+				maxcitenames=3 
+				]{biblatex}
+% change the name of the bib 
+% (see http://tex.stackexchange.com/questions/82993/how-to-change-the-name-of-document-elements-like-figure-contents-bibliogr)
+\DefineBibliographyStrings{american}{%
+  bibliography = {References},
+}
+% see NREL formatting guidelines at 
+% https://communications_resources.nrel.gov/style_guide/references
+% technical reports
+\DeclareBibliographyAlias{techreport}{book}
+% make one type of publication look like another
+\DeclareBibliographyAlias{*}{misc} % map unknown bibliography entry types to the misc type
+
+% make sure URLs in the bibliography are shown in roman fonts
+\urlstyle{same}
+
+
+% --------------------------------------------------------
 % Main Code
-% --------------
+% --------------------------------------------------------
 
 % NREL default is ragged right.
 % Load ragged2e so \justifying and environment justify are available.
@@ -176,7 +201,7 @@
 \ifthenelse{\NOT \boolean{IsMemoir}}{  % not memoir class
 
 	% improved table of contents and list of figures/tables
-	\RequirePackage[subfigure]{tocloft}
+	\RequirePackage{tocloft}
 
 	% remove numbering on bibliography but still allow in TOC
 	\RequirePackage[nottoc, notlot, notlof]{tocbibind}
@@ -209,9 +234,7 @@
 
 	% remove indentation
 	\setlength{\cftfigindent}{0pt}
-	\setlength{\cftsubfigindent}{0pt}
 	\setlength{\cfttabindent}{0pt}
-	\setlength{\cftsubtabindent}{0pt}
 
 	% don't add extra spaces in list of figures between chapters
 	\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
@@ -222,8 +245,6 @@
 	\setlength{\cftaftertoctitleskip}{\baselineskip}
 	\setlength{\cftafterloftitleskip}{\baselineskip}
 	\setlength{\cftafterlottitleskip}{\baselineskip}
-	
-	% footers
 	
 	% add front matter etc
 	\ifthenelse{\boolean{IsBook}}{%TRUE
@@ -349,6 +370,7 @@
 \let\printloftitle\printtoctitle
 
 % Format Captions
+% see e.g. http://www.peteryu.ca/tutorials/publishing/latex_captions for details of how to adjust
 \RequirePackage[format=plain,
 	labelformat=simple,
 	font={small,sf,bf},
@@ -360,14 +382,42 @@
 	singlelinecheck=true,
 	tableposition=top,
 	figureposition=bottom]{caption}
+\RequirePackage{subcaption}
 
-% number continuously across chapters
+% number figures and tables continuously across chapters
+\RequirePackage{chngcntr}
 \ifthenelse{\boolean{HasChapters}}{
-	\RequirePackage{chngcntr}
 	\counterwithout{figure}{chapter}
 	\counterwithout{table}{chapter}
-}
+	\counterwithout{footnote}{chapter}
 
+	% deal with the appendix
+	\renewcommand\appendix{\par
+		\setcounter{chapter}{0} 
+		\setcounter{section}{0}
+		\setcounter{footnote}{0} 
+		\gdef\thechapter{\@Alph\c@chapter}
+		% counters should reset each chapter
+		\counterwithin{figure}{chapter}
+		\counterwithin{table}{chapter}
+		% footnote formatting
+		 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}}
+}{% else
+	\counterwithout{figure}{section}
+	\counterwithout{table}{section}	
+
+	% deal with the appendix
+	\renewcommand\appendix{\par 
+		\setcounter{section}{0} 
+		\setcounter{footnote}{0} 
+		\gdef\thesection{\@Alph\c@section}
+		% counters should reset each section
+		\counterwithin{figure}{section}
+		\counterwithin{table}{section}
+		% footnote formatting
+		 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}}
+}
+		
 % Note that if we use the front matter / main matter, we have to change numbers
 \ifthenelse{\boolean{IsMemoir}}{% True
 	}{%FALSE
@@ -394,12 +444,9 @@
 	}
 }
 
-% Create some figure and table caption styles that are narrower than textwidth. These look better with small floats.
-\DeclareCaptionStyle{narrow}{width=4.5in,
-						labelsep=period,
-						font={sf,normalsize},
-						labelfont=bf,
-						format=plain}
+
+% check that the default san-serif font is sort-of-arial	(required for tables)					
+\renewcommand{\sfdefault}{phv} % Arial
 
 % Indenting and spacing between paragraphs
 \setlength{\parindent}{0pt}
@@ -439,10 +486,36 @@
 
 % Add .pdf links
 \ifthenelse{\boolean{blacklinks}}{% True
-	\RequirePackage[final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=black, citecolor=black, menucolor=black, urlcolor=black, pdfborder={0 0 0}, unicode, pdflang={en-US}]{hyperref}
-	}{% False
-	\RequirePackage[final, pdfa, linktocpage, colorlinks, linktoc=all, linkcolor=blue, citecolor=blue, menucolor=blue, urlcolor=blue, pdfborder={0 0 0},unicode, pdflang={en-US}]{hyperref}
-	}
+	\RequirePackage[
+		final, 
+		pdfa, 
+		linktocpage, 
+		colorlinks, 
+		linktoc=all, 
+		linkcolor=black, 
+		citecolor=black, 
+		menucolor=black, 
+		urlcolor=black, 
+		pdfborder={0 0 0}, 
+		unicode, 
+		pdflang={en-US}
+	]{hyperref}
+}{% False
+	\RequirePackage[
+		final, 
+		pdfa, 
+		linktocpage, 
+		colorlinks, 
+		linktoc=all, 
+		linkcolor=black, 
+		citecolor=black, 
+		menucolor=black, 
+		urlcolor=nrelblue, 
+		pdfborder={0 0 0},
+		unicode, 
+		pdflang={en-US}
+	]{hyperref}
+}
 
 % Enable tooltips
 \RequirePackage[linewidth = 0]{pdfcomment}
@@ -477,7 +550,7 @@
 
 %% ACCESSIBILITY
 \ifthenelse{\boolean{IsTagged}}{% True
-	\RequirePackage[tagged,highstructure]{accessibility_nrel}
+	\RequirePackage[tagged,highstructure]{accessibility}
 	}{% can use the footnote
 	\ifthenelse{\boolean{IsMemoir}}{% TRU
 	}{
@@ -485,26 +558,97 @@
 	\RequirePackage{fancyhdr}
 	\fancypagestyle{nrel}{%
 		\fancyhf{} % clear all header and footer fields
-		\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{blue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
-		\renewcommand{\headrulewidth}{0pt}
-		\renewcommand{\footrulewidth}{0pt}}
+		\ifthenelse{\boolean{IsConfidential}}{%#TODO add flag for confidential
+			\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{nrelblue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
+		}{
+			\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{nrelblue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
+		}
+		\fancyfoot[L]{CONFIDENTIAL: limited distribution}
+		\fancyfoot[R]{{\thepage}} 
+
+		\renewcommand{\headrulewidth}{0.5pt}
+		\renewcommand{\headrule}{\hbox to\headwidth{%
+				\color{nrelblue}\leaders\hrule height \headrulewidth\hfill}}
+
+		\renewcommand{\footrulewidth}{0.5pt}
+		\renewcommand{\footrule}{\hbox to\headwidth{%
+				\color{nrelblue}\leaders\hrule height \headrulewidth\hfill}}
+			
+% 		\fancyhead[RE,LO]{
+% 			\includegraphics[height=1.5cm]{nrelLogo}
+% 						 }
+		}
 	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
 	\let\ps@plain\ps@nrel
 	\pagestyle{nrel}
 
 	}
 }
-
+ 
 %% THINGS WE NEED TO DO AT THE START OF THE DOCUMENT
 \AtBeginDocument{
+	\setlength{\headsep}{6em}
+	% table font should be sans-serif
+	\makeatletter
+%	\appto\@floatboxreset{%
+%	  \ifx\@captype\nrel@table
+%	    \sffamily
+%	  \fi
+%	}
+%	\def\nrel@table{table}
+	\renewenvironment{table}
+		{\renewcommand\familydefault\sfdefault\selectfont
+		\@float{table}}
+		{\end@float}
+	\makeatother
+	% fix hyperlinks
 	\makeatletter
 	\hypersetup{
 		pdftitle = {\@title},
 		pdfauthor = {\@author}
 	}
 	\makeatother
-	\maketitle
-	\clearpage
-}
+	\makeatletter
+		\setlength{\@fptop}{0pt}
+	\makeatother	
+	
+	\makeatletter
+	\def\blx@maxline{77}
+	\makeatother
 
+	% -------------------------------------
+	% hard-coded formatting for title page
+	% * no changes needed *
+	% -------------------------------------
+	\thispagestyle{empty}		
+	\centering
+	\vspace*{-8em}
+	\includegraphics[width=\textwidth]{header}\\
+	\vspace*{4em}
+	\begin{flushright}
+		\begin{minipage}{0.7\textwidth}
+			\huge{\thetitle}\\
+			\vspace*{1.5em}				
+			\large{\@author}\\			
+		\end{minipage}
+		\\	
+		\vfill
+		\begin{minipage}[b]{0.7\textwidth}
+			NREL is a national laboratory of the U.S. Department of Energy\\
+			Office of Energy Efficiency \& Renewable Energy\\
+			Operated by the Alliance for Sustainable Energy, LLC.
+			\\
+			\vspace{3em}
+			\textbf{Technical Report}\\
+			NREL/TP-xxxx-xxxx\\ %#TODO add field for TP#
+			\monthyeardate\today\\
+			\vspace{3em}
+			Contract No. DE-AC36-08GO28308
+		\end{minipage}
+	\end{flushright}
+	\justify	
+
+
+% 	\clearpage
+}
 % end of file
