@@ -19,7 +19,8 @@
 \pdfinterwordspaceon
 \pdfminorversion=6
 
-\RequirePackage{xifthen,xcolor}
+\RequirePackage{xifthen}
+\RequirePackage{xcolor}
 
 % Mark as draft
 \newboolean{IsDraft}
@@ -29,19 +30,18 @@
 \newboolean{blacklinks}
 \setboolean{blacklinks}{false}
 
-% memoir, book, report, article?
-\newboolean{IsMemoir}
-\setboolean{IsMemoir}{false}
-\newboolean{IsBook}
-\setboolean{IsBook}{false}
-\newboolean{IsReport}
-\setboolean{IsReport}{false}
-\newboolean{IsArticle}
-\setboolean{IsArticle}{false}
+% Set flag to meet NREL template requirements
+% true by default
+\newboolean{IsNREL}
+\setboolean{IsNREL}{true}
 
-% do we have chapters?
-\newboolean{HasChapters}
-\setboolean{HasChapters}{false}
+% Set flag to meet EERE template requirements
+\newboolean{IsEERE}
+\setboolean{IsEERE}{false}
+
+% Set flag for confidentiality statement
+\newboolean{IsConfidential}
+\setboolean{IsConfidential}{false}
 
 % tagged?
 \newboolean{IsTagged}
@@ -50,38 +50,33 @@
 % -------------------------------------------------------------
 % Check for choice of package and formatting options
 % -------------------------------------------------------------
-
 % look out for draft
 \DeclareOption{draft}{
 	\setboolean{IsDraft}{true}
 	\typeout{Formatting as draft}
 	}
-% book, report, article?
-\DeclareOption{memoir}{
-	\setboolean{IsMemoir}{true}
-	\def\NREL@class{memoir}
-	}
-\DeclareOption{book}{
-	\setboolean{IsBook}{true}
-	\setboolean{HasChapters}{true}
-	\def\NREL@class{book}
-	\typeout{Using modified book class}
-	}
-\DeclareOption{report}{
-	\setboolean{IsReport}{true}
-	\setboolean{HasChapters}{true}
+% If EERE option is set, format as EERE template
+\DeclareOption{EERE}{
+	\setboolean{IsEERE}{true}
+	\setboolean{IsNREL}{false}
 	\def\NREL@class{report}
-	\typeout{Using modified report class}
-	}
-\DeclareOption{article}{
-	\setboolean{IsArticle}{true}
-	\setboolean{HasChapters}{false}
-	\def\NREL@class{article}
-	\typeout{Using modified article class}
-	}
+	\typeout{Using EERE report template}
+}
+% NREL is assumed to be true by default
+% unless switched off by EERE flag
+\ifthenelse{\boolean{IsNREL}}{ 
+	\def\NREL@class{report}
+	\typeout{Using NREL report template}
+}{}
+% If tagged option is set, format as tagged pdf
 \DeclareOption{tagged}{
 	\setboolean{IsTagged}{true}
 	\typeout{PDF will be tagged}
+	}
+% If confidential option is set, add confidentiality statement
+\DeclareOption{confidential}{
+	\setboolean{IsConfidential}{true}
+	\typeout{Confidentiality statement added to title page and headers}
 	}
 
 % -------------------------------------------------------------
@@ -154,16 +149,17 @@
 
 % For formatting the bibliography. See guidance 
 \RequirePackage[babel]{csquotes}
-\RequirePackage[style=chicago-authordate,
-				strict,backend=bibtex,
-				natbib=true,
-				bibencoding=inputenc,
-				sorting=nyt,
-				doi=true, 
-				maxbibnames=10,
-				firstinits=true, 
-				maxcitenames=3 
-				]{biblatex}
+\RequirePackage[
+	style=chicago-authordate,
+	strict,backend=bibtex,
+	natbib=true,
+	bibencoding=inputenc,
+	sorting=nyt,
+	doi=true, 
+	maxbibnames=10,
+	firstinits=true, 
+	maxcitenames=3 
+]{biblatex}
 % change the name of the bib 
 % (see http://tex.stackexchange.com/questions/82993/how-to-change-the-name-of-document-elements-like-figure-contents-bibliogr)
 \DefineBibliographyStrings{american}{%
@@ -183,7 +179,6 @@
 % --------------------------------------------------------
 % Main Code
 % --------------------------------------------------------
-
 % NREL default is ragged right.
 % Load ragged2e so \justifying and environment justify are available.
 % Redefines \centering, \raggedleft, and \raggedright, and environments center flushleft and flushright to use versions made by ragged2e. Sets default alignment to ragged right. To override, use the command \justifying or the environment justify.
@@ -196,105 +191,45 @@
 % -------------------------------------------
 % Changes to TOC and list of figures/tables
 % -------------------------------------------
+% improved table of contents and list of figures/tables
+\RequirePackage{tocloft}
 
+% remove numbering on bibliography but still allow in TOC
+\RequirePackage[nottoc, notlot, notlof]{tocbibind}
 
-\ifthenelse{\NOT \boolean{IsMemoir}}{  % not memoir class
+% add Figure before # and a period after
+\renewcommand{\cftfigfont}{\fontfamily{phv} Figure }
+\renewcommand{\cfttabfont}{\fontfamily{phv} Table }
+\renewcommand{\cftfigaftersnum}{.}
+\renewcommand{\cfttabaftersnum}{.}
 
-	% improved table of contents and list of figures/tables
-	\RequirePackage{tocloft}
+% title font
+\renewcommand{\cfttoctitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
+\renewcommand{\cftloftitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
+\renewcommand{\cftlottitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
 
-	% remove numbering on bibliography but still allow in TOC
-	\RequirePackage[nottoc, notlot, notlof]{tocbibind}
+% add dotfill in toc
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 
-	% add Figure before # and a period after
-	\renewcommand{\cftfigfont}{\fontfamily{phv} Figure }
-	\renewcommand{\cfttabfont}{\fontfamily{phv} Table }
-	\renewcommand{\cftfigaftersnum}{.}
-	\renewcommand{\cfttabaftersnum}{.}
+% remove indentation
+\setlength{\cftfigindent}{0pt}
+\setlength{\cfttabindent}{0pt}
 
-	% title font
-	\ifthenelse{\boolean{HasChapters}}{
-		\renewcommand{\cfttoctitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
-		\renewcommand{\cftloftitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
-		\renewcommand{\cftlottitlefont}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries}
-
-	}{ % no chapters (section has a smaller font size)
-		\renewcommand{\cfttoctitlefont}{\color{nrelblue} \raggedright  \fontsize{12}{14}\sffamily\bfseries}
-		\renewcommand{\cftloftitlefont}{\color{nrelblue} \raggedright  \fontsize{12}{14}\sffamily\bfseries}
-		\renewcommand{\cftlottitlefont}{\color{nrelblue} \raggedright  \fontsize{12}{14}\sffamily\bfseries}
-
-	}
-
-	% add dotfill in toc
-	\ifthenelse{\boolean{HasChapters}}{
-		\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
-	}{
-		\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-	}
-
-	% remove indentation
-	\setlength{\cftfigindent}{0pt}
-	\setlength{\cfttabindent}{0pt}
-
-	% don't add extra spaces in list of figures between chapters
-	\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
-	\addtocontents{lof}{\protect\noaddvspace}
-	\addtocontents{lot}{\protect\noaddvspace}
-	\setlength{\cftbeforefigskip}{5pt}
-	\setlength{\cftbeforetabskip}{5pt}
-	\setlength{\cftaftertoctitleskip}{\baselineskip}
-	\setlength{\cftafterloftitleskip}{\baselineskip}
-	\setlength{\cftafterlottitleskip}{\baselineskip}
-	
-	% add front matter etc
-	\ifthenelse{\boolean{IsBook}}{%TRUE
-		}{%FALSE
-		\newcommand{\frontmatter}{\textbf{Error defining front matter!}}
-		\newcommand{\mainmatter}{\textbf{Error defining main matter!}}
-		\newcommand{\backmatter}{\textbf{Error defining back matter!}}
-	}	
-
-}{  % else IsMemoir
-
-	% add Figure before # and a period after
-	\renewcommand{\cftfigurefont}{\fontfamily{phv} Figure }
-	\renewcommand{\cfttablefont}{\fontfamily{phv} Figure }
-	\renewcommand{\cftfigureaftersnum}{.}
-	\renewcommand{\cfttableaftersnum}{.}
-
-	% title font
-	\renewcommand{\printtoctitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
-	\renewcommand{\printloftitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
-	\renewcommand{\printlottitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
-	% \renewcommand{\bibname}{\color{nrelblue} \raggedright  \Large\sffamily\bfseries Bibliography}
-
-	% remove indentation
-	\setlength{\cftsectionindent}{0pt}
-	\setlength{\cftsubsectionindent}{2em}
-	\setlength{\cftfigureindent}{0pt}
-	\setlength{\cfttableindent}{0pt}
-
-	% additional spacing
-	\setlength{\cftbeforefigureskip}{5pt}
-	\setlength{\cftbeforetableskip}{5pt}
-}
-
+% don't add extra spaces in list of figures between chapters
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}
+\addtocontents{lot}{\protect\noaddvspace}
+\setlength{\cftbeforefigskip}{5pt}
+\setlength{\cftbeforetabskip}{5pt}
+\setlength{\cftaftertoctitleskip}{\baselineskip}
+\setlength{\cftafterloftitleskip}{\baselineskip}
+\setlength{\cftafterlottitleskip}{\baselineskip}
 
 % -------------------------------------------
 % Changes to the chapter and section markings
 % -------------------------------------------
-% Assign numbers to headings chapter through subparagraph
-\ifthenelse{\boolean{IsMemoir}}{% True (memoir)
-	\setsecnumdepth{subsubsection}
-	\maxtocdepth{subparagraph}
-	}{% False (other classes)
-	\setcounter{secnumdepth}{5}
-	\setcounter{tocdepth}{5}
-	}
-
 % Chapter Headings
-\ifthenelse{\boolean{HasChapters}}{% True
-	\renewcommand{\@makechapterhead}[1]{%
+\renewcommand{\@makechapterhead}[1]{%
 	{\color{nrelblue} \parindent \z@ \raggedright \normalfont \interlinepenalty\@M
 	\ifnum \c@secnumdepth >\m@ne
 		\fontfamily{phv} \fontsize{14}{20}\fontseries{b}\selectfont
@@ -310,8 +245,6 @@
 	\Large\sffamily\bfseries #1
 	\par\nobreak
 	\vspace*{12pt}}}
-	}{% False
-	}
 
 % Section Headings
 \renewcommand{\section}{%
@@ -340,31 +273,9 @@
 	{0.25ex \@plus .2ex}
 	{\bfseries\normalsize\itshape}}
 
-% change the formatting of the TOC heading
-\ifthenelse{\boolean{IsMemoir}}{%True
-	\def\chapterheadstart{}
-	\renewcommand\printtoctitle[1]{%
-		\parindent \z@ \raggedright \normalfont \interlinepenalty\@M
-		\fontfamily{phv} \fontsize{14}{20} \fontseries{b}\selectfont #1}
-	\def\afterchaptertitle{%
-		\par\nobreak
-		\vspace*{12pt}}
-	}{% False
-	}
-
-% To harmonise the font sizes
-\ifthenelse{\boolean{IsMemoir}}{% True
-	\renewcommand{\chapnumfont}{\chaptitlefont}
-	\renewcommand{\chapnamefont}{\chaptitlefont}
-	}{% False
-	}
-
-% use dots as the separator
-\ifthenelse{\boolean{IsMemoir}}{% True
-	\renewcommand*{\cftchapterdotsep}{\cftdotsep}
-	}{% False
-	}
-
+\renewenvironment{table}
+	{\@float{table} \fontfamily{phv}\selectfont}
+	{\end@float}
 % inherit fonts etc from TOC
 \let\printlottitle\printtoctitle
 \let\printloftitle\printtoctitle
@@ -381,49 +292,33 @@
 	justification=centering,
 	singlelinecheck=true,
 	tableposition=top,
-	figureposition=bottom]{caption}
+	figureposition=bottom
+]{caption}
 \RequirePackage{subcaption}
 
 % number figures and tables continuously across chapters
 \RequirePackage{chngcntr}
-\ifthenelse{\boolean{HasChapters}}{
-	\counterwithout{figure}{chapter}
-	\counterwithout{table}{chapter}
-	\counterwithout{footnote}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{footnote}{chapter}
 
-	% deal with the appendix
-	\renewcommand\appendix{\par
-		\setcounter{chapter}{0} 
-		\setcounter{section}{0}
-		\setcounter{footnote}{0} 
-		\gdef\thechapter{\@Alph\c@chapter}
-		% counters should reset each chapter
-		\counterwithin{figure}{chapter}
-		\counterwithin{table}{chapter}
-		% footnote formatting
-		 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}}
-}{% else
-	\counterwithout{figure}{section}
-	\counterwithout{table}{section}	
+% deal with the appendix
+\renewcommand\appendix{\par
+	\setcounter{chapter}{0} 
+	\setcounter{section}{0}
+	\setcounter{footnote}{0} 
+	\gdef\thechapter{\@Alph\c@chapter}
+	% counters should reset each chapter
+	\counterwithin{figure}{chapter}
+	\counterwithin{table}{chapter}
+	% footnote formatting
+		\renewcommand*{\thefootnote}{\fnsymbol{footnote}}}
 
-	% deal with the appendix
-	\renewcommand\appendix{\par 
-		\setcounter{section}{0} 
-		\setcounter{footnote}{0} 
-		\gdef\thesection{\@Alph\c@section}
-		% counters should reset each section
-		\counterwithin{figure}{section}
-		\counterwithin{table}{section}
-		% footnote formatting
-		 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}}
-}
 		
 % Note that if we use the front matter / main matter, we have to change numbers
-\ifthenelse{\boolean{IsMemoir}}{% True
-	}{%FALSE
-	% not memoir class
-	% need to renew the front, main, and back matter commands
-	\renewcommand{\frontmatter}{%
+% need to renew the front, main, and back matter commands
+\makeatletter
+	\newcommand{\frontmatter}{%
 		\pagenumbering{roman} %
 		\setcounter{page}{3} %
 		\setcounter{figure}{0} %
@@ -431,7 +326,7 @@
 		\setcounter{table}{0} %
 		\renewcommand{\thetable}{\Alph{table}}
 	}
-	\renewcommand{\mainmatter}{%
+	\newcommand{\mainmatter}{%
 		\clearpage %
 		\pagenumbering{arabic} %
 		\setcounter{figure}{0} %
@@ -439,21 +334,15 @@
 		\setcounter{table}{0} %
 		\renewcommand{\thetable}{\arabic{table}}%
 	}
-	\renewcommand{\backmatter}{%
-	%
-	}
-}
+	\newcommand{\backmatter}{}
+\makeatother
 
-
-% check that the default san-serif font is sort-of-arial	(required for tables)					
+% check that the default san-serif font is sort-of-arial	
+% (required for tables)					
 \renewcommand{\sfdefault}{phv} % Arial
 
 % Indenting and spacing between paragraphs
 \setlength{\parindent}{0pt}
-\ifthenelse{\boolean{IsMemoir}}{% True
-	\nonzeroparskip
-	}{% False
-	}
 
 %-----------------------
 % GENERAL CODE
@@ -489,6 +378,8 @@
 	\RequirePackage[
 		final, 
 		pdfa, 
+		pdftitle = {\@title},
+		pdfauthor = {\@author},
 		linktocpage, 
 		colorlinks, 
 		linktoc=all, 
@@ -504,12 +395,14 @@
 	\RequirePackage[
 		final, 
 		pdfa, 
+		pdftitle = {\@title},
+		pdfauthor = {\@author},
 		linktocpage, 
 		colorlinks, 
 		linktoc=all, 
-		linkcolor=black, 
-		citecolor=black, 
-		menucolor=black, 
+		linkcolor=nrelblue, 
+		citecolor=nrelblue, 
+		menucolor=nrelblue, 
 		urlcolor=nrelblue, 
 		pdfborder={0 0 0},
 		unicode, 
@@ -520,97 +413,78 @@
 % Enable tooltips
 \RequirePackage[linewidth = 0]{pdfcomment}
 
-\ifthenelse{\boolean{IsMemoir}}{ % for some reason this is overriden from above so need to define at end
-	\renewcommand{\printtoctitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
-	\renewcommand{\printloftitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
-	\renewcommand{\printlottitle}[1]{\color{nrelblue} \raggedright  \Large\sffamily\bfseries #1}
-}
+%%%#TODO review verbatim/listings code
+% % CODE / VERBATIM
+% \@ifundefined{lstlisting}{}{%
+% 	\let\verbatim\relax%
+% 	\lstnewenvironment{verbatim}{\lstset{language=[LaTeX]TeX,                     % the language of the code
+% 		basicstyle=\small\sffamily,
+% 		numbers=none,                   % where to put the line-numbers
+% 		numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+% 		stepnumber=1,                   % the step between two line-numbers. If it's 1, each line will be numbered
+% 		numbersep=5pt,                  % how far the line-numbers are from the code
+% 		backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+% 		showspaces=false,               % show spaces adding particular underscores
+% 		showstringspaces=false,         % underline spaces within strings
+% 		breaklines=true,                % sets automatic line breaking
+% 		breakatwhitespace=true,        % sets if automatic breaks should only happen at whitespace
+% 		keywordstyle=\color{blue},      % keyword style
+% 		commentstyle=\color{gray},   % comment style
+% 		stringstyle=\color{green},      % string literal style
+% 		escapeinside={\%*}{*)},         % if you want to add a comment within your code
+% 		morekeywords={*,...}}%            % if you want to add more keywords to the set
+% 	}{}%
+% }
 
-% CODE / VERBATIM
-\@ifundefined{lstlisting}{}{%
-  \let\verbatim\relax%
-  \lstnewenvironment{verbatim}{\lstset{language=[LaTeX]TeX,                     % the language of the code
-  basicstyle=\small\sffamily,
-  numbers=none,                   % where to put the line-numbers
-  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
-  stepnumber=1,                   % the step between two line-numbers. If it's 1, each line will be numbered
-  numbersep=5pt,                  % how far the line-numbers are from the code
-  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
-  showspaces=false,               % show spaces adding particular underscores
-  showstringspaces=false,         % underline spaces within strings
-  breaklines=true,                % sets automatic line breaking
-  breakatwhitespace=true,        % sets if automatic breaks should only happen at whitespace
-  keywordstyle=\color{blue},      % keyword style
-  commentstyle=\color{gray},   % comment style
-  stringstyle=\color{green},      % string literal style
-  escapeinside={\%*}{*)},         % if you want to add a comment within your code
-  morekeywords={*,...}}%            % if you want to add more keywords to the set
-}{}%
-}
+%%%#TODO review accessibility code
+% %% ACCESSIBILITY
+% \ifthenelse{\boolean{IsTagged}}{% True
+% 	\RequirePackage[tagged,highstructure]{accessibility}
+% 	}{% can use the footnote
+% 	% need to add page number and availability information to every page, including new chapters.
+% 	\RequirePackage{fancyhdr}
+% 	\fancypagestyle{nrel}{%
+% 		\fancyhf{} % clear all header and footer fields
+% 		\ifthenelse{\boolean{IsConfidential}}{%IsConfidential==True
+% 			\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{nrelblue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
+% 		}{%IsConfidential==False
+% 			\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{nrelblue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
+% 		}
+% 		\fancyfoot[L]{CONFIDENTIAL: limited distribution}
+% 		\fancyfoot[R]{{\thepage}} 
 
-%% ACCESSIBILITY
-\ifthenelse{\boolean{IsTagged}}{% True
-	\RequirePackage[tagged,highstructure]{accessibility}
-	}{% can use the footnote
-	\ifthenelse{\boolean{IsMemoir}}{% TRU
-	}{
-		% need to add page number and availability information to every page, including new chapters.
-	\RequirePackage{fancyhdr}
-	\fancypagestyle{nrel}{%
-		\fancyhf{} % clear all header and footer fields
-		\ifthenelse{\boolean{IsConfidential}}{%#TODO add flag for confidential
-			\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{nrelblue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
-		}{
-			\fancyfoot[C]{\thepage\\ \textcolor{gray}{This report is available at no cost from the National Renewable Energy Laboratory at }\textcolor{nrelblue}{\href{www.nrel.gov/publications}{www.nrel.gov/publications}}} % except the center
-		}
-		\fancyfoot[L]{CONFIDENTIAL: limited distribution}
-		\fancyfoot[R]{{\thepage}} 
+% 		\renewcommand{\headrulewidth}{0.5pt}
+% 		\renewcommand{\headrule}{\hbox to\headwidth{%
+% 				\color{nrelblue}\leaders\hrule height \headrulewidth\hfill}}
 
-		\renewcommand{\headrulewidth}{0.5pt}
-		\renewcommand{\headrule}{\hbox to\headwidth{%
-				\color{nrelblue}\leaders\hrule height \headrulewidth\hfill}}
-
-		\renewcommand{\footrulewidth}{0.5pt}
-		\renewcommand{\footrule}{\hbox to\headwidth{%
-				\color{nrelblue}\leaders\hrule height \headrulewidth\hfill}}
+% 		\renewcommand{\footrulewidth}{0.5pt}
+% 		\renewcommand{\footrule}{\hbox to\headwidth{%
+% 				\color{nrelblue}\leaders\hrule height \headrulewidth\hfill}}
 			
-% 		\fancyhead[RE,LO]{
-% 			\includegraphics[height=1.5cm]{nrelLogo}
-% 						 }
-		}
-	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
-	\let\ps@plain\ps@nrel
-	\pagestyle{nrel}
-
-	}
-}
+% % 		\fancyhead[RE,LO]{
+% % 			\includegraphics[height=1.5cm]{nrelLogo}
+% % 						 }
+% 		}
+% 	% note that the first page of a chapter uses "plain", so we need to redefine that to match the "nrel" page style.
+% 	\let\ps@plain\ps@nrel
+% 	\pagestyle{nrel}
+% }
  
+
+%#TODO add ifthenelse statement to change from NREL cover page to EERE cover page
 %% THINGS WE NEED TO DO AT THE START OF THE DOCUMENT
 \AtBeginDocument{
 	\setlength{\headsep}{6em}
-	% table font should be sans-serif
-	\makeatletter
-%	\appto\@floatboxreset{%
-%	  \ifx\@captype\nrel@table
-%	    \sffamily
-%	  \fi
-%	}
-%	\def\nrel@table{table}
-	\renewenvironment{table}
-		{\renewcommand\familydefault\sfdefault\selectfont
-		\@float{table}}
-		{\end@float}
-	\makeatother
-	% fix hyperlinks
-	\makeatletter
-	\hypersetup{
-		pdftitle = {\@title},
-		pdfauthor = {\@author}
-	}
-	\makeatother
-	\makeatletter
-		\setlength{\@fptop}{0pt}
-	\makeatother	
+	%% fix hyperlinks
+	% \makeatletter
+	% 	\hypersetup{
+	% 		pdftitle = {\@title},
+	% 		pdfauthor = {\@author}
+	% 	}
+	% \makeatother
+	% \makeatletter
+	% 	\setlength{\@fptop}{0pt}
+	% \makeatother	
 	
 	\makeatletter
 	\def\blx@maxline{77}
@@ -629,7 +503,7 @@
 		\begin{minipage}{0.7\textwidth}
 			\huge{\thetitle}\\
 			\vspace*{1.5em}				
-			\large{\@author}\\			
+			\large{\theauthor}\\			
 		\end{minipage}
 		\\	
 		\vfill
