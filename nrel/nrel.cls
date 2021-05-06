@@ -538,16 +538,11 @@
 		\\	
 		\vfill
 		\begin{minipage}[b]{0.7\textwidth}
-			NREL is a national laboratory of the U.S. Department of Energy\\
-			Office of Energy Efficiency \& Renewable Energy\\
-			Operated by the Alliance for Sustainable Energy, LLC.
+			This is a temporary cover page.\\ 
+			A final cover page will be generated\\
+			by comms with current style and formatting.
 			\\
-			\vspace{3em}
-			\textbf{Technical Report}\\
-			NREL/TP-xxxx-xxxx\\ %#TODO add field for TP#
-			\monthyeardate\today\\
-			\vspace{3em}
-			Contract No. DE-AC36-08GO28308
+			\vfill
 		\end{minipage}
 	\end{flushright}
 	\justify	
