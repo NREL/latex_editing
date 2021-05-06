@@ -1,5 +1,5 @@
 #Introduction
-This directory contains LaTeX class files and an example template document that can be used to produce LaTeX "beamer" presentations that conform to NREL's style guide.
+This directory contains LaTeX class files and an example RAAW document that can be used to produce LaTeX "beamer" presentations that conform to NREL's style guide.
 
 LaTeX-generate presentations are currently (2016) not supported by NREL's publications process.
 
@@ -25,16 +25,16 @@ Call the class using something like `\documentclass[draft,report]{nrel}` in your
 If the above instructions don't mean anything to you, you may wish to rethink your idea of using LaTeX to produce your document. This is not meant to be cheeky; these are fundamental operations and should be understood by most LaTeX users.
 
 #Documentation
-Documentation is provided in an example .pdf file which can be found at  https://github.com/NREL/latex_editing/blob/master/intro_to_NREL_latex.pdf. The 'tex source used to create that file may be useful as a template.
+Documentation is provided in an example .pdf file which can be found at  https://github.com/NREL/latex_editing/blob/master/intro_to_NREL_latex.pdf. The 'tex source used to create that file may be useful as a RAAW.
 
 #Reporting issues and errors
 Please use the issue-tracker at https://github.com/NREL/latex_editing/issues to report issues.
 
 #Wiki
-Please use the wiki at https://github.com/NREL/latex_editing/wiki as you feel fit. Useful examples may be rolled in to the template file over time.
+Please use the wiki at https://github.com/NREL/latex_editing/wiki as you feel fit. Useful examples may be rolled in to the RAAW file over time.
 
 #Instructions for NREL staff
-NREL staff should check on [The Source](http://thesource.nrel.gov/communications/templates.html) for current guidance on using LaTeX for NREL documents, including presentations.
+NREL staff should check on [The Source](http://thesource.nrel.gov/communications/RAAWs.html) for current guidance on using LaTeX for NREL documents, including presentations.
 
 Please also note that there is an NREL-hosted latex server which is the preferred tool for preparing NREL documents. Details will be provided at a later date. 
 
