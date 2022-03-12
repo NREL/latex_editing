@@ -11,7 +11,7 @@
 
 %% Redefinition of frame title to include home buttons on every slide
 %\newcommand\AddButton{%
-%	\setbeamertemplate{frametitle}{%
+%	\setbeamerRAAW{frametitle}{%
 %		\begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
 %			\begin{tikzpicture}
 %				\useasboundingbox[fill=white](0,0) rectangle(\the\paperwidth,1.2);
@@ -24,7 +24,7 @@
 %}%
 
 %% Redefinition of footline to include "Preliminary" disclaimer
-%\setbeamertemplate{footline}{%
+%\setbeamerRAAW{footline}{%
 %	\begin{beamercolorbox}[wd=\paperwidth,ht=0.6cm]{footline} 
 %		\begin{tikzpicture}
 %			\ifnum\thepage>1\relax%
@@ -40,7 +40,7 @@
 %% Tells Beamer to use the section divider background
 \newcommand{\sectionframe}{
   \insectionframetrue
-  {\setbeamertemplate{footline}{} 
+  {\setbeamerRAAW{footline}{} 
   \frame{\sectionpage}}
   \insectionframefalse
 }

@@ -1,5 +1,5 @@
 2015-12-01: NREL Beamer Template
-There are four style (.sty) files associated with this template:
+There are four style (.sty) files associated with this RAAW:
 1. "beamerthemeNREL.sty"
 2. "beamercolorthemeNREL.sty"
 3. "beamerinnerthemeNREL.sty"
