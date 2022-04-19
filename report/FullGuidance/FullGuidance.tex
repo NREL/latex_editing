@@ -58,7 +58,7 @@ This report was typeset using the LaTeX typesetting system originally developed 
 \subsection{Front, main, and back matter}
 NREL's convention is to have Roman numerals in the front matter, and then arabic numerals in the main matter of the document (after the tables of contents, figures and tables). Tables and figures in the front matter are also numbered differently (Table A, B, C, ...) than in the main matter (Table 1, 2, 3, ...).
 
-This change in page and float numbering is implemented using the \verb+\frontmatter+, \verb+\mainmatter+, and \verb+\backmatter+ commands at the start of these sections of the document:
+This change in page and float numbering is implemented using the \begin{verbatim}\frontmatter\end{verbatim}, \begin{verbatim}\mainmatter\end{verbatim}, and \begin{verbatim}\backmatter\end{verbatim} commands at the start of these sections of the document:
 
 \begin{lstlisting}
 \begin{document}
@@ -167,14 +167,14 @@ See note below for more information.\footnote{This is a just a footnote to have 
 
 \subsection{Citations}
 \label{Sec:Bib}
-Use \texttt{bibtex} to organize references and store them in a single file (e.g. \verb+/Documents/bibliography/bibliography.bib+). The bibliography will then contain entries with `keys' for each source, like \texttt{Lamport\_1986\_a}.
+Use \texttt{bibtex} to organize references and store them in a single file (e.g. \begin{verbatim}/Documents/bibliography/bibliography.bib\end{verbatim}). The bibliography will then contain entries with `keys' for each source, like \texttt{Lamport\_1986\_a}.
 
 Authors can then insert citations to this key throughout their document, using different styles of citation. Citations are generated using the \texttt{biblatex} package, which also formats references in the correct style.  Ways to generate citations are described in the \texttt{biblatex} documentation, and include:
 \begin{itemize}
-  \item \verb+\cite{moriarty2020american}+ prints \cite{moriarty2020american}.
-  \item \verb+\citep{moriarty2020american}+ prints \citep{moriarty2020american}.
-  \item \verb+\citet{moriarty2020american}+ prints \citet{moriarty2020american}.
-  \item A more complex case: \verb+\parentext{\citet{moriarty2020american} and \citep{fernando2019perdigao}}+ prints \parentext{\citet{moriarty2020american} and \citep{fernando2019perdigao}}
+  \item \begin{verbatim}\cite{moriarty2020american}\end{verbatim} prints \cite{moriarty2020american}.
+  \item \begin{verbatim}\citep{moriarty2020american}\end{verbatim} prints \citep{moriarty2020american}.
+  \item \begin{verbatim}\citet{moriarty2020american}\end{verbatim} prints \citet{moriarty2020american}.
+  \item A more complex case: \begin{verbatim}\parentext{\citet{moriarty2020american} and \citep{fernando2019perdigao}}\end{verbatim} prints \parentext{\citet{moriarty2020american} and \citep{fernando2019perdigao}}
 \end{itemize}
 
 To cite URLs, use the 'misc' style. For example, the bibtex entry for \href{http://tex.stackexchange.com}{http://tex.stackexchange.com}\ \cite{texstackexchange} looks like this:
@@ -194,7 +194,7 @@ The citations should work with journal articles \citep{Clifton_2013_a}, books \c
 \subsection{Including computer code}
 The \texttt{listings} package has been loaded. Note: this does not work if the `Draft' document option is used.
 
-To change the syntax highlighting use \verb+\lstset{language=[dialect]language,columns=fullflexible,keepspaces=true}+ before each listing where the language changes. For more details see the \texttt{lstlisting} documentation.
+To change the syntax highlighting use \begin{verbatim}\lstset{language=[dialect]language,columns=fullflexible,keepspaces=true}\end{verbatim} before each listing where the language changes. For more details see the \texttt{lstlisting} documentation.
 
 \subsection{NREL-style bibliographies}
 NREL uses "Chicago A" style-references. The \emph{nrel.cls} file uses Biblatex to produce these references automatically.
