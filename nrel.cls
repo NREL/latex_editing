@@ -116,6 +116,7 @@
 \RequirePackage{gensymb}
 % acronyms
 \RequirePackage{acronym}
+\renewcommand*\aclabelfont[1]{\acsfont{#1}}
 % Prevent orphan lines and windows
 \RequirePackage[all]{nowidow}
 % % better tables
