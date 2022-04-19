@@ -29,6 +29,7 @@
 \chapter{Executive Summary}
 This document is a guide to writing documents for publication by NREL using the LaTeX document preparation system. LaTeX is not WYSIWYG and has different reviewing and editing tools compared to typical word processing software. For this reason special care has to be taken when preparing NREL documents in LaTeX.
 
+
 This document serves both as a guide to implementing NREL's style and formatting guidelines in LaTeX, and as a template. This document is intended for people with some familiarity with LaTeX.
 
 \chapter{Acknowledgments}
@@ -110,7 +111,7 @@ For example, each of the chapters in this report is in separate files, called \e
 
 \section{Dummy section}
 \lipsum[5-6]
-\cite{aitken2014utility,aitken2014quantifying,argrow2017ncar}
+\cite{aitken2014quantifying,argrow2017ncar}
 
 
 \lipsum[9]
@@ -173,6 +174,7 @@ Authors can then insert citations to this key throughout their document, using d
   \item \verb+\cite{moriarty2020american}+ prints \cite{moriarty2020american}.
   \item \verb+\citep{moriarty2020american}+ prints \citep{moriarty2020american}.
   \item \verb+\citet{moriarty2020american}+ prints \citet{moriarty2020american}.
+  \item A more complex case: \verb+\parentext{\citet{moriarty2020american} and \citep{fernando2019perdigao}}+ prints \parentext{\citet{moriarty2020american} and \citep{fernando2019perdigao}}
 \end{itemize}
 
 To cite URLs, use the 'misc' style. For example, the bibtex entry for \href{http://tex.stackexchange.com}{http://tex.stackexchange.com}\ \cite{texstackexchange} looks like this:

@@ -151,17 +151,16 @@
 %% ----------------------------
 % For formatting the bibliography. See guidance 
 \RequirePackage[babel]{csquotes}
-\RequirePackage[
-	style=chicago-authordate,
-	strict,backend=bibtex,
-	natbib=true,
-	bibencoding=inputenc,
-	sorting=nyt,
-	doi=true, 
-	maxbibnames=10,
-	giveninits=true, 
-	maxcitenames=3,
-]{biblatex}
+\usepackage[authordate,
+            backend=biber,
+			natbib,
+			bibencoding=inputenc,
+			sorting=nyt,
+			doi=true, 
+			maxbibnames=10,
+			giveninits=true, 
+			maxcitenames=3,
+            ]{biblatex-chicago}
 % change the name of the bib 
 % (see http://tex.stackexchange.com/questions/82993/how-to-change-the-name-of-document-elements-like-figure-contents-bibliogr)
 \DefineBibliographyStrings{american}{%
