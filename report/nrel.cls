@@ -576,7 +576,9 @@
 	unicode, 
 	pdflang={en-US},
 	pdftitle=\@title,
-	pdfauthor={Nicholas Hamilton}
+	pdfauthor={Nicholas Hamilton},
+	hypertexnames=false,
+	bookmarksnumbered
 	% pdfauthor={\cleanlist}
 }
 \makeatother
