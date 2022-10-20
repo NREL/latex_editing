@@ -320,8 +320,8 @@
 	labelsep=period,
 	justification=centering,
 	singlelinecheck=true,
-	aboveskip=6pt,
-	aboveskip=6pt}
+	aboveskip=0pt,
+	belowskip=0pt}
 \captionsetup[figure]{font={small,sf,bf},
 	labelfont={small,sf,bf},
 	textfont={small,sf,bf},
@@ -329,8 +329,8 @@
 	labelsep=period,
 	justification=centering,
 	singlelinecheck=true,
-	belowskip=-12pt,
-	aboveskip=12pt}
+	belowskip=0pt,
+	aboveskip=0pt}
 
 % number figures and tables continuously across chapters
 \RequirePackage{chngcntr}
