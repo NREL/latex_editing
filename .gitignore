@@ -1,4 +1,5 @@
 # Latex files
+**/*/aux/
 *.*.*(busy) 
 *.*(busy) 
 *.acn
