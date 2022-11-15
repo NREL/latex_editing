@@ -392,7 +392,7 @@
 		} %<--------- Use this if only one appendix	
 	\newcommand{\appchapter}[1]{
 	\chapter*{Appendix\hspace{11pt} #1}
-    \addcontentsline{toc}{chapter}{{Appendix\hspace{11pt} #1}}}
+    \addcontentsline{toc}{chapter}{{#1}}}
 	}
 	{% False
 	\AtBeginEnvironment{appendices}{
