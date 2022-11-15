@@ -40,7 +40,9 @@
 *.upb
 *.vrb
 *.xdy
- 
+*.zip
+**/*.zip
+
 # Mac IDE files
 *.swp
 *~
