@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NREL Formal Letter 
+% LaTeX Template
+%
+% Authors:
+% Nicholas Hamilton
+% nicholas.hamilton@nrel.gov
+%
+% version 1.0, April 2024
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,letterpaper]{NRELletter}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{lipsum}
+%----------------------------------------------------------------------------------------
+%	DEFINE CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+
+\newcommand{\logo}[1]{\renewcommand{\logo}{#1}}
+\newcommand{\signat}[1]{\renewcommand{\signat}{#1}}
+\newcommand{\Who}[1]{\renewcommand{\Who}{#1}}
+\newcommand{\Title}[1]{\renewcommand{\Title}{#1}}
+\newcommand{\headerlineone}[1]{\renewcommand{\headerlineone}{#1}}
+\newcommand{\headerlinetwo}[1]{\renewcommand{\headerlinetwo}{#1}}
+\newcommand{\authordetails}[1]{\renewcommand{\authordetails}{#1}}
+
+\longindentation=0pt % Adjust alignment of the closing "Sincerely," and date from the left of the page
+
+%----------------------------------------------------------------------------------------
+%	YOUR INFORMATION
+%----------------------------------------------------------------------------------------
+
+\Who{ First Last} % Your name
+
+\Title{, Ph.D.} % Your title, leave blank for no title
+\authordetails{
+	Researcher IV--Mechanical Engineering\\ % Your job title
+	National Wind Technology Center\\ % Your department/institution
+	Street Address\\ % Address for the STM or FC campus
+	City, State ZIP\\
+	\href{mailto:First.Last@nrel.gov}{First.Last@nrel.gov}\\ % Your email address
+	111-111-1111\\ % Your phone number
+}
+
+%----------------------------------------------------------------------------------------
+%	HEADER CONTENTS
+%----------------------------------------------------------------------------------------
+
+\logo{nrel-logo-2025.png} % Logo filename or location. adjust spacing within the HEADER STRUCTURE block in NRELletter.cls (read the comments carefully!)
+\signat{signature.png}
+
+
+\headerlineone{} % Top header line, leave blank to suppress output 
+\headerlinetwo{} % Bottom header line
+
+%\headerlineone{National Renewable}
+%\headerlinetwo{Energy Laboratory} 
+
+%----------------------------------------------------------------------------------------
+
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS
+%----------------------------------------------------------------------------------------
+
+\begin{letter}{
+Recipient Name\\
+Street Address\\
+City, State ZIP\\
+\href{mailto:First.Last@nrel.gov}{First.Last@nrel.gov}\\ % Recipient's email address
+111-111-1111
+}
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+\opening{Dear Recipient,}
+
+\lipsum[1-5]
+
+\closing{Sincerely,}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+
+\end{document}
+
+
+
+
+
+
+
+
