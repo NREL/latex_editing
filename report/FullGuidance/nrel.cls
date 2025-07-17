@@ -520,7 +520,7 @@
 	\fancypagestyle{nrel}{%
 	\fancyhf{}
 	\renewcommand{\headrulewidth}{0pt}
-	\fancyfoot[C]{\thepage\\\vspace{1em} \fontsize{10pt}{10pt}\sffamily \textcolor{lightgray}{This report is available at no cost from the National Renewable Energy Laboratory (NREL) at \href{www.nrel.gov/publications}{www.nrel.gov/publications}}}
+	\fancyfoot[C]{\thepage\\\vspace{1em} \fontsize{10pt}{10pt}\sffamily \textcolor{lightgray}{This report is available at no cost from NREL at \href{www.nrel.gov/publications}{www.nrel.gov/publications}}}
 }
 
 
